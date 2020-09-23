@@ -1,10 +1,12 @@
 {
   "env": {
     "browser": true,
-    "es6": true
+    "es6": true,
+    "cypress/globals": true
   },
   "extends": [
     "airbnb",
+    "plugin:cypress/recommended",
     "plugin:react/recommended",
     "plugin:@typescript-eslint/recommended",
     "prettier/@typescript-eslint",
@@ -22,8 +24,19 @@
     "ecmaVersion": 2018,
     "sourceType": "module"
   },
-  "plugins": ["react", "react-hooks", "@typescript-eslint", "prettier"],
+  "plugins": [
+    "cypress",
+    "chai-friendly",
+    "plugin:chai-friendly/recommended",
+    "react",
+    "react-hooks",
+    "@typescript-eslint",
+    "prettier"
+  ],
   "rules": {
+    "no-unused-expressions": 0,
+    "chai-friendly/no-unused-expressions": 2,
+    "import/no-extraneous-dependencies": "off",
     "no-use-before-define": "off",
     "@typescript-eslint/no-use-before-define": "off",
     "prettier/prettier": "error",

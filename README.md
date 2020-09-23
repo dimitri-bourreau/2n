@@ -1,9 +1,23 @@
 # 2n
 
-Remember 2 numbers ago.
+React.js based game : will your remember two numbers ago ? 🤔
 
-## React app, for sport
+## Purpose
 
-This repo is just about playing with React and TypeScript for fun.
+This is me playing with my code, and maybe later you enjoying it! 🤓
 
-Run it with `npm start`.
+## How it works
+
+You run it with:
+
+```bash
+npm start (surprised? 😄)
+```
+
+And you test it with:
+
+```bash
+npx cypress open
+```
+
+Hope you like it. 😇
