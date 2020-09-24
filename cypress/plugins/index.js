@@ -15,12 +15,14 @@
 /**
  * @type {Cypress.PluginConfig}
  */
-const webpack = require('@cypress/webpack-preprocessor');
+import webpack from '@cypress/webpack-preprocessor';
+import webpackOptions from '../../webpack.config.js';
+
 module.exports = on => {
   const options = {
     // send in the options from your webpack.config.js, so it works the same
     // as your app's code
-    webpackOptions: require('../../webpack.config'),
+    webpackOptions,
     watchOptions: {},
   };
 

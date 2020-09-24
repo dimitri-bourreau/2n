@@ -27,7 +27,6 @@
   "plugins": [
     "cypress",
     "chai-friendly",
-    "plugin:chai-friendly/recommended",
     "react",
     "react-hooks",
     "@typescript-eslint",
