@@ -17,5 +17,5 @@
     "jsx": "react",
     "types": ["cypress"]
   },
-  "include": ["src", "cypress/component/**/*.tsx", "decs.d.ts"]
+  "include": ["src", "cypress/component/**/*.tsx", "decs.d.ts", "src/i18n.js"]
 }
