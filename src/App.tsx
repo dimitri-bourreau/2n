@@ -3,7 +3,7 @@ import Header from './components/Header';
 
 const App: FunctionComponent = (): ReactElement => {
   return (
-    <div className="App">
+    <div id="app">
       <Header />
     </div>
   );
