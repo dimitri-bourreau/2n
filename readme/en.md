@@ -4,7 +4,7 @@ Will you remember 2 digits ago?
 
 _[french version of this readme](https://github.com/tobudim/2n/)_
 
-![Homepage](game.png)
+<img src="game.png" alt="homepage" width="350" />
 
 ## Game
 
@@ -18,13 +18,13 @@ This game uses these technologies: React.js, TypeScript, Reach Router, Shards Re
 
 The game has an old fashioned ranking system!
 
-![Ranking](rank.png)
+<img src="rank.png" alt="rank" width="300" />
 
 ### Languages
 
 The game is offered in English and French ... for what it costs ... Hey! I'm doing this little game to show off my skills so I couldn't be too lazy!
 
-![Languages](lang.png)
+<img src="lang.png" alt="lang" width="150" />
 
 ## How it works
 
