@@ -2,7 +2,15 @@
   "header": {
     "game": "Game",
     "ranking": "Ranking",
-    "more": "More",
+    "more": "More"
+  },
+  "home": {
     "subtitle": "Will you remember 2 numbers ago?"
+  },
+  "ranking": {
+    "title": "Ranking"
+  },
+  "more": {
+    "title": "More"
   }
 }

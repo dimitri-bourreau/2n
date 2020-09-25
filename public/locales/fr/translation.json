@@ -2,7 +2,15 @@
   "header": {
     "game": "Jeu",
     "ranking": "Classement",
-    "more": "En savoir plus",
+    "more": "En savoir plus"
+  },
+  "home": {
     "subtitle": "Souvenez-vous il y a deux chiffres !"
+  },
+  "ranking": {
+    "title": "Classement"
+  },
+  "more": {
+    "title": "En savoir plus"
   }
 }
