@@ -17,7 +17,7 @@ const More: FunctionComponent<RouteComponentProps> = (): ReactElement => {
 
       <p>
         Le fabuleux site <a href="https://pilotest.com">Pilotest</a> a développé
-        d'excellents tests de cette nature, à voir !
+        d&aposexcellents tests de cette nature, à voir !
       </p>
 
       <p>
