@@ -15,7 +15,7 @@ const Home: FunctionComponent<RouteComponentProps> = (): ReactElement => {
       </h6>
 
       <Button pill block theme="success" className="mt-5" size="lg">
-        Jouer
+        <Trans i18nKey="home.play">Play</Trans>
       </Button>
     </div>
   );

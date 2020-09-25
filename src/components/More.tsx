@@ -11,23 +11,31 @@ const More: FunctionComponent<RouteComponentProps> = (): ReactElement => {
       </h1>
 
       <p>
-        Ce projet est inspiré par des tests psychotechniques à réaliser pour
-        devenir pilote chez Air France.
+        <Trans i18nKey="more.p.1">
+          This project is inspired by the psychotechnical tests to be performed
+          to become a pilot at Air France.
+        </Trans>
       </p>
 
       <p>
-        Le fabuleux site <a href="https://pilotest.com">Pilotest</a> a développé
-        d&apos;excellents tests de cette nature, à voir !
+        <Trans i18nKey="more.p.2">
+          The fabulous site <a href="https://pilotest.com">Pilotest</a> has
+          developed excellent tests of this nature, must see!
+        </Trans>
       </p>
 
       <p>
-        Ce jeu utilise ces technologies : React.js, TypeScript, Reach Router,
-        Shards React, react-i18next et Cypress.
+        <Trans i18nKey="more.p.3">
+          This game uses these technologies: React.js, TypeScript, Reach Router,
+          Shards React, react-i18next and Cypress.
+        </Trans>
       </p>
 
       <a href="https://github.com/tobudim/2n">
         <Button theme="primary" pill block className="mx-auto">
-          Code source disponible sur GitHub
+          <Trans i18nKey="more.sourceCode">
+            Source code available on GitHub
+          </Trans>
         </Button>
       </a>
     </div>
