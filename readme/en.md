@@ -10,7 +10,7 @@ _[french version of this readme](https://github.com/tobudim/2n/)_
 
 This project is inspired by the psychotechnical tests to be performed to become a pilot at Air France.
 
-The fabulous [Pilotest] site (https://pilotest.com) has developed excellent tests of this nature, must see!
+The fabulous site [Pilotest](https://pilotest.com) has developed excellent tests of this nature, must see!
 
 This game uses these technologies: React.js, TypeScript, Reach Router, Shards React, react-i18next and Cypress.
 
