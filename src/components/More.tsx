@@ -1,7 +1,7 @@
 import React, { FunctionComponent, ReactElement } from 'react';
 import { RouteComponentProps } from '@reach/router';
 import { Trans } from 'react-i18next';
-import { Alert as Button } from 'shards-react';
+import { Button } from 'shards-react';
 
 const More: FunctionComponent<RouteComponentProps> = (): ReactElement => {
   return (
@@ -25,12 +25,11 @@ const More: FunctionComponent<RouteComponentProps> = (): ReactElement => {
         Shards React, react-i18next et Cypress.
       </p>
 
-      <Button theme="primary" className="text-center">
-        Code source disponible sur{' '}
-        <a className="alert-link" href="https://github.com/tobudim/2n">
-          GitHub
-        </a>
-      </Button>
+      <a href="https://github.com/tobudim/2n">
+        <Button theme="primary" pill block className="mx-auto">
+          Code source disponible sur GitHub
+        </Button>
+      </a>
     </div>
   );
 };
