@@ -1,6 +1,7 @@
 import React, { FunctionComponent, ReactElement } from 'react';
 import { Trans } from 'react-i18next';
 import { RouteComponentProps } from '@reach/router';
+import { Button } from 'shards-react';
 
 const Home: FunctionComponent<RouteComponentProps> = (): ReactElement => {
   return (
@@ -12,6 +13,10 @@ const Home: FunctionComponent<RouteComponentProps> = (): ReactElement => {
           🤭
         </span>
       </h6>
+
+      <Button pill block theme="success" className="mt-5" size="lg">
+        Jouer
+      </Button>
     </div>
   );
 };
