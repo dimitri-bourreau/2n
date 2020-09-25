@@ -9,14 +9,16 @@ import More from './More';
 const Layout: FunctionComponent = (): ReactElement => {
   useTranslation();
   return (
-    <>
+    <div id="layout">
       <Header />
-      <Router>
-        <Home path="/" />
-        <Ranking path="ranking" />
-        <More path="more" />
-      </Router>
-    </>
+      <div id="router-wrapper" className="px-4">
+        <Router>
+          <Home path="/" />
+          <Ranking path="ranking" />
+          <More path="more" />
+        </Router>
+      </div>
+    </div>
   );
 };
 
