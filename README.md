@@ -4,7 +4,7 @@ Souvenez-vous il y a deux chiffres !
 
 _[english version of this readme](https://github.com/tobudim/2n/readme/en.md)_
 
-![Homepage](readme/game.png)
+![Homepage](readme/game.png =400x)
 
 ## Jeu
 
@@ -18,13 +18,13 @@ Ce jeu utilise ces technologies : React.js, TypeScript, Reach Router, Shards Rea
 
 Le jeu a un système de ranking _à l'ancienne_ !
 
-![Ranking](readme/rank.png)
+![Ranking](readme/rank.png =300x)
 
 ### Langages
 
 Le jeu est proposé en anglais et en français... pour ce que ça coûte... Hey ! Je fais ce petit jeu aussi pour montrer mes compétences alors je ne pouvais pas être trop fainéant !
 
-![Languages](readme/lang.png)
+![Languages](readme/lang.png =150x)
 
 ## Fonctionnement
 
