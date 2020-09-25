@@ -1,23 +1,37 @@
 # 2n
 
-React.js based game : will your remember two numbers ago ? 🤔
+Souvenez-vous il y a deux chiffres !
 
-## Purpose
+_[english version of this readme](https://github.com/tobudim/2n/readme/en.md)_
 
-This is me playing with my code, and maybe later you enjoying it! 🤓
+![Homepage](readme/game.png)
 
-## How it works
+## Jeu
 
-You run it with:
+Ce projet est inspiré par des tests psychotechniques à réaliser pour devenir pilote chez Air France.
+
+Le fabuleux site [Pilotest](https://pilotest.com) a développé d'excellents tests de cette nature, à voir !
+
+Ce jeu utilise ces technologies : React.js, TypeScript, Reach Router, Shards React, react-i18next et Cypress.
+
+### Classement
+
+Le jeu a un système de ranking _à l'ancienne_ !
+
+![Ranking](readme/rank.png)
+
+### Langages
+
+Le jeu est proposé en anglais et en français... pour ce que ça coûte... Hey ! Je fais ce petit jeu aussi pour montrer mes compétences alors je ne pouvais pas être trop fainéant !
+
+![Languages](readme/lang.png)
+
+## Fonctionnement
+
+Lorsque le projet sera terminé il sera disponible à [dimitribourreau.me/2n](https://dimitribourreau.me/2n).
+
+Pour l'instant, vous pouvez lancer le serveur avec :
 
 ```bash
-npm start (surprised? 😄)
+npm start
 ```
-
-And you test it with:
-
-```bash
-npx cypress open
-```
-
-Hope you like it. 😇
