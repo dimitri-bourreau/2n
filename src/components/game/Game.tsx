@@ -6,11 +6,11 @@ import EndOfGame from './EndOfGame';
 
 const Game: FunctionComponent<GameProps> = (): ReactElement => {
   const getRandomDigit: number = Math.floor(Math.random() * 9);
-  const passedDigits: number[] = [];
+  const [passedDigits, setPassedDigits] = useState<number[]>([]);
   const [turn, setTurn] = useState(1);
   const [digit, setDigit] = useState(getRandomDigit);
   const [success, setSuccess] = useState(true);
-  let score = 0;
+  const [score, setScore] = useState(0);
 
   const checkAnswer = (answer: boolean): void => {
     const rightAnswer = digit === passedDigits[passedDigits.length - 2];
@@ -22,8 +22,8 @@ const Game: FunctionComponent<GameProps> = (): ReactElement => {
   };
 
   const nextTurn = (): void => {
-    if (turn > 2) score += 1;
-    passedDigits.push(digit);
+    if (turn > 2) setScore(score + 1);
+    setPassedDigits([...passedDigits, digit]);
     setDigit(getRandomDigit);
     setTurn(turn + 1);
   };
@@ -31,7 +31,7 @@ const Game: FunctionComponent<GameProps> = (): ReactElement => {
   if (!success) return <EndOfGame score={score} />;
 
   return (
-    <div id="game" className="text-center">
+    <div id="game" className="text-center pt-2">
       <Digit digit={digit} />
 
       {turn === 1 || turn === 2 ? (
@@ -58,12 +58,10 @@ const Game: FunctionComponent<GameProps> = (): ReactElement => {
               Ce chiffre était-il affiché il y a deux tours ?{' '}
               <span role="img" aria-label="think">
                 🤔
-              </span>
+              </span>{' '}
+              {passedDigits[passedDigits.length - 2]}
             </p>
           </Alert>
-          {passedDigits.map(d => (
-            <p key={d}>{d}</p>
-          ))}
           <Button
             theme="success"
             className="mr-1"
@@ -80,6 +78,10 @@ const Game: FunctionComponent<GameProps> = (): ReactElement => {
           </Button>
         </>
       )}
+
+      <p className="mb-0 mt-3">
+        Tour {turn} - Score {score}
+      </p>
     </div>
   );
 };
