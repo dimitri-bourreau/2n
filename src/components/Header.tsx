@@ -25,9 +25,9 @@ const Header: FunctionComponent = (): ReactElement => {
           </NavLink>
         </NavItem>
 
-        <NavItem>
+        <div className="ml-auto mr-0 mt-1">
           <LangDropDown />
-        </NavItem>
+        </div>
       </Nav>
     </div>
   );

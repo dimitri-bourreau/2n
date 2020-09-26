@@ -26,6 +26,7 @@ const LangDrowDown: FunctionComponent = (): ReactElement => {
       open={langDropOpen}
       toggle={toggleLangDropdown}
       className="d-table"
+      size="sm"
     >
       <DropdownToggle theme="white">
         <span role="img" aria-label="globle">
