@@ -17,13 +17,7 @@ const Ranking: FunctionComponent<RouteComponentProps> = (): ReactElement => {
       </h1>
 
       {ranking.map((user, index) => (
-        <Alert
-          key={`${user.name}${user.score}`}
-          theme="light"
-          className="mb-1"
-          block
-          square
-        >
+        <Alert key={`${user.name}${user.score}`} theme="light" className="mb-1">
           <Badge theme="info" className="mr-2" pill>
             {index + 1}
           </Badge>{' '}
