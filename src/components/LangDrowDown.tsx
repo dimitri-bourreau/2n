@@ -33,10 +33,10 @@ const LangDrowDown: FunctionComponent = (): ReactElement => {
         </span>
       </DropdownToggle>
       <DropdownMenu right>
-        <DropdownItem onClick={() => handleChangeLanguage('en')}>
+        <DropdownItem onClick={(): null => handleChangeLanguage('en')}>
           English
         </DropdownItem>
-        <DropdownItem onClick={() => handleChangeLanguage('fr')}>
+        <DropdownItem onClick={(): null => handleChangeLanguage('fr')}>
           Français
         </DropdownItem>
       </DropdownMenu>
