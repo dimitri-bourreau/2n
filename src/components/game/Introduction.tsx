@@ -4,9 +4,9 @@ import { Button } from 'shards-react';
 import { Trans } from 'react-i18next';
 import { GameProps } from '../../interfaces/game';
 
-const Introduction: FunctionComponent<GameProps> = (
-  props: GameProps,
-): ReactElement => {
+const Introduction: FunctionComponent<GameProps> = ({
+  handlePlayGame,
+}: GameProps): ReactElement => {
   return (
     <>
       <h1 className="mt-5 mx-auto text-center">2n</h1>
@@ -23,7 +23,7 @@ const Introduction: FunctionComponent<GameProps> = (
         theme="success"
         className="mt-5"
         size="lg"
-        onClick={(): null => props.handlePlayGame(true)}
+        onClick={(): null => handlePlayGame(true)}
       >
         <Trans i18nKey="home.play">Play</Trans>
       </Button>
