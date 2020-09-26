@@ -1,22 +1,23 @@
-import React, { FunctionComponent, ReactElement } from 'react';
-import { Trans } from 'react-i18next';
+import React, { FunctionComponent, ReactElement, useState } from 'react';
 import { RouteComponentProps } from '@reach/router';
-import { Button } from 'shards-react';
+import Introduction from './game/Introduction';
+import Game from './game/Game';
 
 const Home: FunctionComponent<RouteComponentProps> = (): ReactElement => {
+  const [gameIsOn, setGameIsOn] = useState(false);
+
+  const handlePlayGame = (game: boolean): null => {
+    setGameIsOn(game);
+    return null;
+  };
+
   return (
     <div id="home">
-      <h1 className="mt-5 mx-auto text-center">2n</h1>
-      <h6 className="text-center">
-        <Trans i18nKey="home.subtitle">Will you remember 2 numbers ago?</Trans>{' '}
-        <span role="img" aria-label="emoji-hand-mouth">
-          🤭
-        </span>
-      </h6>
-
-      <Button pill block theme="success" className="mt-5" size="lg">
-        <Trans i18nKey="home.play">Play</Trans>
-      </Button>
+      {gameIsOn ? (
+        <Game handlePlayGame={handlePlayGame} />
+      ) : (
+        <Introduction handlePlayGame={handlePlayGame} />
+      )}
     </div>
   );
 };

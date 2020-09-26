@@ -9,7 +9,7 @@ import More from './More';
 const Layout: FunctionComponent = (): ReactElement => {
   useTranslation();
   return (
-    <div id="layout" className="col-sm-10 col-md-8 col-lg-5 mx-auto">
+    <div id="layout" className="col-sm-10 col-md-8 col-lg-5 mx-auto mt-2">
       <Header />
       <div id="router-wrapper" className="px-4">
         <Router>
