@@ -1,7 +1,7 @@
 import React, { FunctionComponent, ReactElement, useState } from 'react';
 import { RouteComponentProps } from '@reach/router';
 import Introduction from './game/Introduction';
-import Game from './game/Game';
+import GameLogic from './game/GameLogic';
 
 const Home: FunctionComponent<RouteComponentProps> = (): ReactElement => {
   const [gameIsOn, setGameIsOn] = useState(false);
@@ -14,7 +14,7 @@ const Home: FunctionComponent<RouteComponentProps> = (): ReactElement => {
   return (
     <div id="home">
       {gameIsOn ? (
-        <Game handlePlayGame={handlePlayGame} />
+        <GameLogic />
       ) : (
         <Introduction handlePlayGame={handlePlayGame} />
       )}

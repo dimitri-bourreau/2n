@@ -1,40 +1,25 @@
-import React, { FunctionComponent, ReactElement, useState } from 'react';
+import React, { FunctionComponent, ReactElement } from 'react';
 import { Alert, Button } from 'shards-react';
-import { GameProps } from '../../interfaces/game';
-import Digit from './Digit';
+import { GameDisplayProps } from '../../interfaces/game';
 import EndOfGame from './EndOfGame';
 
-const Game: FunctionComponent<GameProps> = (): ReactElement => {
-  const getRandomDigit: number = Math.floor(Math.random() * 9);
-  const [passedDigits, setPassedDigits] = useState<number[]>([]);
-  const [turn, setTurn] = useState(1);
-  const [digit, setDigit] = useState(getRandomDigit);
-  const [success, setSuccess] = useState(true);
-  const [score, setScore] = useState(0);
+import Digit from './Digit';
 
-  const checkAnswer = (answer: boolean): void => {
-    const rightAnswer = digit === passedDigits[passedDigits.length - 2];
-    if (answer !== rightAnswer) {
-      setSuccess(false);
-    } else {
-      nextTurn();
-    }
-  };
-
-  const nextTurn = (): void => {
-    if (turn > 2) setScore(score + 1);
-    setPassedDigits([...passedDigits, digit]);
-    setDigit(getRandomDigit);
-    setTurn(turn + 1);
-  };
-
-  if (!success) return <EndOfGame score={score} />;
+const GameDisplay: FunctionComponent<GameDisplayProps> = ({
+  allDigits,
+  digit,
+  score,
+  gameOver,
+  newTurn,
+  checkAnswer,
+}: GameDisplayProps): ReactElement => {
+  if (gameOver) return <EndOfGame score={score} />;
 
   return (
     <div id="game" className="text-center pt-2">
       <Digit digit={digit} />
 
-      {turn === 1 || turn === 2 ? (
+      {allDigits.length <= 1 ? (
         <>
           <Alert theme="info" className="text-center mt-4">
             <p className="mb-0">
@@ -44,7 +29,7 @@ const Game: FunctionComponent<GameProps> = (): ReactElement => {
               </span>
             </p>
           </Alert>
-          <Button theme="success" onClick={(): void => nextTurn()}>
+          <Button theme="success" onClick={(): void => newTurn()}>
             Suivant{' '}
             <span role="img" aria-label="fist">
               🤜
@@ -59,7 +44,7 @@ const Game: FunctionComponent<GameProps> = (): ReactElement => {
               <span role="img" aria-label="think">
                 🤔
               </span>{' '}
-              {passedDigits[passedDigits.length - 2]}
+              {allDigits[allDigits.length - 2]}
             </p>
           </Alert>
           <Button
@@ -80,10 +65,10 @@ const Game: FunctionComponent<GameProps> = (): ReactElement => {
       )}
 
       <p className="mb-0 mt-3">
-        Tour {turn} - Score {score}
+        Tour {allDigits.length} - Score {score}
       </p>
     </div>
   );
 };
 
-export default Game;
+export default GameDisplay;

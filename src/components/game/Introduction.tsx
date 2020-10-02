@@ -2,11 +2,11 @@ import React, { FunctionComponent, ReactElement } from 'react';
 
 import { Button } from 'shards-react';
 import { Trans } from 'react-i18next';
-import { GameProps } from '../../interfaces/game';
+import { IntroductionProps } from '../../interfaces/game';
 
-const Introduction: FunctionComponent<GameProps> = ({
+const Introduction: FunctionComponent<IntroductionProps> = ({
   handlePlayGame,
-}: GameProps): ReactElement => {
+}: IntroductionProps): ReactElement => {
   return (
     <>
       <h1 className="mt-5 mx-auto text-center">2n</h1>
