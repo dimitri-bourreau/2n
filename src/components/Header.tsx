@@ -14,11 +14,6 @@ const Header: FunctionComponent = (): ReactElement => {
             <Trans i18nKey="header.game">Game</Trans>
           </NavLink>
         </NavItem>
-        <NavItem>
-          <NavLink active={activePath === 'ranking'} href="ranking">
-            <Trans i18nKey="header.ranking">Ranking</Trans>
-          </NavLink>
-        </NavItem>
         <NavItem href="more">
           <NavLink active={activePath === 'more'} href="more">
             <Trans i18nKey="header.more">More</Trans>

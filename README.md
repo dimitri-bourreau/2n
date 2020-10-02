@@ -14,12 +14,6 @@ Le fabuleux site [Pilotest](https://pilotest.com) a développé d'excellents tes
 
 Ce jeu utilise ces technologies : React.js, TypeScript, Reach Router, Shards React, react-i18next et Cypress.
 
-### Classement
-
-Le jeu a un système de ranking _à l'ancienne_ !
-
-<img src="readme/rank.png" alt="rank" width="300" />
-
 ### Langages
 
 Le jeu est proposé en anglais et en français... pour ce que ça coûte... Hey ! Je fais ce petit jeu aussi pour montrer mes compétences alors je ne pouvais pas être trop fainéant !
