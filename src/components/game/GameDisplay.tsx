@@ -29,7 +29,7 @@ const GameDisplay: FunctionComponent<GameDisplayProps> = ({
               </span>
             </p>
           </Alert>
-          <Button theme="success" onClick={(): void => newTurn()}>
+          <Button theme="success" onClick={newTurn}>
             Suivant{' '}
             <span role="img" aria-label="fist">
               🤜

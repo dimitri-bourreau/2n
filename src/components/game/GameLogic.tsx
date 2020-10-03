@@ -9,7 +9,7 @@ const GameLogic: FunctionComponent<RouteComponentProps> = (): ReactElement => {
   const [score, setScore] = useState(0);
   const [gameOver, setGameOver] = useState(false);
 
-  const checkAnswer = (answer: boolean): void | ReactElement => {
+  const checkAnswer = (answer: boolean): void => {
     const { length: turn } = allDigits;
     if (turn <= 1) newTurn();
     if (digit === allDigits[turn - 2]) {
@@ -22,14 +22,17 @@ const GameLogic: FunctionComponent<RouteComponentProps> = (): ReactElement => {
 
   const newTurn = (): void => {
     const { length: turn } = allDigits;
-    const digits = turn > 5 ? allDigits.slice(turn - 5) : [...allDigits];
-    const hasMatchHappened = digits.map((passedDigit, index) => {
-      if (allDigits[index - 2] === passedDigit) return true;
-      return false;
-    });
-    setDigit(getRandomDigit());
-    setScore(score + 1);
-    if (!hasMatchHappened.includes(true)) setDigit(allDigits[turn - 2]);
+    const digits = turn > 10 ? allDigits.slice(turn - 5) : [0];
+    const hasMatchHappened =
+      turn > 10 && turn % 5 === 0
+        ? digits.map((passedDigit, index) => {
+            if (index >= 2 && passedDigit === digits[index - 2]) return true;
+            return false;
+          })
+        : [true];
+    if (turn >= 2) setScore(score + 1);
+    const doMatch = !hasMatchHappened.includes(true);
+    setDigit(doMatch ? allDigits[turn - 2] : getRandomDigit());
     setAllDigits([...allDigits, digit]);
   };
 
