@@ -3,7 +3,8 @@ import { RouteComponentProps } from '@reach/router';
 import GameDisplay from './GameDisplay';
 
 const GameLogic: FunctionComponent<RouteComponentProps> = (): ReactElement => {
-  const getRandomDigit = (): number => Math.floor(Math.random() * 9);
+  const getRandomDigit = (): number => Math.floor(Math.random() * 7);
+  const getRandomBool = (): boolean => Math.random() >= 0.1;
   const [allDigits, setAllDigits] = useState<number[]>([]);
   const [digit, setDigit] = useState(getRandomDigit());
   const [score, setScore] = useState(0);
@@ -31,8 +32,10 @@ const GameLogic: FunctionComponent<RouteComponentProps> = (): ReactElement => {
           })
         : [true];
     if (turn >= 2) setScore(score + 1);
-    const doMatch = !hasMatchHappened.includes(true);
-    setDigit(doMatch ? allDigits[turn - 2] : getRandomDigit());
+    const doMatch =
+      !hasMatchHappened.includes(true) || (turn > 5 && getRandomBool());
+    console.log(doMatch, allDigits[turn - 1]);
+    setDigit(doMatch ? allDigits[turn - 1] : getRandomDigit());
     setAllDigits([...allDigits, digit]);
   };
 

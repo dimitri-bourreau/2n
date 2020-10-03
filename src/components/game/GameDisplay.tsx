@@ -51,6 +51,7 @@ const GameDisplay: FunctionComponent<GameDisplayProps> = ({
                 🤔
               </span>
             </p>
+            <p>{allDigits.map(e => e)}</p>
           </Alert>
           <Button
             theme="success"
