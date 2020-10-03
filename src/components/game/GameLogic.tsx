@@ -34,7 +34,6 @@ const GameLogic: FunctionComponent<RouteComponentProps> = (): ReactElement => {
     if (turn >= 2) setScore(score + 1);
     const doMatch =
       !hasMatchHappened.includes(true) || (turn > 5 && getRandomBool());
-    console.log(doMatch, allDigits[turn - 1]);
     setDigit(doMatch ? allDigits[turn - 1] : getRandomDigit());
     setAllDigits([...allDigits, digit]);
   };
