@@ -19,5 +19,23 @@
       "3": "This game uses these technologies: React.js, TypeScript, Reach Router, Shards React, react-i18next and Cypress."
     },
     "sourceCode": "Source code available on GitHub"
+  },
+  "gameDisplay": {
+    "intro": {
+      "remember": "Remember this digit!",
+      "next": "Next"
+    },
+    "inGame": {
+      "question": "What this digit displayed two turns ago?",
+      "yes": "Yes",
+      "no": "No",
+      "turn": "Tun",
+      "score": "Score"
+    },
+    "gameOver": {
+      "gameOver": "Game over!",
+      "score": "Your score",
+      "playAgain": "Play again"
+    }
   }
 }
