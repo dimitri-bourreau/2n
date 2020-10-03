@@ -1,7 +1,7 @@
 import React, { FunctionComponent, ReactElement } from 'react';
 import { Alert, Button } from 'shards-react';
 import { GameDisplayProps } from '../../interfaces/game';
-import EndOfGame from './EndOfGame';
+import GameOver from './GameOver';
 
 import Digit from './Digit';
 
@@ -13,7 +13,7 @@ const GameDisplay: FunctionComponent<GameDisplayProps> = ({
   newTurn,
   checkAnswer,
 }: GameDisplayProps): ReactElement => {
-  if (gameOver) return <EndOfGame score={score} />;
+  if (gameOver) return <GameOver score={score} />;
 
   return (
     <div id="game" className="text-center pt-2">
