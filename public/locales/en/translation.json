@@ -6,7 +6,24 @@
   },
   "home": {
     "subtitle": "Will you remember 2 digits ago?",
-    "play": "Play"
+    "play": "Play",
+    "description": {
+      "title": "The game",
+      "subtitle": "Will you remember 2 digits ago?",
+      "p1": "Every turn the game will show you one digit.",
+      "p2": "First two turns just remember the digits.",
+      "p3": "Then, the game will ask you if a digit was displayed two turns ago!",
+      "example": {
+        "title": "Example",
+        "list": {
+          "l1": "Turn 1 : you remember 2.",
+          "l2": "Turn 2 : you remember 7.",
+          "l3": "Turn 3 : you remember 8. The game asks you if 5 was displayed two turns ago: no.",
+          "l4": "Turn 4 : you remember 1. The game asks you if 7 was displayed two turns ago: yes."
+        }
+      },
+      "score": "Go as far as you can, make the biggest score!"
+    }
   },
   "ranking": {
     "title": "Ranking"
