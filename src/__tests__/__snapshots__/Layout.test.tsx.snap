@@ -1,0 +1,177 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Layout /> Layout component should match snapshot 1`] = `
+<div
+  className="col-sm-10 col-md-8 col-lg-5 mx-auto mt-2"
+  id="layout"
+>
+  <div
+    id="header"
+  >
+    <ul
+      className="nav nav-tabs"
+    >
+      <li
+        className="nav-item"
+      >
+        <a
+          className="nav-link active"
+          href="/"
+          onClick={[Function]}
+        >
+          Game
+        </a>
+      </li>
+      <li
+        className="nav-item"
+        href="more"
+      >
+        <a
+          className="nav-link"
+          href="more"
+          onClick={[Function]}
+        >
+          More
+        </a>
+      </li>
+      <div
+        className="ml-auto mr-0 mt-1"
+      >
+        <div
+          id="langDropDown"
+        >
+          <div
+            className="d-table btn-group-sm dropdown"
+          >
+            <button
+              aria-haspopup={true}
+              className="btn btn-white"
+              onClick={[Function]}
+              type="button"
+            >
+              <span
+                aria-label="globle"
+                role="img"
+              >
+                🌐
+              </span>
+            </button>
+            <div
+              className="dropdown-menu dropdown-menu-right"
+              role="menu"
+              tabIndex="-1"
+            >
+              <button
+                className="dropdown-item"
+                onClick={[Function]}
+                tabIndex="0"
+                type="button"
+              >
+                English
+              </button>
+              <button
+                className="dropdown-item"
+                onClick={[Function]}
+                tabIndex="0"
+                type="button"
+              >
+                Français
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ul>
+  </div>
+  <div
+    className="px-4"
+    id="router-wrapper"
+  >
+    <div
+      style={
+        Object {
+          "outline": "none",
+        }
+      }
+      tabIndex="-1"
+    >
+      <div
+        id="home"
+      >
+        <h1
+          className="mt-5 mx-auto text-center"
+        >
+          2n
+        </h1>
+        <h6
+          className="text-center"
+        >
+          Will you remember 2 numbers ago?
+           
+          <span
+            aria-label="emoji-hand-mouth"
+            role="img"
+          >
+            🤭
+          </span>
+        </h6>
+        <button
+          className="mt-5 btn btn-success btn-lg btn-pill btn-block"
+          id="play-game-button"
+          onClick={[Function]}
+          type="button"
+        >
+          Play
+        </button>
+        <div
+          className="mx-auto my-5 card"
+        >
+          <div
+            className="card-header"
+          >
+            The game
+          </div>
+          <div
+            className="card-body"
+          >
+            <h5
+              className="card-title"
+            >
+              Will you remember 2 digits ago?
+            </h5>
+            <p>
+              Every turn the game will show you one digit.
+            </p>
+            <p>
+              First two turns just remember the digits.
+            </p>
+            <p>
+              Then, the game will ask you if a digit was displayed two turns ago!
+            </p>
+            <h5>
+              Example
+            </h5>
+            <ul>
+              <li>
+                Turn 1 : you remember 2.
+              </li>
+              <li>
+                Turn 2 : you remember 7.
+              </li>
+              <li>
+                Turn 3 : you remember 8. The game asks you if 5 was displayed two turns ago: no.
+              </li>
+              <li>
+                Turn 4 : you remember 1. The game asks you if 7 was displayed two turns ago: yes.
+              </li>
+            </ul>
+            <p>
+              Go as far as you can, make the biggest score!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

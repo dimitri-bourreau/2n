@@ -27,7 +27,7 @@ const More: FunctionComponent<RouteComponentProps> = (): ReactElement => {
       <p>
         <Trans i18nKey="more.p.3">
           This game uses these technologies: React.js, TypeScript, Reach Router,
-          Shards React, react-i18next and Cypress.
+          Shards React, react-i18next.
         </Trans>
       </p>
 

@@ -14,14 +14,7 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react",
-    "types": ["cypress"]
+    "jsx": "react"
   },
-  "include": [
-    "app.js",
-    "src",
-    "cypress/component/**/*.tsx",
-    "decs.d.ts",
-    "src/i18n.js"
-  ]
+  "include": ["app.js", "src", "decs.d.ts", "src/i18n.js"]
 }

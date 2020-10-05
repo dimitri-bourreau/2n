@@ -1,12 +1,10 @@
 {
   "env": {
     "browser": true,
-    "es6": true,
-    "cypress/globals": true
+    "es6": true
   },
   "extends": [
     "airbnb",
-    "plugin:cypress/recommended",
     "plugin:react/recommended",
     "plugin:@typescript-eslint/recommended",
     "prettier/@typescript-eslint",
@@ -25,7 +23,6 @@
     "sourceType": "module"
   },
   "plugins": [
-    "cypress",
     "chai-friendly",
     "react",
     "react-hooks",

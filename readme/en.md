@@ -12,7 +12,7 @@ This project is inspired by the psychotechnical tests to be performed to become 
 
 The fabulous site [Pilotest](https://pilotest.com) has developed excellent tests of this nature, must see!
 
-This game uses these technologies: React.js, TypeScript, Reach Router, Shards React, react-i18next and Cypress.
+This game uses these technologies: React.js, TypeScript, Reach Router, Shards React, react-i18next.
 
 ### Ranking
 

@@ -1,0 +1,82 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Header /> Header component should match snapshot 1`] = `
+<div
+  id="header"
+>
+  <ul
+    className="nav nav-tabs"
+  >
+    <li
+      className="nav-item"
+    >
+      <a
+        className="nav-link active"
+        href="/"
+        onClick={[Function]}
+      >
+        Game
+      </a>
+    </li>
+    <li
+      className="nav-item"
+      href="more"
+    >
+      <a
+        className="nav-link"
+        href="more"
+        onClick={[Function]}
+      >
+        More
+      </a>
+    </li>
+    <div
+      className="ml-auto mr-0 mt-1"
+    >
+      <div
+        id="langDropDown"
+      >
+        <div
+          className="d-table btn-group-sm dropdown"
+        >
+          <button
+            aria-haspopup={true}
+            className="btn btn-white"
+            onClick={[Function]}
+            type="button"
+          >
+            <span
+              aria-label="globle"
+              role="img"
+            >
+              🌐
+            </span>
+          </button>
+          <div
+            className="dropdown-menu dropdown-menu-right"
+            role="menu"
+            tabIndex="-1"
+          >
+            <button
+              className="dropdown-item"
+              onClick={[Function]}
+              tabIndex="0"
+              type="button"
+            >
+              English
+            </button>
+            <button
+              className="dropdown-item"
+              onClick={[Function]}
+              tabIndex="0"
+              type="button"
+            >
+              Français
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ul>
+</div>
+`;

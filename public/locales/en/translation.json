@@ -33,7 +33,7 @@
     "p": {
       "1": "This project is inspired by the psychotechnical tests to be performed to become a pilot at Air France.",
       "2": "The fabulous site <1>Pilotest</1> has developed excellent tests of this nature, must see!",
-      "3": "This game uses these technologies: React.js, TypeScript, Reach Router, Shards React, react-i18next and Cypress."
+      "3": "This game uses these technologies: React.js, TypeScript, Reach Router, Shards React, react-i18next."
     },
     "sourceCode": "Source code available on GitHub"
   },
