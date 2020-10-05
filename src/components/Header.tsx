@@ -1,7 +1,7 @@
 import React, { FunctionComponent, ReactElement } from 'react';
 import { Trans } from 'react-i18next';
 import { Nav, NavItem, NavLink } from 'shards-react';
-import LangDropDown from './LangDrowDown';
+import LangDropDown from './LangDropDown';
 
 const Header: FunctionComponent = (): ReactElement => {
   const activePath = window.location.pathname.split('').splice(1).join('');

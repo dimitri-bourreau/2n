@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`App component should match snapshot 1`] = `
+exports[`<Layout /> Layout component should match snapshot 1`] = `
 <div
   className="col-sm-10 col-md-8 col-lg-5 mx-auto mt-2"
   id="layout"
@@ -38,42 +38,46 @@ exports[`App component should match snapshot 1`] = `
         className="ml-auto mr-0 mt-1"
       >
         <div
-          className="d-table btn-group-sm dropdown"
+          id="langDropDown"
         >
-          <button
-            aria-haspopup={true}
-            className="btn btn-white"
-            onClick={[Function]}
-            type="button"
-          >
-            <span
-              aria-label="globle"
-              role="img"
-            >
-              🌐
-            </span>
-          </button>
           <div
-            className="dropdown-menu dropdown-menu-right"
-            role="menu"
-            tabIndex="-1"
+            className="d-table btn-group-sm dropdown"
           >
             <button
-              className="dropdown-item"
+              aria-haspopup={true}
+              className="btn btn-white"
               onClick={[Function]}
-              tabIndex="0"
               type="button"
             >
-              English
+              <span
+                aria-label="globle"
+                role="img"
+              >
+                🌐
+              </span>
             </button>
-            <button
-              className="dropdown-item"
-              onClick={[Function]}
-              tabIndex="0"
-              type="button"
+            <div
+              className="dropdown-menu dropdown-menu-right"
+              role="menu"
+              tabIndex="-1"
             >
-              Français
-            </button>
+              <button
+                className="dropdown-item"
+                onClick={[Function]}
+                tabIndex="0"
+                type="button"
+              >
+                English
+              </button>
+              <button
+                className="dropdown-item"
+                onClick={[Function]}
+                tabIndex="0"
+                type="button"
+              >
+                Français
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -113,6 +117,7 @@ exports[`App component should match snapshot 1`] = `
         </h6>
         <button
           className="mt-5 btn btn-success btn-lg btn-pill btn-block"
+          id="play-game-button"
           onClick={[Function]}
           type="button"
         >
