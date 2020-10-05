@@ -3,3 +3,4 @@ build
 /src/react-app-env.d.ts
 app.js
 config/
+*.test.js

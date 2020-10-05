@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "echo nope",
+    "test": "jest -su",
     "lint": "eslint . --fix",
     "format": "prettier --write '**/*.{js, json, ts, jsx, tsx, md}'"
   },
@@ -23,7 +23,6 @@
     "@types/react": "^16.9.49",
     "@types/react-dom": "^16.9.8",
     "babel-eslint": "10.1.0",
-    "babel-jest": "^24.9.0",
     "babel-loader": "8.1.0",
     "babel-plugin-named-asset-import": "^0.3.6",
     "babel-preset-react-app": "^9.1.2",
@@ -74,8 +73,12 @@
     "workbox-webpack-plugin": "4.3.1"
   },
   "devDependencies": {
+    "@babel/preset-env": "^7.11.5",
+    "@babel/preset-react": "^7.10.4",
+    "@testing-library/dom": "^7.24.3",
     "@typescript-eslint/eslint-plugin": "4.0.1",
     "@typescript-eslint/parser": "4.0.1",
+    "babel-jest": "^24.9.0",
     "eslint": "^6.6.0",
     "eslint-config-airbnb": "^18.2.0",
     "eslint-config-prettier": "^6.11.0",
@@ -87,6 +90,7 @@
     "eslint-plugin-react": "^7.21.0",
     "eslint-plugin-react-hooks": "^4.1.2",
     "prettier": "^2.1.2",
+    "react-test-renderer": "^16.13.1",
     "ts-loader": "^8.0.4",
     "webpack": "^4.42.0"
   },
