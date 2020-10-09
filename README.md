@@ -1,10 +1,14 @@
+_[english version of this readme ](https://github.com/tobudim/2n/readme/en.md)_
+
 # 2n
 
 Souvenez-vous il y a deux chiffres !
 
-_[english version of this readme](https://github.com/tobudim/2n/readme/en.md)_
-
+<a href="https://2n.dimitribourreau.me">
 <img src="readme/game.png" alt="homepage" width="350" />
+
+Jeu disponible sur 2n.dimitribourreau.me. 😄
+</a>
 
 ## Jeu
 
@@ -22,9 +26,9 @@ Le jeu est proposé en anglais et en français... pour ce que ça coûte... Hey 
 
 ## Fonctionnement
 
-Lorsque le projet sera terminé il sera disponible à [dimitribourreau.me/2n](https://dimitribourreau.me/2n).
+Jeu disponible sur [2n.dimitribourreau.me](https://2n.dimitribourreau.me).
 
-Pour l'instant, vous pouvez lancer le serveur avec :
+Vous pouvez télécharger ce code source et lancer un serveur avec cette commande :
 
 ```bash
 npm start
