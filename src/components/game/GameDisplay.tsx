@@ -50,7 +50,6 @@ const GameDisplay: FunctionComponent<GameDisplayProps> = ({
               <span role="img" aria-label="think">
                 🤔
               </span>
-              {allDigits.map(e => e)}
             </p>
           </Alert>
           <Button
