@@ -1,10 +1,14 @@
+_[french version of this readme](https://github.com/tobudim/2n/)_
+
 # 2n
 
 Will you remember 2 digits ago?
 
-_[french version of this readme](https://github.com/tobudim/2n/)_
-
+<a href="https://2n.dimitribourreau.me">
 <img src="game.png" alt="homepage" width="350" />
+
+Game available at 2n.dimitribourreau.me. 😄
+</a>
 
 ## Game
 
@@ -28,9 +32,9 @@ The game is offered in English and French ... for what it costs ... Hey! I'm doi
 
 ## How it works
 
-When the project is finished it will be available at [dimitribourreau.me/2n](https://dimitribourreau.me/2n).
+Game available at [dimitribourreau.me/2n](https://2n.dimitribourreau.me/).
 
-For now, you can start the server with:
+You can download this repo and start the server with:
 
 ```bash
 npm start
