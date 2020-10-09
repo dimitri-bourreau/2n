@@ -22,26 +22,28 @@ const LangDrowDown: FunctionComponent = (): ReactElement => {
   };
 
   return (
-    <Dropdown
-      open={langDropOpen}
-      toggle={toggleLangDropdown}
-      className="d-table"
-      size="sm"
-    >
-      <DropdownToggle theme="white">
-        <span role="img" aria-label="globle">
-          🌐
-        </span>
-      </DropdownToggle>
-      <DropdownMenu right>
-        <DropdownItem onClick={(): null => handleChangeLanguage('en')}>
-          English
-        </DropdownItem>
-        <DropdownItem onClick={(): null => handleChangeLanguage('fr')}>
-          Français
-        </DropdownItem>
-      </DropdownMenu>
-    </Dropdown>
+    <div id="langDropDown">
+      <Dropdown
+        open={langDropOpen}
+        toggle={toggleLangDropdown}
+        className="d-table"
+        size="sm"
+      >
+        <DropdownToggle theme="white">
+          <span role="img" aria-label="globle">
+            🌐
+          </span>
+        </DropdownToggle>
+        <DropdownMenu right>
+          <DropdownItem onClick={(): null => handleChangeLanguage('en')}>
+            English
+          </DropdownItem>
+          <DropdownItem onClick={(): null => handleChangeLanguage('fr')}>
+            Français
+          </DropdownItem>
+        </DropdownMenu>
+      </Dropdown>
+    </div>
   );
 };
 

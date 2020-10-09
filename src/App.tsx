@@ -7,7 +7,9 @@ import 'shards-ui/dist/css/shards.min.css';
 const App: FunctionComponent = (): ReactElement => {
   return (
     <Suspense fallback={<Loader />}>
-      <Layout />
+      <div id="app">
+        <Layout />
+      </div>
     </Suspense>
   );
 };

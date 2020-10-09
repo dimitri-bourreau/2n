@@ -18,6 +18,7 @@ const Introduction: FunctionComponent<IntroductionProps> = ({
       </h6>
 
       <Button
+        id="play-game-button"
         pill
         block
         theme="success"
