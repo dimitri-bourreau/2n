@@ -1,24 +1,26 @@
-import React, { FunctionComponent, ReactElement } from 'react';
-import style from 'styled-components';
+import React, { FunctionComponent, ReactElement, useEffect } from 'react';
 
-const Canvas: FunctionComponent = (): ReactElement => (
-  <canvas id="2digits-canvas" />
-);
+const IntroductionCanvas: FunctionComponent = (): ReactElement => {
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = '/2-digits-canvas/main.mjs';
+    script.type = 'module';
+    document.body.appendChild(script);
+  }, []);
 
-const StyledCanvas = style(Canvas)`
-  canvas {
-  width: 100%;
-  height: 100%;
-  background-color: red;
-  }
-`;
-
-const Introduction: FunctionComponent = (): ReactElement => {
-  return <StyledCanvas />;
+  return (
+    <canvas
+      id="2-digits-canvas"
+      style={{
+        width: '100%',
+        height: '100%',
+      }}
+    />
+  );
 };
 
-Introduction.defaultProps = {
+IntroductionCanvas.defaultProps = {
   handlePlayGame: () => null,
 };
 
-export default Introduction;
+export default IntroductionCanvas;

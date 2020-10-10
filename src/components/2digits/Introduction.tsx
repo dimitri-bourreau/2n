@@ -2,6 +2,8 @@ import React, { FunctionComponent, ReactElement, useEffect } from 'react';
 import { RouteComponentProps } from '@reach/router';
 import style from 'styled-components';
 
+import IntroductionCanvas from './IntroductionCanvas';
+
 // import { Trans } from 'react-i18next';
 
 interface IntroductionProps extends RouteComponentProps {
@@ -38,16 +40,9 @@ const IntroductionWrapper = style.div`
 const Introduction: FunctionComponent<IntroductionProps> = ({
   handlePlayGame,
 }: IntroductionProps): ReactElement => {
-  useEffect(() => {
-    const script = document.createElement('script');
-    script.src = '/2Digits-canvas/main.mjs';
-    script.type = 'module';
-    document.body.appendChild(script);
-  }, []);
-
   return (
     <IntroductionWrapper>
-      <canvas id="2digits-canvas" />
+      <IntroductionCanvas />
     </IntroductionWrapper>
   );
 };
