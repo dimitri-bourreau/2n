@@ -118,9 +118,7 @@ const Header: FunctionComponent<HeaderProps> = ({
             <a href="/settings">Paramètres</a>
           </ListElt>
           <ListElt>
-            <a href={userIsConnected ? '/me' : '/login'}>
-              {userIsConnected ? 'Mon compte' : 'Se connecter'}
-            </a>
+            <a href={userIsConnected ? '/me' : '/login'}>Mon compte</a>
           </ListElt>
         </List>
       </Nav>
