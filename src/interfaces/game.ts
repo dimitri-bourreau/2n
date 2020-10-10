@@ -1,9 +1,5 @@
 import { RouteComponentProps } from '@reach/router';
 
-export interface IntroductionProps extends RouteComponentProps {
-  handlePlayGame: (game: boolean) => null;
-}
-
 export interface GameDisplayProps extends RouteComponentProps {
   allDigits: number[];
   digit: number;

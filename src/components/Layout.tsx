@@ -1,9 +1,9 @@
 import React, { FunctionComponent, ReactElement } from 'react';
 import style from 'styled-components';
-// import { Router } from '@reach/router';
+import { Router } from '@reach/router';
 import { useTranslation } from 'react-i18next';
 import Header from './Header';
-// import Home from './Home';
+import Home from './Home';
 // import More from './More';
 
 const LayoutWrapper = style.div`
@@ -16,12 +16,12 @@ const Layout: FunctionComponent = (): ReactElement => {
   return (
     <LayoutWrapper>
       <Header />
-      {/* <div id="router-wrapper" className="px-4">
+      <div id="router-wrapper" className="px-4">
         <Router>
           <Home path="/" />
-          <More path="more" />
+          {/* <More path="more" /> */}
         </Router>
-      </div> */}
+      </div>
     </LayoutWrapper>
   );
 };
