@@ -57,10 +57,10 @@ const Nav = style.nav`
     flex-basis: 80%;
   }
   @media all and (min-width: 992px) {
-    flex-basis: 60%;
+    flex-basis: 70%;
   }
   @media all and (min-width: 1200px) {
-    flex-basis: 50%;
+    flex-basis: 60%;
   }
 `;
 
@@ -115,15 +115,11 @@ const Header: FunctionComponent<HeaderProps> = ({
             <a href="/apropos">À propos</a>
           </ListElt>
           <ListElt>
-            <a href={userIsConnected ? '/me' : '/login'}>
-              {userIsConnected ? 'Mon compte' : 'Se connecter'}
-            </a>
+            <a href="/settings">Paramètres</a>
           </ListElt>
           <ListElt>
-            <a href="/">
-              <span role="img" aria-label="language">
-                🌐
-              </span>
+            <a href={userIsConnected ? '/me' : '/login'}>
+              {userIsConnected ? 'Mon compte' : 'Se connecter'}
             </a>
           </ListElt>
         </List>
