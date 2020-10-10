@@ -42,7 +42,7 @@ const Logo = style.div`
   flex-basis: 7%;
   margin: 10px auto;
   img {
-    max-width: 50px;
+    width: 50px;
   }
 
   @media all and (min-width: 768px) {
@@ -117,6 +117,13 @@ const Header: FunctionComponent<HeaderProps> = ({
           <ListElt>
             <a href={userIsConnected ? '/me' : '/login'}>
               {userIsConnected ? 'Mon compte' : 'Se connecter'}
+            </a>
+          </ListElt>
+          <ListElt>
+            <a href="/">
+              <span role="img" aria-label="language">
+                🌐
+              </span>
             </a>
           </ListElt>
         </List>

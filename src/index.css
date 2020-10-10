@@ -15,9 +15,8 @@ a {
   text-decoration: none;
   border-bottom: 2px solid transparent;
   transition: all 0.3s ease-in;
-  padding: 3px;
+  padding: 3px 0;
 }
-
 a:hover {
   border-bottom: 2px solid white;
 }
@@ -26,8 +25,15 @@ a:hover {
   border-bottom: none;
   padding: 0px;
 }
-
 .img-link:hover {
   border-bottom: none;
   padding: 0px;
+}
+
+.img-link img {
+  transition: all 0.3s ease-out;
+}
+.img-link img:hover {
+  width: 60px;
+  transform: rotate(-10deg);
 }
