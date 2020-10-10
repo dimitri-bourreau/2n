@@ -60,7 +60,7 @@ const Nav = style.nav`
     flex-basis: 60%;
   }
   @media all and (min-width: 1200px) {
-    flex-basis: 40%;
+    flex-basis: 50%;
   }
 `;
 
