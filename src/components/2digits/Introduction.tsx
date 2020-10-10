@@ -1,6 +1,5 @@
 import React, { FunctionComponent, ReactElement } from 'react';
 
-import { Button, Card, CardHeader, CardTitle, CardBody } from 'shards-react';
 import { Trans } from 'react-i18next';
 import { IntroductionProps } from '../../interfaces/game';
 
@@ -17,28 +16,20 @@ const Introduction: FunctionComponent<IntroductionProps> = ({
         </span>
       </h6>
 
-      <Button
-        id="play-game-button"
-        pill
-        block
-        theme="success"
-        className="mt-5"
-        size="lg"
-        onClick={(): null => handlePlayGame(true)}
-      >
+      <div id="play-game-button" className="mt-5">
         <Trans i18nKey="home.play">Play</Trans>
-      </Button>
+      </div>
 
-      <Card className="mx-auto my-5">
-        <CardHeader>
+      <div className="mx-auto my-5">
+        <div>
           <Trans i18nKey="home.description.title">The game</Trans>
-        </CardHeader>
-        <CardBody>
-          <CardTitle>
+        </div>
+        <div>
+          <div>
             <Trans i18nKey="home.description.subtitle">
               Will you remember 2 digits ago?
             </Trans>
-          </CardTitle>
+          </div>
           <p>
             <Trans i18nKey="home.description.p1">
               Every turn the game will show you one digit.
@@ -89,8 +80,8 @@ const Introduction: FunctionComponent<IntroductionProps> = ({
               Go as far as you can, make the biggest score!
             </Trans>
           </p>
-        </CardBody>
-      </Card>
+        </div>
+      </div>
     </>
   );
 };

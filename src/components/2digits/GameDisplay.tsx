@@ -1,5 +1,4 @@
 import React, { FunctionComponent, ReactElement } from 'react';
-import { Alert, Button } from 'shards-react';
 import { Trans } from 'react-i18next';
 
 import { GameDisplayProps } from '../../interfaces/game';
@@ -23,7 +22,7 @@ const GameDisplay: FunctionComponent<GameDisplayProps> = ({
 
       {allDigits.length <= 1 ? (
         <>
-          <Alert theme="info" className="text-center mt-4">
+          <div className="text-center mt-4">
             <p className="mb-0">
               <Trans i18nKey="gameDisplay.intro.remember">
                 Remember this digit!
@@ -32,17 +31,17 @@ const GameDisplay: FunctionComponent<GameDisplayProps> = ({
                 🧐
               </span>
             </p>
-          </Alert>
-          <Button theme="success" onClick={newTurn}>
+          </div>
+          <div>
             <Trans i18nKey="gameDisplay.intro.next">Next</Trans>{' '}
             <span role="img" aria-label="fist">
               🤜
             </span>
-          </Button>
+          </div>
         </>
       ) : (
         <>
-          <Alert theme="light" className="text-center mt-4">
+          <div className="text-center mt-4">
             <p className="mb-0">
               <Trans i18nKey="gameDisplay.inGame.question">
                 What this digit displayed two turns ago?
@@ -51,21 +50,13 @@ const GameDisplay: FunctionComponent<GameDisplayProps> = ({
                 🤔
               </span>
             </p>
-          </Alert>
-          <Button
-            theme="success"
-            className="mr-1"
-            onClick={(): void => checkAnswer(true)}
-          >
+          </div>
+          <div className="mr-1">
             <Trans i18nKey="gameDisplay.inGame.yes">Yes</Trans>
-          </Button>
-          <Button
-            theme="danger"
-            className="ml-1"
-            onClick={(): void => checkAnswer(false)}
-          >
+          </div>
+          <div className="ml-1">
             <Trans i18nKey="gameDisplay.inGame.no">No</Trans>
-          </Button>
+          </div>
         </>
       )}
 

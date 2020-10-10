@@ -1,7 +1,6 @@
 import React, { FunctionComponent, ReactElement } from 'react';
 import { RouteComponentProps } from '@reach/router';
 import { Trans } from 'react-i18next';
-import { Button } from 'shards-react';
 
 const More: FunctionComponent<RouteComponentProps> = (): ReactElement => {
   return (
@@ -32,11 +31,11 @@ const More: FunctionComponent<RouteComponentProps> = (): ReactElement => {
       </p>
 
       <a href="https://github.com/tobudim/2n">
-        <Button theme="primary" pill block className="mx-auto">
+        <div className="mx-auto">
           <Trans i18nKey="more.sourceCode">
             Source code available on GitHub
           </Trans>
-        </Button>
+        </div>
       </a>
     </div>
   );

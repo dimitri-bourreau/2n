@@ -1,7 +1,7 @@
 import React, { FunctionComponent, ReactElement, useState } from 'react';
 import { RouteComponentProps } from '@reach/router';
-import Introduction from './game/Introduction';
-import GameLogic from './game/GameLogic';
+import Introduction from './2digits/Introduction';
+import GameLogic from './2digits/GameLogic';
 
 const Home: FunctionComponent<RouteComponentProps> = (): ReactElement => {
   const [gameIsOn, setGameIsOn] = useState(false);

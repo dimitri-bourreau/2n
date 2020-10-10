@@ -1,8 +1,7 @@
 import React, { FunctionComponent, ReactElement } from 'react';
-import { Alert } from 'shards-react';
 
 const Loader: FunctionComponent = (): ReactElement => {
-  return <Alert theme="info">Loading...</Alert>;
+  return <h1>Loading...</h1>;
 };
 
 export default Loader;

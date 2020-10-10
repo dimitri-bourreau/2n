@@ -1,10 +1,4 @@
 import React, { FunctionComponent, ReactElement, useState } from 'react';
-import {
-  Dropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
-} from 'shards-react';
 import { useTranslation } from 'react-i18next';
 
 const LangDrowDown: FunctionComponent = (): ReactElement => {
@@ -23,7 +17,7 @@ const LangDrowDown: FunctionComponent = (): ReactElement => {
 
   return (
     <div id="langDropDown">
-      <Dropdown
+      {/* <Dropdown
         open={langDropOpen}
         toggle={toggleLangDropdown}
         className="d-table"
@@ -42,7 +36,7 @@ const LangDrowDown: FunctionComponent = (): ReactElement => {
             Français
           </DropdownItem>
         </DropdownMenu>
-      </Dropdown>
+      </Dropdown> */}
     </div>
   );
 };

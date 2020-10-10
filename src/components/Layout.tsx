@@ -1,22 +1,28 @@
 import React, { FunctionComponent, ReactElement } from 'react';
-import { Router } from '@reach/router';
+import style from 'styled-components';
+// import { Router } from '@reach/router';
 import { useTranslation } from 'react-i18next';
 import Header from './Header';
-import Home from './Home';
-import More from './More';
+// import Home from './Home';
+// import More from './More';
+
+const LayoutWrapper = style.div`
+  // padding: 20px 5vw;
+  min-height: 100vh;
+`;
 
 const Layout: FunctionComponent = (): ReactElement => {
   useTranslation();
   return (
-    <div id="layout" className="col-sm-10 col-md-8 col-lg-5 mx-auto mt-2">
+    <LayoutWrapper>
       <Header />
-      <div id="router-wrapper" className="px-4">
+      {/* <div id="router-wrapper" className="px-4">
         <Router>
           <Home path="/" />
           <More path="more" />
         </Router>
-      </div>
-    </div>
+      </div> */}
+    </LayoutWrapper>
   );
 };
 
