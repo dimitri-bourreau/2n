@@ -13,12 +13,11 @@ import fixDimensions from './fix-dimensions.mjs';
   const context = canvas.getContext('2d');
   const columns = defineHowManyColumns(width);
   const lines = defineHowManyLines(height);
-  const spaces = { x: 10, y: 20 };
-  const twos = initializeTwos(columns, lines, context, spaces);
+  const spaces = { x: 50, y: 80 };
+  const linesOfTwos = initializeTwos(columns, lines, context, spaces);
   const animation = defineAnimation(lines);
 
   window.requestAnimationFrame(() => {
-    context.clearRect(0, 0, width, height);
-    animateCanvas(twos, context, animation);
+    animateCanvas(linesOfTwos, context, animation, { width, height });
   });
 })();

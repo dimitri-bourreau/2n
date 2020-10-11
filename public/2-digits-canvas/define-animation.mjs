@@ -7,7 +7,7 @@ export default function defineAnimation(lines) {
   const animation = [];
   for (let i = 0; i < lines; i++) {
     const randomNumber = getRandomNumber();
-    animation.push(randomNumber);
+    animation.push(randomNumber * 0.005);
   }
   return animation;
 }

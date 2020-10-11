@@ -1,4 +1,5 @@
 import getNiceColorPalette from '../nice-color-palettes.mjs';
+import writeTwo from './write-two.mjs';
 
 /**
  * Write requested number of "2" on canvas
@@ -6,7 +7,7 @@ import getNiceColorPalette from '../nice-color-palettes.mjs';
  * @param lines Number
  * @param context Object
  * @param spaces Object { x, y }
- * -> Array [{ dimensions, randomColor }]
+ * -> Array [[{ dimensions, randomColor, size }]]
  */
 export default function initializeTwos(
   columns,
@@ -16,29 +17,20 @@ export default function initializeTwos(
 ) {
   const palette = getNiceColorPalette();
   const twos = [];
-  context.font = '1em Arial';
-  for (let x = 0; x <= columns; x++) {
-    for (let y = 0; y <= lines; y++) {
-      const randomColor = Math.floor(Math.random() * palette.length);
-      const randomIndex = randomColor;
+  for (let y = 0; y <= lines; y++) {
+    const line = [];
+    for (let x = 0; x <= columns; x++) {
+      const randomColorIndex = Math.floor(Math.random() * palette.length);
+      const randomColor = palette[randomColorIndex];
       const dimensions = {
         x: x * xSpace,
         y: y * ySpace,
       };
-      writeTwo(dimensions, palette[randomIndex], context);
-      twos.push({ dimensions, randomColor });
+      const size = Math.random() * 2;
+      writeTwo(dimensions, randomColor, size, context);
+      line.push({ dimensions, randomColor, size });
     }
+    twos.push(line);
   }
   return twos;
-}
-
-/**
- * Write a "2" on specified coordonates
- * @param Object Dimensions { x, y }
- * @param color String
- * -> Void
- */
-function writeTwo({ x, y }, color, context) {
-  context.fillStyle = color;
-  context.fillText('2', x, y);
 }

@@ -4,5 +4,5 @@
  * -> Number
  */
 export default function defineHowManyColumns(height) {
-  return Math.floor(height / 10);
+  return Math.floor(height / 50);
 }
