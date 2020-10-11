@@ -5,9 +5,15 @@ import getNiceColorPalette from '../nice-color-palettes.mjs';
  * @param columns Number
  * @param lines Number
  * @param context Object
+ * @param spaces Object { x, y }
  * -> Array [{ dimensions, randomColor }]
  */
-export default function writeAndReturnTwos(columns, lines, context) {
+export default function initializeTwos(
+  columns,
+  lines,
+  context,
+  { x: xSpace, y: ySpace },
+) {
   const palette = getNiceColorPalette();
   const twos = [];
   context.font = '1em Arial';
@@ -16,8 +22,8 @@ export default function writeAndReturnTwos(columns, lines, context) {
       const randomColor = Math.floor(Math.random() * palette.length);
       const randomIndex = randomColor;
       const dimensions = {
-        x: x * 10,
-        y: y * 20,
+        x: x * xSpace,
+        y: y * ySpace,
       };
       writeTwo(dimensions, palette[randomIndex], context);
       twos.push({ dimensions, randomColor });

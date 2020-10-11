@@ -6,5 +6,6 @@
  * -> Void
  */
 export default function animateCanvas(twos, context, animation) {
-  console.log('animating...', animation);
+  let lastLineAnimated = 0;
+  const newTwos = animation.map(anim => {});
 }
