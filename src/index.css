@@ -12,6 +12,32 @@ code {
     monospace;
 }
 
+h1 {
+  color: #464343;
+  font-size: 2em;
+}
+
+h2 {
+  color: #736f6d;
+  font-size: 1.2em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+p,
+ul,
+li,
+span,
+button {
+  margin: 0;
+  padding: 0;
+}
+
 a {
   text-decoration: none;
   border-bottom: 2px solid transparent;
@@ -37,4 +63,28 @@ a:hover {
 .img-link img:hover {
   width: 60px;
   transform: rotate(-10deg);
+}
+
+/* ---- PRESETS ---- */
+.btn {
+  padding: 10px 20px;
+  margin: 30px auto;
+  border-radius: 30px;
+  border: none;
+  color: white;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+.btn-play {
+  background-color: #1cae1c;
+}
+
+.btn-play:hover {
+  background-color: #19c219;
 }
