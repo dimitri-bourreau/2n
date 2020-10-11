@@ -48,6 +48,10 @@ a:hover {
   border-bottom: 2px solid white;
 }
 
+p {
+  margin-bottom: 15px;
+}
+
 .img-link {
   border-bottom: none;
   padding: 0px;
