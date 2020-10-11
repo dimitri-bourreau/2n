@@ -50,7 +50,7 @@ const Rules: FunctionComponent<RouteComponentProps> = (): ReactElement => {
   return (
     <RulesWrapper>
       <RulesBuble>
-        <p>Le jeu est vraiment simple !</p>
+        <p>Ce jeu est vraiment simple !</p>
         <p>À chaque tour vous devez mémoriser le chiffre présenté.</p>
         <p>
           Quand on vous demande si le chiffre affiché est apparu il y a deux
