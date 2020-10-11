@@ -12,13 +12,13 @@ const RulesWrapper = style.div`
       margin: 0 0 0 45%;
     }
     @media all and (min-width: 768px) {
-      margin: 0 0 0 50%;
+      margin: 0 0 0 45%;
     }
     @media all and (min-width: 992px) {
-      margin: 0 0 0 50%;
+      margin: 0 0 0 45%;
     }
     @media all and (min-width: 1200px) {
-      margin: 0 0 0 60%;
+      margin: 0 0 0 50%;
     }
   }
 `;
