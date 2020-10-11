@@ -42,7 +42,7 @@ const RulesBuble = style.section`
     width: 30%;
   }
   @media all and (min-width: 1200px) {
-    width: 20%;
+    width: 26%;
   }
 `;
 
