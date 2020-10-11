@@ -13,27 +13,27 @@ interface IntroductionProps extends RouteComponentProps {
 const IntroductionWrapper = style.div`
   width: 100%;
   height: 95vh;
-  background: linear-gradient(270deg, #0eb288, #dba317, #d191df);
-  background-size: 600% 600%;
+  background: linear-gradient(221deg, #2b3ba7, #b38737, #3eaba5, #bc6f55);
+  background-size: 800% 800%;
 
   -webkit-animation: AnimationName 30s ease infinite;
   -moz-animation: AnimationName 30s ease infinite;
   animation: AnimationName 30s ease infinite;
 
   @-webkit-keyframes AnimationName {
-      0%{background-position:0% 87%}
-      50%{background-position:100% 14%}
-      100%{background-position:0% 87%}
+      0%{background-position:0% 88%}
+      50%{background-position:100% 13%}
+      100%{background-position:0% 88%}
   }
   @-moz-keyframes AnimationName {
-      0%{background-position:0% 87%}
-      50%{background-position:100% 14%}
-      100%{background-position:0% 87%}
+      0%{background-position:0% 88%}
+      50%{background-position:100% 13%}
+      100%{background-position:0% 88%}
   }
   @keyframes AnimationName {
-      0%{background-position:0% 87%}
-      50%{background-position:100% 14%}
-      100%{background-position:0% 87%}
+      0%{background-position:0% 88%}
+      50%{background-position:100% 13%}
+      100%{background-position:0% 88%}
   }
 `;
 
