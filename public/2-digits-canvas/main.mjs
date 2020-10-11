@@ -13,7 +13,7 @@ import fixDimensions from './fix-dimensions.mjs';
   const context = canvas.getContext('2d');
   const columns = defineHowManyColumns(width);
   const lines = defineHowManyLines(height);
-  const spaces = { x: 50, y: 80 };
+  const spaces = { x: 50, y: 60 };
   const linesOfTwos = initializeTwos(columns, lines, context, spaces);
   const animation = defineAnimation(lines);
 
