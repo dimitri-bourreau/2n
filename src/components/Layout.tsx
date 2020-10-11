@@ -2,6 +2,8 @@ import React, { FunctionComponent, ReactElement } from 'react';
 import style from 'styled-components';
 import { Router } from '@reach/router';
 import { useTranslation } from 'react-i18next';
+
+import Footer from './Footer';
 import Header from './Header';
 import Home from './Home';
 // import More from './More';
@@ -22,6 +24,7 @@ const Layout: FunctionComponent = (): ReactElement => {
           {/* <More path="more" /> */}
         </Router>
       </div>
+      <Footer />
     </LayoutWrapper>
   );
 };
