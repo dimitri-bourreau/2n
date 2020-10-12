@@ -3,16 +3,70 @@ import { RouteComponentProps } from '@reach/router';
 import style from 'styled-components';
 
 const RankingWrapper = style.section`
-  min-height: 80vh;
+  margin: 30px auto;
+  width: 80%;
   text-align: center;
+  min-height: 80vh;
   padding: 30px;
   box-sizing: border-box;
+
+  h1 {
+    margin-bottom: 50px;
+  }
+
+  table {
+    width: 80%;
+    margin: auto;
+  }
+
+  table th {
+    padding-bottom: 20px;
+  }
+
+  @media all and (min-width: 576px) {
+    width: 70%;
+  }
+  @media all and (min-width: 768px) {
+    width: 60%;
+  }
+  @media all and (min-width: 992px) {
+    width: 50%;
+  }
+  @media all and (min-width: 1200px) {
+    width: 30%;
+  }
 `;
 
 const Ranking: FunctionComponent<RouteComponentProps> = (): ReactElement => {
+  const ranking = [
+    { name: 'Xavier', score: 134 },
+    { name: 'Damien', score: 124 },
+    { name: 'Laura', score: 115 },
+    { name: 'Thomas', score: 113 },
+    { name: 'Dimitri', score: 98 },
+    { name: 'Marion', score: 93 },
+    { name: 'Anthony', score: 85 },
+    { name: 'Billie', score: 56 },
+    { name: 'Matt', score: 30 },
+    { name: 'Laurent', score: 1 },
+  ];
+
   return (
     <RankingWrapper>
-      <h1>Ranking En cours...</h1>
+      <h1 className="mt-5 mb-5 mx-auto text-center">Classement</h1>
+
+      <table>
+        <tr>
+          <th>Nom</th>
+          <th>Score</th>
+        </tr>
+        {ranking.map(rank => (
+          <tr key={`${rank.name}${rank.score}`}>
+            <td>{rank.name}</td>
+            <td>{rank.score}</td>
+          </tr>
+        ))}
+      </table>
     </RankingWrapper>
   );
 };
