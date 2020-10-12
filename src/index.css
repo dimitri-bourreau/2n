@@ -83,6 +83,7 @@ ul {
   font-size: 1.2em;
   cursor: pointer;
   transition: all 0.2s ease-in;
+  outline: none;
 }
 
 .btn:hover {
