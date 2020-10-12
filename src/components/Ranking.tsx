@@ -56,16 +56,20 @@ const Ranking: FunctionComponent<RouteComponentProps> = (): ReactElement => {
       <h1>Classement</h1>
 
       <table>
-        <tr>
-          <th>Nom</th>
-          <th>Score</th>
-        </tr>
-        {ranking.map(rank => (
-          <tr key={`${rank.name}${rank.score}`}>
-            <td>{rank.name}</td>
-            <td>{rank.score}</td>
+        <thead>
+          <tr>
+            <th>Nom</th>
+            <th>Score</th>
           </tr>
-        ))}
+        </thead>
+        <tbody>
+          {ranking.map(rank => (
+            <tr key={`${rank.name}${rank.score}`}>
+              <td>{rank.name}</td>
+              <td>{rank.score}</td>
+            </tr>
+          ))}
+        </tbody>
       </table>
     </RankingWrapper>
   );
