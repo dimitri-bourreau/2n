@@ -46,6 +46,10 @@ const IntroductionCard = style.section`
   padding: 20px;
   box-sizing: border-box;
 
+  h2 {
+    margin-top: 30px;
+  }
+
   @media all and (min-width: 576px) {
     width: 60%;
   }

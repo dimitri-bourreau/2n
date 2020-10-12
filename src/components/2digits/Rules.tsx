@@ -5,21 +5,6 @@ import { RouteComponentProps } from '@reach/router';
 
 const RulesWrapper = style.div`
   img {
-    margin: 0 0 0 40%;
-    display: block;
-
-    @media all and (min-width: 576px) {
-      margin: 0 0 0 45%;
-    }
-    @media all and (min-width: 768px) {
-      margin: 0 0 0 45%;
-    }
-    @media all and (min-width: 992px) {
-      margin: 0 0 0 45%;
-    }
-    @media all and (min-width: 1200px) {
-      margin: 0 0 0 50%;
-    }
   }
 `;
 
@@ -67,6 +52,27 @@ const RulesBuble = style.section`
   }
 `;
 
+const Kirk = style.div`
+  background-image: url('/img/kirk.jpg');
+    margin: 0 0 0 40%;
+    display: block;
+    width: 220px;
+    height: 200px;
+
+    @media all and (min-width: 576px) {
+      margin: 0 0 0 45%;
+    }
+    @media all and (min-width: 768px) {
+      margin: 0 0 0 45%;
+    }
+    @media all and (min-width: 992px) {
+      margin: 0 0 0 45%;
+    }
+    @media all and (min-width: 1200px) {
+      margin: 0 0 0 50%;
+    }
+`;
+
 const Rules: FunctionComponent<RouteComponentProps> = (): ReactElement => {
   return (
     <RulesWrapper>
@@ -78,7 +84,7 @@ const Rules: FunctionComponent<RouteComponentProps> = (): ReactElement => {
           tours, vous devez donner la bonne réponse !
         </p>
       </RulesBuble>
-      <img src="/img/kirk.jpg" alt="Captain Kirk" />
+      <Kirk />
     </RulesWrapper>
   );
 };
