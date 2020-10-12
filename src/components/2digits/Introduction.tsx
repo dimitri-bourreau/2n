@@ -73,7 +73,7 @@ const Introduction: FunctionComponent<RouteComponentProps> = (): ReactElement =>
           </span>
         </h2>
         <a href="/game">
-          <button className="btn btn-play" type="button">
+          <button className="btn btn-success" type="button">
             Jouer
           </button>
         </a>
