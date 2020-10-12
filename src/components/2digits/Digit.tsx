@@ -4,19 +4,38 @@ import style from 'styled-components';
 import { DigitProps } from '../../interfaces/game';
 import getNiceColorPalette from '../../nice-color-palettes';
 
+const colors = getNiceColorPalette();
+const randomNumber = Math.random();
 const BlockWidthPropagationOnRotate = style.div`
   display: block;
   box-size: border-box;
   width: 200px;
   margin: 150px auto;
 `;
+const animation = `
+  animation-duration: ${Math.floor(Math.random() * 7)}s;
+  animation-name: rotateitup;
+  animation-iteration-count: infinite;
+
+  @keyframes rotateitup {
+    from {
+      transform: rotate(${randomNumber}turn);
+    }
+
+    50% {
+      transform: rotate(${Math.random()}turn);
+    }
+
+    to {
+      transform: rotate(${randomNumber}turn);
+    }
+  }
+`;
 
 const Digit: FunctionComponent<DigitProps> = ({
   digit,
 }: DigitProps): ReactElement => {
-  const colors = getNiceColorPalette();
   const randomColor = colors[Math.floor(Math.random() * colors.length)];
-
   const DigitWrapper = style.div`
   display: flex;
   justify-content: center;
@@ -29,23 +48,7 @@ const Digit: FunctionComponent<DigitProps> = ({
   font-size: 8em;
   border-radius: ${Math.floor(Math.random() * 100)}px;
 
-  // animation-duration: ${Math.floor(Math.random() * 10)}s;
-  // animation-name: rotateitup;
-  // animation-iteration-count: infinite;
-
-  // @keyframes rotateitup {
-  //   from {
-  //     transform: rotate(0turn);
-  //   }
-
-  //   50% {
-  //     transform: rotate(${Math.random()}turn);
-  //   }
-
-  //   to {
-  //     transform: rotate(0turn);
-  //   }
-  // }
+  ${Math.random() > 0.5 ? animation : null}
 `;
 
   const DigitUnderliner = style.div`
