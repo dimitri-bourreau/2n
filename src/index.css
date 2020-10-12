@@ -90,10 +90,18 @@ ul {
   cursor: pointer;
 }
 
-.btn-play {
+.btn-success {
   background-color: #1cae1c;
 }
 
-.btn-play:hover {
+.btn-success:hover {
   background-color: #19c219;
+}
+
+.btn-danger {
+  background-color: #c51d1d;
+}
+
+.btn-danger:hover {
+  background-color: #e21f1f;
 }
