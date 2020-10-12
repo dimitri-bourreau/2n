@@ -5,8 +5,13 @@ import { useTranslation } from 'react-i18next';
 
 import Footer from './Footer';
 import Header from './Header';
+
+import Game from './Game';
 import Home from './Home';
-// import More from './More';
+import Login from './Login';
+import More from './More';
+import Ranking from './Ranking';
+import Settings from './Settings';
 
 const LayoutWrapper = style.div`
   // padding: 20px 5vw;
@@ -18,12 +23,14 @@ const Layout: FunctionComponent = (): ReactElement => {
   return (
     <LayoutWrapper>
       <Header />
-      <div id="router-wrapper" className="px-4">
-        <Router>
-          <Home path="/" />
-          {/* <More path="more" /> */}
-        </Router>
-      </div>
+      <Router>
+        <Home path="/" />
+        <Game path="/game" />
+        <Login path="/login" />
+        <More path="/more" />
+        <Ranking path="/ranking" />
+        <Settings path="/settings" />
+      </Router>
       <Footer />
     </LayoutWrapper>
   );

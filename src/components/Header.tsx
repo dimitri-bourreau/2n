@@ -1,7 +1,6 @@
 import React, { FunctionComponent, ReactElement } from 'react';
 import style from 'styled-components';
 // import { Trans } from 'react-i18next';
-// import LangDropDown from './LangDropDown';
 
 const HeaderWrapper = style.header`
   padding: 10px 5vw 20px 5vw;
@@ -109,10 +108,10 @@ const Header: FunctionComponent<HeaderProps> = ({
             <a href="/">Accueil</a>
           </ListElt>
           <ListElt>
-            <a href="/classements">Classements</a>
+            <a href="/ranking">Classements</a>
           </ListElt>
           <ListElt>
-            <a href="/apropos">À propos</a>
+            <a href="/more">À propos</a>
           </ListElt>
           <ListElt>
             <a href="/settings">Paramètres</a>
