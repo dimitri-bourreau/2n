@@ -25,7 +25,7 @@ const RulesWrapper = style.div`
 
 const RulesBuble = style.section`
   clip-path: polygon(0% 0%, 100% 0%, 100% 88%, 75% 88%, 75% 100%, 50% 88%, 0 88%);
-  background-color: purple;
+  background-color: #920292;
   margin: 50px auto;
   width: 70%;
   color: white;
