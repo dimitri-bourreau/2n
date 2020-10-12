@@ -26,11 +26,32 @@ const RulesWrapper = style.div`
 const RulesBuble = style.section`
   clip-path: polygon(0% 0%, 100% 0%, 100% 88%, 75% 88%, 75% 100%, 50% 88%, 0 88%);
   background-color: purple;
-  margin: 50px auto 0 auto;
+  margin: 50px auto;
   width: 70%;
   color: white;
   padding: 30px 30px 50px 30px;
   box-sizing: border-box;
+
+  animation-duration: 3s;
+  animation-name: fly;
+  animation-iteration-count: infinite;
+
+  @keyframes fly {
+    from {
+      margin-top: 45px;
+      margin-bottom: 5px;
+    }
+
+    50% {
+      margin-top: 50px;
+      margin-bottom: 0;
+    }
+
+    to {
+      margin-top: 45px;
+      margin-bottom: 5px;
+    }
+  }
 
   @media all and (min-width: 576px) {
     width: 50%;
