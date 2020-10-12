@@ -56,7 +56,11 @@ const Footer: FunctionComponent = (): ReactElement => {
         <span>
           J&apos;ai réalisé ce petit site pour m&apos;amuser et montrer mes
           compétences : je suis un développeur disponible sur Bordeaux et Paris,
-          voici mon <a href="/">LinkedIn</a> !
+          voici mon{' '}
+          <a href="https://www.linkedin.com/in/dimitri-bourreau-94a4b3151/">
+            LinkedIn
+          </a>{' '}
+          !
         </span>
       </p>
       <ul>
