@@ -2,19 +2,19 @@ import React, { FunctionComponent, ReactElement } from 'react';
 import { RouteComponentProps } from '@reach/router';
 import style from 'styled-components';
 
-const RankingWrapper = style.section`
+const LegalWrapper = style.section`
   min-height: 80vh;
   text-align: center;
   padding: 30px;
   box-sizing: border-box;
 `;
 
-const Ranking: FunctionComponent<RouteComponentProps> = (): ReactElement => {
+const Legal: FunctionComponent<RouteComponentProps> = (): ReactElement => {
   return (
-    <RankingWrapper>
-      <h1>Ranking En cours...</h1>
-    </RankingWrapper>
+    <LegalWrapper>
+      <h1>Legal En cours...</h1>
+    </LegalWrapper>
   );
 };
 
-export default Ranking;
+export default Legal;

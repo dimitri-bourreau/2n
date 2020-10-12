@@ -1,43 +1,36 @@
 import React, { FunctionComponent, ReactElement } from 'react';
 import { RouteComponentProps } from '@reach/router';
-import { Trans } from 'react-i18next';
+import style from 'styled-components';
+
+const MoreWrapper = style.section`
+  margin: 30px auto;
+  text-align: center;
+`;
 
 const More: FunctionComponent<RouteComponentProps> = (): ReactElement => {
   return (
-    <div id="more">
-      <h1 className="mt-5 mb-5 mx-auto text-center">
-        <Trans i18nKey="more.title">More</Trans>
-      </h1>
+    <MoreWrapper>
+      <h1 className="mt-5 mb-5 mx-auto text-center">À propos</h1>
 
       <p>
-        <Trans i18nKey="more.p.1">
-          This project is inspired by the psychotechnical tests to be performed
-          to become a pilot at Air France.
-        </Trans>
+        This project is inspired by the psychotechnical tests to be performed to
+        become a pilot at Air France.
       </p>
 
       <p>
-        <Trans i18nKey="more.p.2">
-          The fabulous site <a href="https://pilotest.com">Pilotest</a> has
-          developed excellent tests of this nature, must see!
-        </Trans>
+        The fabulous site <a href="https://pilotest.com">Pilotest</a> has
+        developed excellent tests of this nature, must see!
       </p>
 
       <p>
-        <Trans i18nKey="more.p.3">
-          This game uses these technologies: React.js, TypeScript, Reach Router,
-          Shards React, react-i18next.
-        </Trans>
+        This game uses these technologies: React.js, TypeScript, Reach Router,
+        Shards React, react-i18next.
       </p>
 
       <a href="https://github.com/tobudim/2n">
-        <div className="mx-auto">
-          <Trans i18nKey="more.sourceCode">
-            Source code available on GitHub
-          </Trans>
-        </div>
+        <button type="button">Source code available on GitHub</button>
       </a>
-    </div>
+    </MoreWrapper>
   );
 };
 
