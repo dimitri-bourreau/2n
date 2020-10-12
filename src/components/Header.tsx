@@ -15,21 +15,21 @@ const HeaderWrapper = style.header`
     -moz-animation: AnimationName 46s ease infinite;
     animation: AnimationName 46s ease infinite;
 
-@-webkit-keyframes AnimationName {
-    0%{background-position:0% 10%}
-    50%{background-position:100% 91%}
-    100%{background-position:0% 10%}
-}
-@-moz-keyframes AnimationName {
-    0%{background-position:0% 10%}
-    50%{background-position:100% 91%}
-    100%{background-position:0% 10%}
-}
-@keyframes AnimationName {
-    0%{background-position:0% 10%}
-    50%{background-position:100% 91%}
-    100%{background-position:0% 10%}
-}
+  @-webkit-keyframes AnimationName {
+      0%{background-position:0% 10%}
+      50%{background-position:100% 91%}
+      100%{background-position:0% 10%}
+  }
+  @-moz-keyframes AnimationName {
+      0%{background-position:0% 10%}
+      50%{background-position:100% 91%}
+      100%{background-position:0% 10%}
+  }
+  @keyframes AnimationName {
+      0%{background-position:0% 10%}
+      50%{background-position:100% 91%}
+      100%{background-position:0% 10%}
+  }
 
   @media all and (min-width: 768px) {
     flex-direction: row;
@@ -78,7 +78,7 @@ const List = style.ul`
 `;
 
 const ListElt = style.li`
-  margin-bottom: 4px;
+  margin-bottom: 10px;
   a {
     color: white;
     text-transform: uppercase;
