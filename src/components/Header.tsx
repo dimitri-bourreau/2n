@@ -114,7 +114,10 @@ const Header: FunctionComponent<HeaderProps> = ({
             <a href="/more">À propos</a>
           </ListElt>
           <ListElt>
-            <a href="/settings">Paramètres</a>
+            <a href="/settings">
+              Paramètres <span role="img" aria-label="settings-and-language" />
+              🌐
+            </a>
           </ListElt>
           <ListElt>
             <a href={userIsConnected ? '/me' : '/login'}>Mon compte</a>
