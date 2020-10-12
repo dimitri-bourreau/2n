@@ -13,9 +13,9 @@ const IntroductionWrapper = style.div`
   background-size: 800% 800%;
   position: relative;
 
-  -webkit-animation: AnimationName 30s ease infinite;
-  -moz-animation: AnimationName 30s ease infinite;
-  animation: AnimationName 30s ease infinite;
+  -webkit-animation: AnimationName 15s ease infinite;
+  -moz-animation: AnimationName 15s ease infinite;
+  animation: AnimationName 15s ease infinite;
 
   @-webkit-keyframes AnimationName {
       0%{background-position:0% 88%}
