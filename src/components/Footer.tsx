@@ -8,7 +8,8 @@ const FooterWrapper = style.footer`
   padding: 30px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
+  text-align: center;
 
   p {
     font-size: 0.8em;
@@ -33,7 +34,7 @@ const FooterWrapper = style.footer`
   @media all and (min-width: 768px) {
     flex-direction: row;
     p, ul {
-      width: 30%;
+      width: 45%;
     }
   }
 `;
@@ -41,16 +42,6 @@ const FooterWrapper = style.footer`
 const Footer: FunctionComponent = (): ReactElement => {
   return (
     <FooterWrapper>
-      <p>
-        Concernant la gestion des cookies :{' '}
-        <span>
-          sur ce site vous pouvez créer un compte et vous connecter. Tant que
-          vous ne vous connectez pas, aucun cookie n&apos;est déposé sur votre
-          navigateur internet. Si je dépose un cookie sur votre machine, vous
-          serez prévenu, vous aurez le choix, et tout sera facilement visible et
-          compréhensible... bref, ce qui est censé être normal !
-        </span>
-      </p>
       <p>
         Mais pourquoi ce site ?{' '}
         <span>
