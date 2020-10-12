@@ -12,17 +12,18 @@ const GameWrapper = style.section`
   p {
     font-size: 1.3em;
   }
-
-  button {
-    background-color: #1dad1c;
-  }
-  button:hover {
-    background-color: #19c219;
-  }
 `;
 
 const Score = style.section`
   font-size: 1em;
+`;
+
+const Answers = style.div`
+  width: 150px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: auto;
 `;
 
 const GameDisplay: FunctionComponent<GameDisplayProps> = ({
@@ -47,7 +48,11 @@ const GameDisplay: FunctionComponent<GameDisplayProps> = ({
               🧐
             </span>
           </p>
-          <button type="button" className="btn" onClick={() => newTurn()}>
+          <button
+            type="button"
+            className="btn btn-success"
+            onClick={() => newTurn()}
+          >
             Next{' '}
             <span role="img" aria-label="fist">
               🤜
@@ -56,16 +61,28 @@ const GameDisplay: FunctionComponent<GameDisplayProps> = ({
         </>
       ) : (
         <>
-          <div className="text-center mt-4">
-            <p className="mb-0">
-              What this digit displayed two turns ago?{' '}
-              <span role="img" aria-label="think">
-                🤔
-              </span>
-            </p>
-          </div>
-          <div className="mr-1">Yes</div>
-          <div className="ml-1">No</div>
+          <p>
+            What this digit displayed two turns ago?{' '}
+            <span role="img" aria-label="think">
+              🤔
+            </span>
+          </p>
+          <Answers>
+            <button
+              type="button"
+              className="btn btn-success"
+              onClick={() => checkAnswer(true)}
+            >
+              Yes
+            </button>
+            <button
+              type="button"
+              className="btn btn-danger"
+              onClick={() => checkAnswer(false)}
+            >
+              No
+            </button>
+          </Answers>
         </>
       )}
 
