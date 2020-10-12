@@ -1,7 +1,7 @@
-import React, { ReactElement } from 'react';
+import React, { FunctionComponent, ReactElement } from 'react';
 import { RouteComponentProps } from '@reach/router';
 
-const Login: RouteComponentProps = (): ReactElement => {
+const Login: FunctionComponent<RouteComponentProps> = (): ReactElement => {
   return (
     <>
       <h1>Login En cours...</h1>
