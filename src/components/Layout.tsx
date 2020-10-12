@@ -14,7 +14,6 @@ import Ranking from './Ranking';
 import Settings from './Settings';
 
 const LayoutWrapper = style.div`
-  // padding: 20px 5vw;
   min-height: 100vh;
 `;
 
