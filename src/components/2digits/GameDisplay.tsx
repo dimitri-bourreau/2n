@@ -8,6 +8,21 @@ import Digit from './Digit';
 const GameWrapper = style.section`
   text-align: center;
   margin: 50px auto;
+
+  p {
+    font-size: 1.3em;
+  }
+
+  button {
+    background-color: #1dad1c;
+  }
+  button:hover {
+    background-color: #19c219;
+  }
+`;
+
+const Score = style.section`
+  font-size: 1em;
 `;
 
 const GameDisplay: FunctionComponent<GameDisplayProps> = ({
@@ -26,20 +41,18 @@ const GameDisplay: FunctionComponent<GameDisplayProps> = ({
 
       {allDigits.length <= 1 ? (
         <>
-          <div className="text-center mt-4">
-            <p className="mb-0">
-              Remember this digit!{' '}
-              <span role="img" aria-label="think">
-                🧐
-              </span>
-            </p>
-          </div>
-          <div>
+          <p>
+            Remember this digit!{' '}
+            <span role="img" aria-label="think">
+              🧐
+            </span>
+          </p>
+          <button type="button" className="btn" onClick={() => newTurn()}>
             Next{' '}
             <span role="img" aria-label="fist">
               🤜
             </span>
-          </div>
+          </button>
         </>
       ) : (
         <>
@@ -56,9 +69,9 @@ const GameDisplay: FunctionComponent<GameDisplayProps> = ({
         </>
       )}
 
-      <p className="mb-0 mt-3">
+      <Score>
         Turn {allDigits.length} - Score {score}
-      </p>
+      </Score>
     </GameWrapper>
   );
 };
