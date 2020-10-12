@@ -1,12 +1,10 @@
 import React, { ReactElement, FunctionComponent } from 'react';
 import { RouteComponentProps } from '@reach/router';
 
+import GameLogic from './2digits/GameLogic';
+
 const Game: FunctionComponent<RouteComponentProps> = (): ReactElement => {
-  return (
-    <>
-      <h1>Game En cours...</h1>
-    </>
-  );
+  return <GameLogic />;
 };
 
 export default Game;

@@ -1,10 +1,14 @@
 import React, { FunctionComponent, ReactElement } from 'react';
-import { Trans } from 'react-i18next';
+import style from 'styled-components';
 
 import { GameDisplayProps } from '../../interfaces/game';
 import GameOver from './GameOver';
-
 import Digit from './Digit';
+
+const GameWrapper = style.section`
+  text-align: center;
+  margin: 50px auto;
+`;
 
 const GameDisplay: FunctionComponent<GameDisplayProps> = ({
   allDigits,
@@ -17,23 +21,21 @@ const GameDisplay: FunctionComponent<GameDisplayProps> = ({
   if (gameOver) return <GameOver score={score} />;
 
   return (
-    <div id="game" className="text-center pt-2">
+    <GameWrapper>
       <Digit digit={digit} />
 
       {allDigits.length <= 1 ? (
         <>
           <div className="text-center mt-4">
             <p className="mb-0">
-              <Trans i18nKey="gameDisplay.intro.remember">
-                Remember this digit!
-              </Trans>{' '}
+              Remember this digit!{' '}
               <span role="img" aria-label="think">
                 🧐
               </span>
             </p>
           </div>
           <div>
-            <Trans i18nKey="gameDisplay.intro.next">Next</Trans>{' '}
+            Next{' '}
             <span role="img" aria-label="fist">
               🤜
             </span>
@@ -43,28 +45,21 @@ const GameDisplay: FunctionComponent<GameDisplayProps> = ({
         <>
           <div className="text-center mt-4">
             <p className="mb-0">
-              <Trans i18nKey="gameDisplay.inGame.question">
-                What this digit displayed two turns ago?
-              </Trans>{' '}
+              What this digit displayed two turns ago?{' '}
               <span role="img" aria-label="think">
                 🤔
               </span>
             </p>
           </div>
-          <div className="mr-1">
-            <Trans i18nKey="gameDisplay.inGame.yes">Yes</Trans>
-          </div>
-          <div className="ml-1">
-            <Trans i18nKey="gameDisplay.inGame.no">No</Trans>
-          </div>
+          <div className="mr-1">Yes</div>
+          <div className="ml-1">No</div>
         </>
       )}
 
       <p className="mb-0 mt-3">
-        <Trans i18nKey="gameDisplay.inGame.turn">Turn</Trans> {allDigits.length}{' '}
-        - <Trans i18nKey="gameDisplay.inGame.score">Score</Trans> {score}
+        Turn {allDigits.length} - Score {score}
       </p>
-    </div>
+    </GameWrapper>
   );
 };
 
