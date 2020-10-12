@@ -53,7 +53,7 @@ const Ranking: FunctionComponent<RouteComponentProps> = (): ReactElement => {
 
   return (
     <RankingWrapper>
-      <h1 className="mt-5 mb-5 mx-auto text-center">Classement</h1>
+      <h1>Classement</h1>
 
       <table>
         <tr>

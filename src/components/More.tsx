@@ -49,7 +49,7 @@ const MoreWrapper = style.section`
 const More: FunctionComponent<RouteComponentProps> = (): ReactElement => {
   return (
     <MoreWrapper>
-      <h1 className="mt-5 mb-5 mx-auto text-center">À propos</h1>
+      <h1>À propos</h1>
 
       <p>
         This project is inspired by the psychotechnical tests to be performed to
