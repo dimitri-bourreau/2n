@@ -21,6 +21,13 @@ const FooterWrapper = style.footer`
   a {
     color: white;
     text-decoration: underline;
+    border: none;
+    transition: font-weight 0s ease-in;
+  }
+
+  a:hover {
+    border: none;
+    font-weight: 600;
   }
 
   @media all and (min-width: 768px) {
