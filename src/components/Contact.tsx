@@ -44,6 +44,7 @@ const ContactWrapper = style.section`
 
 const ContactForm = style.form`
   width: 100%;
+  margin: auto;
 
   label, label input, label textarea {
     display: block;
@@ -56,6 +57,7 @@ const ContactForm = style.form`
 
   label input {
     padding: 10px 20px;
+    width: 80%;
   }
 
   label textarea {
