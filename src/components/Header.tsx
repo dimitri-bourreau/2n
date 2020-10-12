@@ -108,7 +108,7 @@ const Header: FunctionComponent<HeaderProps> = ({
             <a href="/">Accueil</a>
           </ListElt>
           <ListElt>
-            <a href="/ranking">Classements</a>
+            <a href="/ranking">Classement</a>
           </ListElt>
           <ListElt>
             <a href="/more">À propos</a>
