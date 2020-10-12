@@ -26,7 +26,7 @@ const FooterWrapper = style.footer`
   @media all and (min-width: 768px) {
     flex-direction: row;
     p, ul {
-      width: 20%;
+      width: 30%;
     }
   }
 `;
@@ -34,19 +34,6 @@ const FooterWrapper = style.footer`
 const Footer: FunctionComponent = (): ReactElement => {
   return (
     <FooterWrapper>
-      <p>
-        Zone du site sans intérêt{' '}
-        <span>
-          mais somme toute un peu réglementaire voir nécessaire, bien qu&apos;à
-          faire peu d&apos;engouement s&apos;affaire. On appelle cet endroit un{' '}
-          <i>footer</i>, ce coin grouille d&apos;informations si désuettes que
-          leur sort les condamne tout en bas du site. Toute cette histoire me
-          rend triste. Et finalement, tout bien réfléchi, ces informations ne
-          sont pas si futiles. Elles ne feraient pas la une du journal
-          quotidien, je ne peux pas nier, mais jugez par vous-même, et peut-être
-          découvrirez-vous une nouvelle passion !
-        </span>
-      </p>
       <p>
         Concernant la gestion des cookies :{' '}
         <span>
@@ -67,7 +54,10 @@ const Footer: FunctionComponent = (): ReactElement => {
       </p>
       <ul>
         <li>
-          <a href="/">Mentions légales</a>
+          <a href="/legal">Mentions légales</a>
+        </li>
+        <li>
+          <a href="/contact">Contact</a>
         </li>
       </ul>
     </FooterWrapper>
