@@ -1,6 +1,7 @@
 import React, { FunctionComponent, ReactElement } from 'react';
 import { RouteComponentProps } from '@reach/router';
 import style from 'styled-components';
+import { Trans } from 'react-i18next';
 
 const RankingWrapper = style.section`
   margin: 30px auto;
@@ -53,13 +54,19 @@ const Ranking: FunctionComponent<RouteComponentProps> = (): ReactElement => {
 
   return (
     <RankingWrapper>
-      <h1>Classement</h1>
+      <h1>
+        <Trans i18nKey="Ranking.ranking">Ranking</Trans>
+      </h1>
 
       <table>
         <thead>
           <tr>
-            <th>Nom</th>
-            <th>Score</th>
+            <th>
+              <Trans i18nKey="Ranking.name">Name</Trans>
+            </th>
+            <th>
+              <Trans i18nKey="Ranking.score">Score</Trans>
+            </th>
           </tr>
         </thead>
         <tbody>

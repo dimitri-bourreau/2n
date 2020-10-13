@@ -1,6 +1,7 @@
 import React, { FunctionComponent, ReactElement } from 'react';
 import { RouteComponentProps } from '@reach/router';
 import style from 'styled-components';
+import { Trans } from 'react-i18next';
 
 const SettingsWrapper = style.section`
   margin: 30px auto;
@@ -45,18 +46,16 @@ const SettingsWrapper = style.section`
 const Settings: FunctionComponent<RouteComponentProps> = (): ReactElement => {
   return (
     <SettingsWrapper>
-      <h1>Paramètres</h1>
+      <h1>
+        <Trans i18nKey="Settings.settings">Paramètres</Trans>
+      </h1>
 
       <p>
-        Bientôt : vous pourrez modifier le thème, changer de langue, administrer
-        les cookies installés sur votre machine.
+        <Trans i18nKey="Settings.soon">
+          Bientôt : vous pourrez modifier le thème, changer de langue,
+          administrer les cookies installés sur votre machine.
+        </Trans>
       </p>
-
-      <h2>Cookies que j&apos;ai installé sur votre machine :</h2>
-
-      <ul>
-        <li>Aucun</li>
-      </ul>
     </SettingsWrapper>
   );
 };

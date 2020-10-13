@@ -1,6 +1,7 @@
 import React, { FunctionComponent, ReactElement } from 'react';
 import { RouteComponentProps } from '@reach/router';
 import style from 'styled-components';
+import { Trans } from 'react-i18next';
 
 const MoreWrapper = style.section`
   margin: 30px auto;
@@ -49,19 +50,30 @@ const MoreWrapper = style.section`
 const More: FunctionComponent<RouteComponentProps> = (): ReactElement => {
   return (
     <MoreWrapper>
-      <h1>À propos</h1>
+      <h1>
+        <Trans i18nKey="More.more">À propos</Trans>
+      </h1>
 
       <p>
-        This project is inspired by the psychotechnical tests to be performed to
-        become a pilot at Air France.
+        <Trans i18nKey="More.airFrance">
+          This project is inspired by the psychotechnical tests to be performed
+          to become a pilot at Air France.
+        </Trans>
       </p>
 
       <p>
-        The fabulous site <a href="https://pilotest.com">Pilotest</a> has
-        developed excellent tests of this nature, must see!
+        <Trans i18nKey="More.aboutPilotest">The fabulous site</Trans>{' '}
+        <a href="https://pilotest.com">Pilotest</a>{' '}
+        <Trans i18nKey="More.excellentPilotest">
+          has developed excellent tests of this nature, must see!
+        </Trans>
       </p>
 
-      <p>This game uses these technologies:</p>
+      <p>
+        <Trans i18nKey="More.technologies">
+          This game uses these technologies:
+        </Trans>
+      </p>
 
       <ul>
         <li>React.js</li>
@@ -75,7 +87,7 @@ const More: FunctionComponent<RouteComponentProps> = (): ReactElement => {
 
       <a href="https://github.com/tobudim/2n">
         <button type="button" className="btn">
-          Source code available on GitHub
+          <Trans i18nKey="More.code">Source code available on GitHub</Trans>
         </button>
       </a>
     </MoreWrapper>

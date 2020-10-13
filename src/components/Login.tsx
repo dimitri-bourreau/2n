@@ -1,6 +1,7 @@
 import React, { FunctionComponent, ReactElement } from 'react';
 import { RouteComponentProps } from '@reach/router';
 import style from 'styled-components';
+import { Trans } from 'react-i18next';
 
 const LoginWrapper = style.section`
   margin: 30px auto;
@@ -77,24 +78,28 @@ const Details = style.div`
 const Login: FunctionComponent<RouteComponentProps> = (): ReactElement => {
   return (
     <LoginWrapper>
-      <h1>Se connecter</h1>
+      <h1>
+        <Trans i18nKey="Login.login">Se connecter</Trans>
+      </h1>
 
       <Logger>
         <label htmlFor="email">
-          Email
+          <Trans i18nKey="Login.email">Email</Trans>
           <input id="email" type="email" />
         </label>
         <label htmlFor="password">
-          Mot de passe
+          <Trans i18nKey="Login.password">Mot de passe</Trans>
           <input id="password" type="password" />
         </label>
         <button type="button" className="btn">
-          Se connecter
+          <Trans i18nKey="Login.loginButton">Se connecter</Trans>
         </button>
       </Logger>
 
       <Details>
-        <p>Mot de passe oublié ?</p>
+        <p>
+          <Trans i18nKey="Login.forgotPass">Mot de passe oublié ?</Trans>
+        </p>
       </Details>
     </LoginWrapper>
   );

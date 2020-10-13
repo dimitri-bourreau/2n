@@ -39,5 +39,70 @@
     "more": "À propos",
     "settings": "Paramètres",
     "me": "Mon compte"
+  },
+  "Legal": {
+    "legal": "Mentions légales",
+    "hosting": "Hébergement",
+    "vps": "VPS loué chez OVH.",
+    "ovhDetails": {
+      "1": "SAS au capital de 10 069 020 €",
+      "2": "RCS Lille Métropole 424 761 419 00045",
+      "3": "Code APE 2620Z",
+      "4": "N° TVA : FR 22 424 761 419",
+      "5": "Siège social : 2 rue Kellermann - 59100 Roubaix - France"
+    },
+    "contactOvh": "Contacter OVH",
+    "source": "Code source",
+    "seeSource": "Voir le code source de ce site sur GitHub",
+    "cookies": "Cookies",
+    "seeCookies": "Vous pouvez voir les cookies stockés sur votre machine pour ce site depuis",
+    "fromSettings": "les paramètres",
+    "allCookies": "Les cookies qui, après votre consentement, peuvent être déposés sur votre navigateur Internet sont ceux-ci :",
+    "cookiesList": {
+      "theme": "theme : Gestion du thème global du site.",
+      "session": "session : Si vous vous connectez, cela permet au site de vous renconnaître au gré de votre navigation."
+    },
+    "privacy": "Utilisation des données personnelles",
+    "privacyContact": " Avant toute chose : pour ce sujet vous pouvez me contacter",
+    "privacyContactHere": "ici",
+    "whenCreatingAccount": "Lorsque vous créez un compte, je vous demande deux données personnelles :",
+    "privacyList": {
+      "email": "Votre adresse email",
+      "pass": "Votre mot de passe"
+    },
+    "emailToFirebase": "L'adresse email est alors enregistrée et conservée par Google au sein de son service Firebase.",
+    "passHash": "Le mot de passe ne quitte pas votre machine. Je confie aux serveurs de Google, au sein de son service Firebase, un hash de votre mot de passe : ce hash est une sorte de clé qui permet plus tard de vérifier votre mot de passe, mais il ne permet pas de le deviner.",
+    "update": "Vous pouvez modifier votre mot de passe, votre email, et supprimer votre compte depuis",
+    "accountPage": "Mon compte",
+    "askYourData": "Vous pouvez me demander les données vous concernant en ma possession depuis",
+    "askDataPage": "cette page",
+    "deleteAccount": "En supprimant votre compte, je supprime toutes les données vous concernant sur les serveurs de Google : adresse email, hash du mot de passe, scores.",
+    "firebasePrivacy": "Confidentialité et sécurité dans Firebase",
+    "complain": "Vous pouvez réaliser une réclamation depuis",
+    "cnil": "le site de la CNIL"
+  },
+  "Login": {
+    "login": "Se connecter",
+    "email": "Email",
+    "password": "Mot de passe",
+    "loginButton": "Se connecter",
+    "forgotPass": "Mot de passe oublié ?"
+  },
+  "More": {
+    "more": "À propos",
+    "airFrance": "Ce jeu est inspiré d'un test psychotechnique à réaliser pour devenir pilote pour Air France.",
+    "aboutPilotest": "L'excellent site",
+    "excellentPilotest": "a réalisé de merveilleux tests de cette nature, à voir !",
+    "technologies": "Ce jeu utilise ces technologies :",
+    "code": "Code source disponible sur GitHub"
+  },
+  "Ranking": {
+    "ranking": "Classement",
+    "name": "Nom",
+    "score": "Score"
+  },
+  "Settings": {
+    "settings": "Paramètres",
+    "soon": "Bientôt : vous pourrez ici modifier le thème du site ou administrer les cookies installés sur votre machine."
   }
 }

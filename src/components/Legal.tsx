@@ -175,23 +175,23 @@ const Legal: FunctionComponent<RouteComponentProps> = (): ReactElement => {
 
       <DetailsBlock>
         <h2>
-          <Trans i18nKey="Legal.home">
+          <Trans i18nKey="Legal.privacy">
             Utilisation des données personnelles
           </Trans>
         </h2>
 
         <p>
-          <Trans i18nKey="Legal.home">
+          <Trans i18nKey="Legal.privacyContact">
             Avant toute chose : pour ce sujet vous pouvez me contacter
           </Trans>{' '}
           <a href="/contact">
-            <Trans i18nKey="Legal.home">ici</Trans>
+            <Trans i18nKey="Legal.privacyContactHere">ici</Trans>
           </a>
           .
         </p>
 
         <p>
-          <Trans i18nKey="Legal.home">
+          <Trans i18nKey="Legal.whenCreatingAccount">
             Lorsque vous créez un compte, je vous demande deux données
             personnelles :
           </Trans>
@@ -199,22 +199,22 @@ const Legal: FunctionComponent<RouteComponentProps> = (): ReactElement => {
 
         <ul>
           <li>
-            <Trans i18nKey="Legal.home">Votre adresse email</Trans>
+            <Trans i18nKey="Legal.privacyList.email">Votre adresse email</Trans>
           </li>
           <li>
-            <Trans i18nKey="Legal.home">Un mot de passe</Trans>
+            <Trans i18nKey="Legal.privacyList.pass">Votre mot de passe</Trans>
           </li>
         </ul>
 
         <p>
-          <Trans i18nKey="Legal.home">
+          <Trans i18nKey="Legal.emailToFirebase">
             L&apos;adresse email est alors enregistrée et conservée par Google
             au sein de son service Firebase.
           </Trans>
         </p>
 
         <p>
-          <Trans i18nKey="Legal.home">
+          <Trans i18nKey="Legal.passHash">
             Le mot de passe ne quitte pas votre machine. Je confie aux serveurs
             de Google, au sein de son service Firebase, un <i>hash</i> de votre
             mot de passe : ce hash est une sorte de clé qui permet plus tard de
@@ -223,38 +223,46 @@ const Legal: FunctionComponent<RouteComponentProps> = (): ReactElement => {
         </p>
 
         <p>
-          <Trans i18nKey="Legal.home">
+          <Trans i18nKey="Legal.update">
             Vous pouvez modifier votre mot de passe, votre email, et supprimer
-            votre compte depuis <a href="/me">Mon compte</a>. Vous pouvez me
-            demander les données vous concernant en ma possession depuis
+            votre compte depuis
+          </Trans>{' '}
+          <a href="/me">
+            <Trans i18nKey="Legal.accountPage">Mon compte</Trans>
+          </a>
+          .{' '}
+          <Trans i18nKey="Legal.askYourData">
+            Vous pouvez me demander les données vous concernant en ma possession
+            depuis
           </Trans>{' '}
           <a href="/contact">
-            <Trans i18nKey="Legal.home">cette page</Trans>
+            <Trans i18nKey="Legal.askDataPage">cette page</Trans>
           </a>
           .
         </p>
 
         <p>
-          <Trans i18nKey="Legal.home">
+          <Trans i18nKey="Legal.deleteAccount">
             En supprimant votre compte, je supprime toutes les données vous
-            concernant sur les serveurs de Google.
+            concernant sur les serveurs de Google : adresse email, hash du mot
+            de passe, scores.
           </Trans>
         </p>
 
         <p>
           <a href="https://firebase.google.com/support/privacy/">
-            <Trans i18nKey="Legal.home">
+            <Trans i18nKey="Legal.firebasePrivacy">
               Confidentialité et sécurité dans Firebase
             </Trans>
           </a>
         </p>
 
         <p>
-          <Trans i18nKey="Legal.home">
+          <Trans i18nKey="Legal.complain">
             Vous pouvez réaliser une réclamation depuis
           </Trans>{' '}
           <a href="https://www.cnil.fr/">
-            <Trans i18nKey="Legal.home">le site de la CNIL</Trans>
+            <Trans i18nKey="Legal.cnil">le site de la CNIL</Trans>
           </a>
           .
         </p>

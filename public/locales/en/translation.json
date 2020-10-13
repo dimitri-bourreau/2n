@@ -61,6 +61,48 @@
     "cookiesList": {
       "theme": "theme: website style theme details if modified.",
       "session": "session: if you logged in, the website can then remember it."
-    }
+    },
+    "privacy": "Privacy",
+    "privacyContact": "You can contact me",
+    "privacyContactHere": "here",
+    "whenCreatingAccount": "When you create an account, I ask several private data:",
+    "privacyList": {
+      "email": "Your email adress",
+      "pass": "Your password"
+    },
+    "emailToFirebase": "Your email adress is stored inside Google's databases via its service Firebase.",
+    "passHash": "Your password does not leave your machine. I send Google's databases only a hash of your password. A hash is some sort of a key that allows to confirm your password without being able to guess it.",
+    "update": "You can update your password and your email, or delete your account from the",
+    "accountPage": "this page",
+    "askYourData": "You can ask all the data I have about you from",
+    "askDataPage": "this page",
+    "deleteAccount": "By deleting your account, I erase all data about you on Google's servers: Email, password's hash, scores.",
+    "firebasePrivacy": "Firebase's privacy",
+    "complain": "You can complain from",
+    "cnil": "the CNIL website"
+  },
+  "Login": {
+    "login": "Log in",
+    "email": "Email",
+    "password": "Password",
+    "loginButton": "Log in",
+    "forgotPass": "Forgot your password?"
+  },
+  "More": {
+    "more": "More",
+    "airFrance": "This project is inspired by the psychotechnical tests to be performed to become a pilot at Air France.",
+    "aboutPilotest": "The fabulous site",
+    "excellentPilotest": "has developed excellent tests of this nature, must see!",
+    "technologies": "This game uses these technologies:",
+    "code": "Source code available on GitHub"
+  },
+  "Ranking": {
+    "ranking": "Ranking",
+    "name": "Name",
+    "score": "Score"
+  },
+  "Settings": {
+    "settings": "Settings",
+    "soon": "Soon: you will be able to select a styling theme for this website and administrate the cookies installed on your machine."
   }
 }
