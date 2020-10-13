@@ -10,7 +10,7 @@ const BlockWidthPropagationOnRotate = style.div`
   display: block;
   box-size: border-box;
   width: 200px;
-  margin: 150px auto;
+  margin: 13vh auto;
 `;
 const animation = `
   animation-duration: ${Math.floor(Math.random() * 7)}s;
