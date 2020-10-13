@@ -11,6 +11,10 @@ const IntroductionWrapper = style.div`
   background: linear-gradient(221deg, #2b3ba7, #b38737, #3eaba5, #bc6f55);
   background-size: 800% 800%;
   position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 
   -webkit-animation: AnimationName 15s ease infinite;
   -moz-animation: AnimationName 15s ease infinite;
@@ -34,12 +38,8 @@ const IntroductionWrapper = style.div`
 `;
 const IntroductionCard = style.section`
   width: 80%;
-  margin: auto;
   background-color: rgba(255,255,255,1); 
   position: absolute;
-  top: 23vh;
-  left: 0;
-  right: 0;
   text-align: center;
   padding: 20px;
   box-sizing: border-box;
