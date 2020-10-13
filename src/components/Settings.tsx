@@ -1,7 +1,12 @@
-import React, { FunctionComponent, ReactElement, useState } from 'react';
+import React, {
+  FunctionComponent,
+  ReactElement,
+  useState,
+  useEffect,
+} from 'react';
 import { RouteComponentProps } from '@reach/router';
 import style from 'styled-components';
-import { Trans } from 'react-i18next';
+import { Trans, useTranslation } from 'react-i18next';
 
 import PreFooterCanvas from './PreFooterCanvas';
 
@@ -67,8 +72,27 @@ const SelectButtons = style.div`
 `;
 
 const Settings: FunctionComponent<RouteComponentProps> = (): ReactElement => {
-  const [storedCookies, setStoredCookies] = useState([]);
+  const [storedCookies, setStoredCookies] = useState<string[]>();
+  const [currentLanguage, setCurrentLanguage] = useState('');
 
+  const { i18n } = useTranslation();
+
+  useEffect(() => {
+    const { localStorage } = window;
+    const cookies = Object.keys(localStorage).map(key => key);
+    const browserLang =
+      localStorage.i18nextLng === 'fr-FR' || !localStorage.i18nextLng
+        ? 'fr'
+        : 'en';
+    setStoredCookies(cookies);
+    setCurrentLanguage(browserLang);
+  }, [i18n.language]);
+
+  const handleChangeLanguage = (newLanguage: string): null => {
+    i18n.changeLanguage(newLanguage);
+    return null;
+  };
+  console.log(currentLanguage);
   return (
     <>
       <SettingsWrapper>
@@ -92,17 +116,29 @@ const Settings: FunctionComponent<RouteComponentProps> = (): ReactElement => {
           </p>
 
           <p className="cookie">
-            lg:{' '}
+            i18nextLng:{' '}
             <span>
               <Trans i18nKey="Settings.langCookieEnFr">en</Trans>
             </span>
           </p>
 
           <SelectButtons>
-            <button type="button" className="btn btn-light">
+            <button
+              type="button"
+              className={`btn btn-${
+                currentLanguage === 'en' ? 'selected' : 'light'
+              }`}
+              onClick={() => handleChangeLanguage('en')}
+            >
               English
             </button>
-            <button type="button" className="btn btn-selected">
+            <button
+              type="button"
+              className={`btn btn-${
+                currentLanguage === 'fr' ? 'selected' : 'light'
+              }`}
+              onClick={() => handleChangeLanguage('fr')}
+            >
               Français
             </button>
           </SelectButtons>
@@ -154,14 +190,14 @@ const Settings: FunctionComponent<RouteComponentProps> = (): ReactElement => {
             </Trans>
           </p>
 
-          {storedCookies.length === 0 ? (
+          {!storedCookies ? (
             <p className="cookie">
               <Trans i18nKey="Settings.noCookies">Aucun cookie</Trans>
             </p>
           ) : (
             storedCookies.map(cookie => (
               <p key={cookie} className="cookie">
-                {cookie}
+                {cookie} : <span>{window.localStorage[cookie]}</span>
               </p>
             ))
           )}
