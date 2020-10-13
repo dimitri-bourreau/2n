@@ -18,8 +18,13 @@ const RankingWrapper = style.section`
   }
 
   table {
-    width: 80%;
+    width: 50%;
     margin: auto;
+    background-color: #6d59da;
+    padding: 25px;
+    box-sizing: box-border;
+    color: white;
+    border-radius: 10px;
   }
 
   table th {
@@ -41,18 +46,7 @@ const RankingWrapper = style.section`
 `;
 
 const Ranking: FunctionComponent<RouteComponentProps> = (): ReactElement => {
-  const ranking = [
-    { name: 'Xavier', score: 134 },
-    { name: 'Damien', score: 124 },
-    { name: 'Laura', score: 115 },
-    { name: 'Thomas', score: 113 },
-    { name: 'Dimitri', score: 98 },
-    { name: 'Marion', score: 93 },
-    { name: 'Anthony', score: 85 },
-    { name: 'Billie', score: 56 },
-    { name: 'Matt', score: 30 },
-    { name: 'Laurent', score: 1 },
-  ];
+  const ranking = [{ name: 'Dimitri', score: 1 }];
 
   return (
     <>
