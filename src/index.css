@@ -108,3 +108,31 @@ ul {
 .btn-danger:hover {
   background-color: #e21f1f;
 }
+
+.btn-light {
+  background-color: whitesmoke;
+  color: #292727;
+}
+.btn-light:hover {
+  background-color: rgb(248, 241, 241);
+}
+
+.btn-dark {
+  background-color: #292727;
+}
+.btn-dark:hover {
+  background-color: #1f1c1c;
+}
+
+.cookie {
+  background-color: rgb(248, 238, 239);
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 0.8em;
+}
+.cookie:hover {
+  background-color: rgb(248, 225, 227);
+}
+.cookie span {
+  color: grey;
+}

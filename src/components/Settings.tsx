@@ -17,6 +17,11 @@ const SettingsWrapper = style.section`
     margin-bottom: 50px;
   }
 
+  h2 {
+    font-size: 1.6em;
+    margin-bottom: 20px;
+  }
+
   p {
     margin-bottom: 30px;
   }
@@ -25,6 +30,10 @@ const SettingsWrapper = style.section`
     background-color: #f7ecec;
     padding: 20px 0;
     border-radius: 10px;
+  }
+
+  button {
+    display: block;
   }
 
   @media all and (min-width: 576px) {
@@ -49,12 +58,40 @@ const Settings: FunctionComponent<RouteComponentProps> = (): ReactElement => {
           <Trans i18nKey="Settings.settings">Paramètres</Trans>
         </h1>
 
+        <h2>
+          Language{' '}
+          <span role="img" aria-label="change-language">
+            🌐
+          </span>
+        </h2>
+
         <p>
-          <Trans i18nKey="Settings.soon">
-            Bientôt : vous pourrez modifier le thème, changer de langue,
-            administrer les cookies installés sur votre machine.
-          </Trans>
+          If you select english, this specific cookie will be stored on your
+          machine :
         </p>
+
+        <p className="cookie">lg: en</p>
+
+        <h2>Thème</h2>
+
+        <p>
+          Si vous sélectionnez un thème, un cookie sera déposé sur votre machine
+          contenant exactement cette donnée :
+        </p>
+
+        <p className="cookie">
+          theme:{' '}
+          <span>
+            {'<'}nom du thème sélectionné{'>'}
+          </span>{' '}
+        </p>
+
+        <button type="button" className="btn btn-light">
+          Clair
+        </button>
+        <button type="button" className="btn btn-dark">
+          Sombre
+        </button>
       </SettingsWrapper>
       <PreFooterCanvas />
     </>
