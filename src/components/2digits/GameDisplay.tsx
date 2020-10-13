@@ -62,7 +62,7 @@ const GameDisplay: FunctionComponent<GameDisplayProps> = ({
       ) : (
         <>
           <p>
-            What this digit displayed two turns ago?{' '}
+            Whas this digit displayed two turns ago?{' '}
             <span role="img" aria-label="think">
               🤔
             </span>
