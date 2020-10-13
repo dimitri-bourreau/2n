@@ -7,7 +7,7 @@ import IntroductionCanvas from './IntroductionCanvas';
 
 const IntroductionWrapper = style.div`
   width: 100%;
-  height: 500px;
+  height: 70vh;
   background: linear-gradient(221deg, #2b3ba7, #b38737, #3eaba5, #bc6f55);
   background-size: 800% 800%;
   position: relative;
@@ -37,7 +37,7 @@ const IntroductionCard = style.section`
   margin: auto;
   background-color: rgba(255,255,255,1); 
   position: absolute;
-  top: 120px;
+  top: 23vh;
   left: 0;
   right: 0;
   text-align: center;
