@@ -158,7 +158,7 @@ const Legal: FunctionComponent<RouteComponentProps> = (): ReactElement => {
 
         <p>
           Vous pouvez modifier votre mot de passe, votre email, et supprimer
-          votre compte depuis <a href="/me">Mon compte</a> Vous pouvez me
+          votre compte depuis <a href="/me">Mon compte</a>. Vous pouvez me
           demander les données vous concernant en ma possession depuis{' '}
           <a href="/contact">cette page</a>.
         </p>
