@@ -3,11 +3,12 @@ import { RouteComponentProps } from '@reach/router';
 import style from 'styled-components';
 import { Trans } from 'react-i18next';
 
+import PreFooterCanvas from './PreFooterCanvas';
+
 const MoreWrapper = style.section`
   margin: 30px auto;
   width: 80%;
   text-align: center;
-  min-height: 80vh;
   padding: 30px;
   box-sizing: border-box;
 
@@ -49,48 +50,51 @@ const MoreWrapper = style.section`
 
 const More: FunctionComponent<RouteComponentProps> = (): ReactElement => {
   return (
-    <MoreWrapper>
-      <h1>
-        <Trans i18nKey="More.more">À propos</Trans>
-      </h1>
+    <>
+      <MoreWrapper>
+        <h1>
+          <Trans i18nKey="More.more">À propos</Trans>
+        </h1>
 
-      <p>
-        <Trans i18nKey="More.airFrance">
-          This project is inspired by the psychotechnical tests to be performed
-          to become a pilot at Air France.
-        </Trans>
-      </p>
+        <p>
+          <Trans i18nKey="More.airFrance">
+            This project is inspired by the psychotechnical tests to be
+            performed to become a pilot at Air France.
+          </Trans>
+        </p>
 
-      <p>
-        <Trans i18nKey="More.aboutPilotest">The fabulous site</Trans>{' '}
-        <a href="https://pilotest.com">Pilotest</a>{' '}
-        <Trans i18nKey="More.excellentPilotest">
-          has developed excellent tests of this nature, must see!
-        </Trans>
-      </p>
+        <p>
+          <Trans i18nKey="More.aboutPilotest">The fabulous site</Trans>{' '}
+          <a href="https://pilotest.com">Pilotest</a>{' '}
+          <Trans i18nKey="More.excellentPilotest">
+            has developed excellent tests of this nature, must see!
+          </Trans>
+        </p>
 
-      <p>
-        <Trans i18nKey="More.technologies">
-          This game uses these technologies:
-        </Trans>
-      </p>
+        <p>
+          <Trans i18nKey="More.technologies">
+            This game uses these technologies:
+          </Trans>
+        </p>
 
-      <ul>
-        <li>React.js</li>
-        <li>TypeScript</li>
-        <li>Reach Router</li>
-        <li>react-i18next</li>
-        <li>Canvas</li>
-        <li>Jest</li>
-        <li>Firebase</li>
-      </ul>
+        <ul>
+          <li>React.js</li>
+          <li>TypeScript</li>
+          <li>Reach Router</li>
+          <li>react-i18next</li>
+          <li>Canvas</li>
+          <li>Jest</li>
+          <li>Firebase</li>
+        </ul>
 
-      <a href="https://github.com/tobudim/2n">
-        <button type="button" className="btn">
-          <Trans i18nKey="More.code">Source code available on GitHub</Trans>
-        </button>
-      </a>
-    </MoreWrapper>
+        <a href="https://github.com/tobudim/2n">
+          <button type="button" className="btn">
+            <Trans i18nKey="More.code">Source code available on GitHub</Trans>
+          </button>
+        </a>
+      </MoreWrapper>
+      <PreFooterCanvas />
+    </>
   );
 };
 

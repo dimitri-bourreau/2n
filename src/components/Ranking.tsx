@@ -3,11 +3,13 @@ import { RouteComponentProps } from '@reach/router';
 import style from 'styled-components';
 import { Trans } from 'react-i18next';
 
+import PreFooterCanvas from './PreFooterCanvas';
+
 const RankingWrapper = style.section`
-  margin: 30px auto;
+  margin: 30px auto 60px auto;
   width: 80%;
+  min-height: 50vh;
   text-align: center;
-  min-height: 80vh;
   padding: 30px;
   box-sizing: border-box;
 
@@ -53,32 +55,35 @@ const Ranking: FunctionComponent<RouteComponentProps> = (): ReactElement => {
   ];
 
   return (
-    <RankingWrapper>
-      <h1>
-        <Trans i18nKey="Ranking.ranking">Ranking</Trans>
-      </h1>
+    <>
+      <RankingWrapper>
+        <h1>
+          <Trans i18nKey="Ranking.ranking">Ranking</Trans>
+        </h1>
 
-      <table>
-        <thead>
-          <tr>
-            <th>
-              <Trans i18nKey="Ranking.name">Name</Trans>
-            </th>
-            <th>
-              <Trans i18nKey="Ranking.score">Score</Trans>
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          {ranking.map(rank => (
-            <tr key={`${rank.name}${rank.score}`}>
-              <td>{rank.name}</td>
-              <td>{rank.score}</td>
+        <table>
+          <thead>
+            <tr>
+              <th>
+                <Trans i18nKey="Ranking.name">Name</Trans>
+              </th>
+              <th>
+                <Trans i18nKey="Ranking.score">Score</Trans>
+              </th>
             </tr>
-          ))}
-        </tbody>
-      </table>
-    </RankingWrapper>
+          </thead>
+          <tbody>
+            {ranking.map(rank => (
+              <tr key={`${rank.name}${rank.score}`}>
+                <td>{rank.name}</td>
+                <td>{rank.score}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </RankingWrapper>
+      <PreFooterCanvas />
+    </>
   );
 };
 

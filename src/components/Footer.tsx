@@ -11,6 +11,7 @@ const FooterWrapper = style.footer`
   flex-direction: column;
   justify-content: space-around;
   text-align: center;
+  margin-top: auto;
 
   p {
     font-size: 0.8em;

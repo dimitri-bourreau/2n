@@ -16,6 +16,8 @@
     "play": "Jouer"
   },
   "Rules": {
+    "keepItUp": "Allez tenez bon !",
+    "gameOver": "Vous devez faire mieux ! Je crois en vous, encore un petit peu !",
     "easy": "Ce jeu est vraiment simple !",
     "remember": "À chaque tour vous devez mémoriser le chiffre présenté.",
     "answer": "Quand on vous demande si le chiffre affiché est apparu il y a deux tours, vous devez donner la bonne réponse !"

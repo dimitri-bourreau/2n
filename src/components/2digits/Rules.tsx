@@ -2,8 +2,6 @@ import React, { FunctionComponent, ReactElement } from 'react';
 import style from 'styled-components';
 import { Trans } from 'react-i18next';
 
-import { RouteComponentProps } from '@reach/router';
-
 const RulesWrapper = style.div`
   background-color: white;
   display: inline-block;
@@ -73,7 +71,30 @@ const Kirk = style.div`
     }
 `;
 
-const Rules: FunctionComponent<RouteComponentProps> = (): ReactElement => {
+interface RulesProps {
+  inGame?: string | boolean;
+}
+
+const Rules: FunctionComponent<RulesProps> = ({
+  inGame = false,
+}: RulesProps): ReactElement => {
+  if (inGame)
+    return (
+      <RulesWrapper>
+        <RulesBuble>
+          <p>
+            {inGame === 'on' ? (
+              <Trans i18nKey="Rules.keepItUp">Keep it up!</Trans>
+            ) : (
+              <Trans i18nKey="Rules.gameOver">
+                You must do better! I believe in you, just a little more!
+              </Trans>
+            )}
+          </p>
+        </RulesBuble>
+        <Kirk />
+      </RulesWrapper>
+    );
   return (
     <RulesWrapper>
       <RulesBuble>
@@ -95,6 +116,10 @@ const Rules: FunctionComponent<RouteComponentProps> = (): ReactElement => {
       <Kirk />
     </RulesWrapper>
   );
+};
+
+Rules.defaultProps = {
+  inGame: false,
 };
 
 export default Rules;

@@ -3,11 +3,13 @@ import { RouteComponentProps } from '@reach/router';
 import style from 'styled-components';
 import { Trans } from 'react-i18next';
 
+import PreFooterCanvas from './PreFooterCanvas';
+
 const LoginWrapper = style.section`
   margin: 30px auto;
   width: 80%;
   text-align: center;
-  min-height: 80vh;
+  min-height: 50vh;
   padding: 30px;
   box-sizing: border-box;
 
@@ -77,31 +79,34 @@ const Details = style.div`
 
 const Login: FunctionComponent<RouteComponentProps> = (): ReactElement => {
   return (
-    <LoginWrapper>
-      <h1>
-        <Trans i18nKey="Login.login">Se connecter</Trans>
-      </h1>
+    <>
+      <LoginWrapper>
+        <h1>
+          <Trans i18nKey="Login.login">Se connecter</Trans>
+        </h1>
 
-      <Logger>
-        <label htmlFor="email">
-          <Trans i18nKey="Login.email">Email</Trans>
-          <input id="email" type="email" />
-        </label>
-        <label htmlFor="password">
-          <Trans i18nKey="Login.password">Mot de passe</Trans>
-          <input id="password" type="password" />
-        </label>
-        <button type="button" className="btn">
-          <Trans i18nKey="Login.loginButton">Se connecter</Trans>
-        </button>
-      </Logger>
+        <Logger>
+          <label htmlFor="email">
+            <Trans i18nKey="Login.email">Email</Trans>
+            <input id="email" type="email" />
+          </label>
+          <label htmlFor="password">
+            <Trans i18nKey="Login.password">Mot de passe</Trans>
+            <input id="password" type="password" />
+          </label>
+          <button type="button" className="btn">
+            <Trans i18nKey="Login.loginButton">Se connecter</Trans>
+          </button>
+        </Logger>
 
-      <Details>
-        <p>
-          <Trans i18nKey="Login.forgotPass">Mot de passe oublié ?</Trans>
-        </p>
-      </Details>
-    </LoginWrapper>
+        <Details>
+          <p>
+            <Trans i18nKey="Login.forgotPass">Mot de passe oublié ?</Trans>
+          </p>
+        </Details>
+      </LoginWrapper>
+      <PreFooterCanvas />
+    </>
   );
 };
 

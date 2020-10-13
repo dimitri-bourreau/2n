@@ -16,6 +16,8 @@
     "play": "Play"
   },
   "Rules": {
+    "keepItUp": "Keep it up!",
+    "gameOver": "You must do better! I believe in you, just a little more!",
     "easy": "This game is easy!",
     "remember": "At every turn remember the displayed digit.",
     "answer": "When we ask you if the displayed digit was shown two turns ago, you must answer correctly!"

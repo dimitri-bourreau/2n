@@ -3,7 +3,7 @@ import { RouteComponentProps } from '@reach/router';
 import style from 'styled-components';
 import { Trans } from 'react-i18next';
 
-import IntroductionCanvas from './IntroductionCanvas';
+import Canvas from '../Canvas';
 
 const IntroductionWrapper = style.div`
   width: 100%;
@@ -65,7 +65,7 @@ const IntroductionCard = style.section`
 const Introduction: FunctionComponent<RouteComponentProps> = (): ReactElement => {
   return (
     <IntroductionWrapper>
-      <IntroductionCanvas />
+      <Canvas />
       <IntroductionCard>
         <h1>2n</h1>
         <h2>

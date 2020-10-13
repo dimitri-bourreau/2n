@@ -1,6 +1,12 @@
 import React, { FunctionComponent, ReactElement, useEffect } from 'react';
 
-const IntroductionCanvas: FunctionComponent = (): ReactElement => {
+interface IntroductionCanvasProps {
+  height?: number | null;
+}
+
+const Canvas: FunctionComponent<IntroductionCanvasProps> = ({
+  height,
+}: IntroductionCanvasProps): ReactElement => {
   useEffect(() => {
     const script = document.createElement('script');
     script.src = '/2-digits-canvas/main.mjs';
@@ -13,14 +19,14 @@ const IntroductionCanvas: FunctionComponent = (): ReactElement => {
       id="2-digits-canvas"
       style={{
         width: '100%',
-        height: '100%',
+        height: height ? `${height}px` : '100%',
       }}
     />
   );
 };
 
-IntroductionCanvas.defaultProps = {
-  handlePlayGame: () => null,
+Canvas.defaultProps = {
+  height: null,
 };
 
-export default IntroductionCanvas;
+export default Canvas;

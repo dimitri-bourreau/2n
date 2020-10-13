@@ -1,6 +1,8 @@
 import React, { FunctionComponent, ReactElement, useState } from 'react';
 import { RouteComponentProps } from '@reach/router';
+
 import GameDisplay from './GameDisplay';
+import PreFooterCanvas from '../PreFooterCanvas';
 
 const GameLogic: FunctionComponent<RouteComponentProps> = (): ReactElement => {
   const getRandomDigit = (): number => Math.floor(Math.random() * 7);
@@ -40,14 +42,17 @@ const GameLogic: FunctionComponent<RouteComponentProps> = (): ReactElement => {
   };
 
   return (
-    <GameDisplay
-      allDigits={allDigits}
-      digit={digit}
-      score={score}
-      gameOver={gameOver}
-      checkAnswer={checkAnswer}
-      newTurn={newTurn}
-    />
+    <>
+      <GameDisplay
+        allDigits={allDigits}
+        digit={digit}
+        score={score}
+        gameOver={gameOver}
+        checkAnswer={checkAnswer}
+        newTurn={newTurn}
+      />
+      <PreFooterCanvas />
+    </>
   );
 };
 

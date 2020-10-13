@@ -3,12 +3,12 @@ import style from 'styled-components';
 import { Trans } from 'react-i18next';
 
 import { EndOfGameProps } from '../../interfaces/game';
+import Rules from './Rules';
 
 const GameOverWrapper = style.div`
-  margin: 30px auto;
+  margin: 60px auto;
   width: 80%;
   text-align: center;
-  min-height: 80vh;
   padding: 30px;
   box-sizing: border-box;
 
@@ -38,19 +38,23 @@ const GameOver: FunctionComponent<EndOfGameProps> = ({
   score,
 }: EndOfGameProps): ReactElement => {
   return (
-    <GameOverWrapper>
-      <h1>
-        <Trans i18nKey="GameOver.gameOver">Game over!</Trans>
-      </h1>
-      <h2>
-        <Trans i18nKey="GameOver.score">Your score</Trans> : {score}
-      </h2>
-      <a href="/game">
-        <button type="button" className="btn btn-success">
-          <Trans i18nKey="GameOver.playAgain">Play again</Trans>
-        </button>
-      </a>
-    </GameOverWrapper>
+    <>
+      <GameOverWrapper>
+        <h1>
+          <Trans i18nKey="GameOver.gameOver">Game over!</Trans>
+        </h1>
+        <h2>
+          <Trans i18nKey="GameOver.score">Your score</Trans> : {score}
+        </h2>
+        <a href="/game">
+          <button type="button" className="btn btn-success">
+            <Trans i18nKey="GameOver.playAgain">Play again</Trans>
+          </button>
+        </a>
+      </GameOverWrapper>
+
+      <Rules inGame="gameOver" />
+    </>
   );
 };
 
