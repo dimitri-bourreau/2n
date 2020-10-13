@@ -5,8 +5,9 @@ import { Trans } from 'react-i18next';
 import { RouteComponentProps } from '@reach/router';
 
 const RulesWrapper = style.div`
-  img {
-  }
+  background-color: white;
+  display: inline-block;
+  width: 100%;
 `;
 const RulesBuble = style.section`
   clip-path: polygon(0% 0%, 100% 0%, 100% 88%, 75% 88%, 75% 100%, 50% 88%, 0 88%);
