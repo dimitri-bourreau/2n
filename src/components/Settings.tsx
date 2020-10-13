@@ -78,19 +78,24 @@ const Settings: FunctionComponent<RouteComponentProps> = (): ReactElement => {
 
         <Setting>
           <h2>
-            Language{' '}
+            <Trans i18nKey="Settings.language">Language</Trans>{' '}
             <span role="img" aria-label="change-language">
               🌐
             </span>
           </h2>
 
           <p>
-            If you select english, this specific cookie will be stored on your
-            machine :
+            <Trans i18nKey="Settings.langCookie">
+              If you select english, this specific cookie will be stored on your
+              machine:
+            </Trans>
           </p>
 
           <p className="cookie">
-            lg: <span>en</span>
+            lg:{' '}
+            <span>
+              <Trans i18nKey="Settings.langCookieEnFr">en</Trans>
+            </span>
           </p>
 
           <SelectButtons>
@@ -104,39 +109,55 @@ const Settings: FunctionComponent<RouteComponentProps> = (): ReactElement => {
         </Setting>
 
         <Setting>
-          <h2>Thème</h2>
+          <h2>
+            <Trans i18nKey="Settings.theme">Thème</Trans>
+          </h2>
 
           <p>
-            Si vous sélectionnez un thème, ce cookie sera déposé sur votre
-            machine :
+            <Trans i18nKey="Settings.themeCookie">
+              Si vous sélectionnez un thème, ce cookie sera déposé sur votre
+              machine :
+            </Trans>
           </p>
 
           <p className="cookie">
             theme:{' '}
             <span>
-              {'<'}nom du thème sélectionné{'>'}
+              {'<'}
+              <Trans i18nKey="Settings.nameOfThemeCookie">
+                nom du thème sélectionné
+              </Trans>
+              {'>'}
             </span>{' '}
           </p>
           <SelectButtons>
             <button type="button" className="btn btn-light">
-              Clair
+              <Trans i18nKey="Settings.light">Clair</Trans>
             </button>
             <button type="button" className="btn btn-dark">
-              Sombre
+              <Trans i18nKey="Settings.dark">Sombre</Trans>
             </button>
           </SelectButtons>
         </Setting>
 
         <Setting>
-          <h2>Gestion des cookies</h2>
+          <h2>
+            <Trans i18nKey="Settings.cookiesManagement">
+              Gestion des cookies
+            </Trans>
+          </h2>
 
           <p>
-            Voici la liste des cookies stockés sur votre machine depuis ce site
-            :
+            <Trans i18nKey="Settings.storedCookies">
+              Voici la liste des cookies stockés sur votre machine depuis ce
+              site
+            </Trans>
           </p>
 
           {storedCookies.length === 0 ? (
-            <p className="cookie">Aucun cookie</p>
+            <p className="cookie">
+              <Trans i18nKey="Settings.noCookies">Aucun cookie</Trans>
+            </p>
           ) : (
             storedCookies.map(cookie => (
               <p key={cookie} className="cookie">

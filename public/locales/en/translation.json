@@ -105,6 +105,16 @@
   },
   "Settings": {
     "settings": "Settings",
-    "soon": "Soon: you will be able to select a styling theme for this website and administrate the cookies installed on your machine."
+    "language": "Langue",
+    "langCookie": "Si vous sélectionnez français, ce cookie sera stocké sur votre machine :",
+    "langCookieEnFr": "fr",
+    "theme": "Theme",
+    "themeCookie": "If you select a theme, this cookie will be stored on your machine:",
+    "nameOfThemeCookie": "name of selected theme",
+    "light": "Light",
+    "dark": "Dark",
+    "cookiesManagement": "Cookies Management",
+    "storedCookies": "Here is the list of all the cookies this website stored on your machine:",
+    "noCookies": "None"
   }
 }

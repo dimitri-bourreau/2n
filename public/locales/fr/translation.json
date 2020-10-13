@@ -105,6 +105,16 @@
   },
   "Settings": {
     "settings": "Paramètres",
-    "soon": "Bientôt : vous pourrez ici modifier le thème du site ou administrer les cookies installés sur votre machine."
+    "language": "Language",
+    "langCookie": "If you select english, this specific cookie will be stored on your machine:",
+    "langCookieEnFr": "en",
+    "theme": "Thème",
+    "themeCookie": "Si vous sélectionnez un thème, ce cookie sera déposé sur votre machine :",
+    "nameOfThemeCookie": "nom du thème sélectionné",
+    "light": "Clair",
+    "dark": "Sombre",
+    "cookiesManagement": "Gestion des cookies",
+    "storedCookies": "Voici la liste des cookies stockés sur votre machine depuis ce site :",
+    "noCookies": "Aucun cookie"
   }
 }
