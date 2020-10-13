@@ -84,6 +84,10 @@ const ListElt = style.li`
     text-transform: uppercase;
     font-weight: 400;
   }
+
+  @media all and (min-width: 768px) {
+    margin-bottom: 0;
+  }
 `;
 
 interface HeaderProps {
