@@ -72,21 +72,25 @@ const DetailsBlock = style.section`
   button {
     margin: 0 auto;
   }
+
+  .privacy-intro {
+    border-left: 5px solid lightgrey;
+  }
 `;
 
 const Legal: FunctionComponent<RouteComponentProps> = (): ReactElement => {
   return (
     <LegalWrapper>
       <h1>
-        <Trans i18nKey="Legal.legal">Mentions légales</Trans>
+        <Trans i18nKey="Legal.legal">Legal notice</Trans>
       </h1>
       <DetailsBlock>
         <h2>
-          <Trans i18nKey="Legal.hosting">Hébergement</Trans>
+          <Trans i18nKey="Legal.hosting">Hosting</Trans>
         </h2>
 
         <p>
-          <Trans i18nKey="Legal.vps">VPS loué chez OVH.</Trans>
+          <Trans i18nKey="Legal.vps">VPS rented to OVH.</Trans>
         </p>
 
         <ul>
@@ -116,20 +120,18 @@ const Legal: FunctionComponent<RouteComponentProps> = (): ReactElement => {
         </ul>
 
         <a href="https://www.ovhcloud.com/fr/contact/">
-          <Trans i18nKey="Legal.contactOvh">Contacter OVH</Trans>
+          <Trans i18nKey="Legal.contactOvh">Contact OVH</Trans>
         </a>
       </DetailsBlock>
 
       <DetailsBlock>
         <h2 className="source-code">
-          <Trans i18nKey="Legal.source">Code source</Trans>
+          <Trans i18nKey="Legal.source">Source code</Trans>
         </h2>
 
         <a href="https://github.com/tobudim/2n">
           <button type="button" className="btn">
-            <Trans i18nKey="Legal.seeSource">
-              Voir le code source de ce site sur GitHub
-            </Trans>
+            <Trans i18nKey="Legal.seeSource">See source code on GitHub</Trans>
           </button>
         </a>
       </DetailsBlock>
@@ -141,128 +143,130 @@ const Legal: FunctionComponent<RouteComponentProps> = (): ReactElement => {
 
         <p>
           <Trans i18nKey="Legal.seeCookies">
-            Vous pouvez voir les cookies stockés sur votre machine pour ce site
-            depuis
+            You can watch the cookies this website stored on your machine at
           </Trans>{' '}
           <a href="/settings">
             {' '}
-            <Trans i18nKey="Legal.fromSettings">les paramètres</Trans>
+            <Trans i18nKey="Legal.fromSettings">the settings page</Trans>
           </a>
           .
         </p>
 
         <p>
           <Trans i18nKey="Legal.allCookies">
-            Les cookies qui, après votre consentement, peuvent être déposés sur
-            votre navigateur Internet sont ceux-ci :
+            All the cookies this website can store on your machine, after your
+            consent, are these:
           </Trans>
         </p>
 
         <ul>
           <li>
-            <Trans i18nKey="Legal.cookiesList.theme">
-              &quot;theme&quot; : Gestion du thème global du site.
-            </Trans>
+            <p className="cookie">
+              <Trans i18nKey="Legal.cookiesList.theme">
+                theme: <span>website style theme details if modified.</span>
+              </Trans>
+            </p>
           </li>
           <li>
-            <Trans i18nKey="Legal.cookiesList.session">
-              &quot;session&quot; : Si vous vous connectez, cela permet au site
-              de vous renconnaître au gré de votre navigation.
-            </Trans>
+            <p className="cookie">
+              <Trans i18nKey="Legal.cookiesList.session">
+                session:{' '}
+                <span>if you logged in, the website can then remember it.</span>
+              </Trans>
+            </p>
           </li>
         </ul>
       </DetailsBlock>
 
       <DetailsBlock>
         <h2>
-          <Trans i18nKey="Legal.privacy">
-            Utilisation des données personnelles
-          </Trans>
+          <Trans i18nKey="Legal.privacy">Privacy</Trans>
         </h2>
 
+        <p className="privacy-intro">
+          <Trans i18nKey="Legal.privacyIntro">
+            I do not share nor resell any of your personnal data. Everything is
+            detailed bellow, I use Google&apos;s servers to store your email and
+            scores, and full control is yours. You will not receive emails from
+            me.
+          </Trans>
+        </p>
+
         <p>
-          <Trans i18nKey="Legal.privacyContact">
-            Avant toute chose : pour ce sujet vous pouvez me contacter
-          </Trans>{' '}
+          <Trans i18nKey="Legal.privacyContact">You can contact me</Trans>{' '}
           <a href="/contact">
-            <Trans i18nKey="Legal.privacyContactHere">ici</Trans>
+            <Trans i18nKey="Legal.privacyContactHere">here</Trans>
           </a>
           .
         </p>
 
         <p>
           <Trans i18nKey="Legal.whenCreatingAccount">
-            Lorsque vous créez un compte, je vous demande deux données
-            personnelles :
+            When you create an account, I ask several private data:
           </Trans>
         </p>
 
         <ul>
           <li>
-            <Trans i18nKey="Legal.privacyList.email">Votre adresse email</Trans>
+            <Trans i18nKey="Legal.privacyList.email">Your email adress</Trans>
           </li>
           <li>
-            <Trans i18nKey="Legal.privacyList.pass">Votre mot de passe</Trans>
+            <Trans i18nKey="Legal.privacyList.pass">Your password</Trans>
           </li>
         </ul>
 
         <p>
           <Trans i18nKey="Legal.emailToFirebase">
-            L&apos;adresse email est alors enregistrée et conservée par Google
-            au sein de son service Firebase.
+            Your email adress is stored inside Google&apos;s databases via its
+            service Firebase.
           </Trans>
         </p>
 
         <p>
           <Trans i18nKey="Legal.passHash">
-            Le mot de passe ne quitte pas votre machine. Je confie aux serveurs
-            de Google, au sein de son service Firebase, un <i>hash</i> de votre
-            mot de passe : ce hash est une sorte de clé qui permet plus tard de
-            vérifier votre mot de passe, mais il ne permet pas de le deviner.
+            Your password does not leave your machine. I send Google&apos;s
+            databases only a hash of your password. A hash is some sort of a key
+            that allows to confirm your password without being able to guess it.
           </Trans>
         </p>
 
         <p>
           <Trans i18nKey="Legal.update">
-            Vous pouvez modifier votre mot de passe, votre email, et supprimer
-            votre compte depuis
+            You can update your password and your email, or delete your account
+            from the
           </Trans>{' '}
           <a href="/me">
-            <Trans i18nKey="Legal.accountPage">Mon compte</Trans>
+            <Trans i18nKey="Legal.accountPage">this page</Trans>
           </a>
           .{' '}
           <Trans i18nKey="Legal.askYourData">
-            Vous pouvez me demander les données vous concernant en ma possession
-            depuis
+            You can ask all the data I have about you from
           </Trans>{' '}
           <a href="/contact">
-            <Trans i18nKey="Legal.askDataPage">cette page</Trans>
+            <Trans i18nKey="Legal.askDataPage">this page</Trans>
           </a>
           .
         </p>
 
         <p>
           <Trans i18nKey="Legal.deleteAccount">
-            En supprimant votre compte, je supprime toutes les données vous
-            concernant sur les serveurs de Google : adresse email, hash du mot
-            de passe, scores.
+            By deleting your account, I erase all data about you on
+            Google&apos;s servers: Email, password&apos;s hash, scores.
           </Trans>
         </p>
 
         <p>
           <a href="https://firebase.google.com/support/privacy/">
             <Trans i18nKey="Legal.firebasePrivacy">
-              Confidentialité et sécurité dans Firebase
+              Firebase&apos;s privacy
             </Trans>
           </a>
         </p>
 
         <p>
-          <Trans i18nKey="Legal.complain">
-            Vous pouvez réaliser une réclamation depuis
-          </Trans>{' '}
+          <Trans i18nKey="Legal.complain">You can complain from</Trans>{' '}
           <a href="https://www.cnil.fr/">
-            <Trans i18nKey="Legal.cnil">le site de la CNIL</Trans>
+            <Trans i18nKey="Legal.cnil">the CNIL website</Trans>
           </a>
           .
         </p>

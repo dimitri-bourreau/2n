@@ -65,6 +65,7 @@
       "session": "session: if you logged in, the website can then remember it."
     },
     "privacy": "Privacy",
+    "privacyIntro": "I do not share nor resell any of your personnal data. Everything is detailed bellow, I use Google's servers to store your email and scores, and full control is yours. You will not receive emails from me.",
     "privacyContact": "You can contact me",
     "privacyContactHere": "here",
     "whenCreatingAccount": "When you create an account, I ask several private data:",

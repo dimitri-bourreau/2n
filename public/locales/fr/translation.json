@@ -65,7 +65,8 @@
       "session": "session : Si vous vous connectez, cela permet au site de vous renconnaître au gré de votre navigation."
     },
     "privacy": "Utilisation des données personnelles",
-    "privacyContact": " Avant toute chose : pour ce sujet vous pouvez me contacter",
+    "privacyIntro": "Je ne partage ni ne revend aucune de vos données personnelles. Tout  est détaillé ci-dessous, j'utilise des serveurs de Google pour stocker votre email et vos scores, et je vous en laisse le contrôle. Vous ne recevrez aucun email de ma part.",
+    "privacyContact": "Vous pouvez me contacter",
     "privacyContactHere": "ici",
     "whenCreatingAccount": "Lorsque vous créez un compte, je vous demande deux données personnelles :",
     "privacyList": {
