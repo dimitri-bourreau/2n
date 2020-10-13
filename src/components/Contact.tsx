@@ -1,6 +1,7 @@
 import React, { FunctionComponent, ReactElement } from 'react';
 import { RouteComponentProps } from '@reach/router';
 import style from 'styled-components';
+import { Trans } from 'react-i18next';
 
 const ContactWrapper = style.section`
   margin: 30px auto;
@@ -77,24 +78,26 @@ const ContactForm = style.form`
 const Contact: FunctionComponent<RouteComponentProps> = (): ReactElement => {
   return (
     <ContactWrapper>
-      <h1>Contact</h1>
+      <h1>
+        <Trans i18nKey="Contact.title">Contact</Trans>
+      </h1>
 
       <ContactForm>
         <label htmlFor="email">
-          Email
+          <Trans i18nKey="Contact.email">Email</Trans>
           <input id="email" type="email" />
         </label>
         <label htmlFor="object">
-          Objet
+          <Trans i18nKey="Contact.object">Object</Trans>
           <input id="object" type="text" />
         </label>
         <label htmlFor="message">
-          Message
+          <Trans i18nKey="Contact.message">Message</Trans>
           <textarea id="message" />
         </label>
 
         <button type="button" className="btn">
-          Envoyer
+          <Trans i18nKey="Contact.send">Send</Trans>
         </button>
       </ContactForm>
     </ContactWrapper>

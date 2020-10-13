@@ -1,5 +1,6 @@
 import React, { FunctionComponent, ReactElement } from 'react';
 import style from 'styled-components';
+import { Trans } from 'react-i18next';
 
 import { EndOfGameProps } from '../../interfaces/game';
 
@@ -38,11 +39,15 @@ const GameOver: FunctionComponent<EndOfGameProps> = ({
 }: EndOfGameProps): ReactElement => {
   return (
     <GameOverWrapper>
-      <h1>Game over!</h1>
-      <h2>Your score : {score}</h2>
+      <h1>
+        <Trans i18nKey="GameOver.gameOver">Game over!</Trans>
+      </h1>
+      <h2>
+        <Trans i18nKey="GameOver.score">Your score</Trans> : {score}
+      </h2>
       <a href="/game">
         <button type="button" className="btn btn-success">
-          Play again
+          <Trans i18nKey="GameOver.playAgain">Play again</Trans>
         </button>
       </a>
     </GameOverWrapper>

@@ -1,58 +1,43 @@
 {
-  "header": {
-    "game": "Jeu",
+  "GameDisplay": {
+    "remember": "Souvenez-vous de ce chiffre !",
+    "next": "Suivant",
+    "question": "Ce chiffre était-il affiché il y a deux tours ?",
+    "yes": "Oui",
+    "no": "Non"
+  },
+  "GameOver": {
+    "gameOver": "Perdu !",
+    "score": "Votre score",
+    "playAgain": "Rejouer"
+  },
+  "Introduction": {
+    "remember": "Souvenez-vous il y a deux chiffres !",
+    "play": "Jouer"
+  },
+  "Rules": {
+    "easy": "Ce jeu est vraiment simple !",
+    "remember": "À chaque tour vous devez mémoriser le chiffre présenté.",
+    "answer": "Quand on vous demande si le chiffre affiché est apparu il y a deux tours, vous devez donner la bonne réponse !"
+  },
+  "Contact": {
+    "title": "Contact",
+    "email": "Email",
+    "object": "Objet",
+    "message": "Message",
+    "send": "Envoyer"
+  },
+  "Footer": {
+    "why": "Pourquoi ce site ?",
+    "site": "J'ai réalisé ce petit site pour m'amuser et montrer mes compétences : je suis un développeur disponible sur Bordeaux et Paris, voici mon",
+    "legal": "Mentions légales",
+    "contact": "Contact"
+  },
+  "Header": {
+    "home": "Accueil",
     "ranking": "Classement",
-    "more": "En savoir plus"
-  },
-  "home": {
-    "subtitle": "Souvenez-vous il y a deux chiffres !",
-    "play": "Jouer",
-    "description": {
-      "title": "Présentation du jeu",
-      "subtitle": "Souvenez-vous il y a deux chiffres !",
-      "p1": "À chaque tour le jeu vous montrera un chiffre.",
-      "p2": "Les deux premiers tours, retenez les chiffres.",
-      "p3": "Ensuite, le jeu vous demandera quel chiffre est apparu il y a deux tours de cela !",
-      "example": {
-        "title": "Exemple",
-        "list": {
-          "l1": "Tour 1 : vous retenez le chiffre 2.",
-          "l2": "Tour 2 : vous retenez le chiffre 7.",
-          "l3": "Tour 3 : vous retenez le chiffre 8. On vous demande si le chiffre 5 est apparut deux tours plus tôt : non.",
-          "l4": "Tour 4 : vous retenez le chiffre 1. On vous demande si le chiffre 7 est apparut deux chiffres plus tôt : oui."
-        }
-      },
-      "score": "Plus loin vous irez, plus gros sera votre score !"
-    }
-  },
-  "ranking": {
-    "title": "Classement"
-  },
-  "more": {
-    "title": "En savoir plus",
-    "p": {
-      "1": "Ce projet est inspiré par des tests psychotechniques à réaliser pour devenir pilote chez Air France.",
-      "2": "Le fabuleux site <1>Pilotest</1> a développé d'excellents tests de cette nature, à voir !",
-      "3": "Ce jeu utilise ces technologies : React.js, TypeScript, Reach Router, Shards React, react-i18next."
-    },
-    "sourceCode": "Code source disponible sur GitHub"
-  },
-  "gameDisplay": {
-    "intro": {
-      "remember": "Souvenez-vous bien de ce chiffre !",
-      "next": "Suivant"
-    },
-    "inGame": {
-      "question": "Ce chiffre était-il affiché il y a deux tours ?",
-      "yes": "Oui",
-      "no": "Non",
-      "turn": "Tour",
-      "score": "Score"
-    },
-    "gameOver": {
-      "gameOver": "Fin du jeu !",
-      "score": "Votre score",
-      "playAgain": "Rejouer"
-    }
+    "more": "À propos",
+    "settings": "Paramètres",
+    "me": "Mon compte"
   }
 }

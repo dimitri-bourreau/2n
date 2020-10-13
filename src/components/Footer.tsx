@@ -1,5 +1,6 @@
 import React, { FunctionComponent, ReactElement } from 'react';
 import style from 'styled-components';
+import { Trans } from 'react-i18next';
 
 const FooterWrapper = style.footer`
   background-color: #292727;
@@ -43,11 +44,12 @@ const Footer: FunctionComponent = (): ReactElement => {
   return (
     <FooterWrapper>
       <p>
-        Pourquoi ce site ?{' '}
+        <Trans i18nKey="Footer.why">Why this website?</Trans>{' '}
         <span>
-          J&apos;ai réalisé ce petit site pour m&apos;amuser et montrer mes
-          compétences : je suis un développeur disponible sur Bordeaux et Paris,
-          voici mon{' '}
+          <Trans i18nKey="Footer.site">
+            I realised this website just for fun and showing my knowledges: I am
+            a French developer available for Bordeaux and Paris, here is my
+          </Trans>{' '}
           <a href="https://www.linkedin.com/in/dimitri-bourreau-94a4b3151/">
             LinkedIn
           </a>{' '}
@@ -56,10 +58,14 @@ const Footer: FunctionComponent = (): ReactElement => {
       </p>
       <ul>
         <li>
-          <a href="/legal">Mentions légales</a>
+          <a href="/legal">
+            <Trans i18nKey="Footer.legal">Legal notice</Trans>
+          </a>
         </li>
         <li>
-          <a href="/contact">Contact</a>
+          <a href="/contact">
+            <Trans i18nKey="Footer.contact">Contact</Trans>
+          </a>
         </li>
       </ul>
     </FooterWrapper>

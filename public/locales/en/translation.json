@@ -1,58 +1,66 @@
 {
-  "header": {
-    "game": "Game",
+  "GameDisplay": {
+    "remember": "Remember this digit!",
+    "next": "Next",
+    "question": "Whas this digit displayed two turns ago ?",
+    "yes": "Yes",
+    "no": "No"
+  },
+  "GameOver": {
+    "gameOver": "Game over!",
+    "score": "Your score",
+    "playAgain": "Play again"
+  },
+  "Introduction": {
+    "remember": "Will you remember two digits ago?",
+    "play": "Play"
+  },
+  "Rules": {
+    "easy": "This game is easy!",
+    "remember": "At every turn remember the displayed digit.",
+    "answer": "When we ask you if the displayed digit was shown two turns ago, you must answer correctly!"
+  },
+  "Contact": {
+    "title": "Contact",
+    "email": "Email",
+    "object": "Object",
+    "message": "Message",
+    "send": "Send"
+  },
+  "Footer": {
+    "why": "Why this website?",
+    "site": "I realised this website just for fun and showing my knowledges: I am a French developer available for Bordeaux and Paris, here is my' ",
+    "legal": "Legal notice",
+    "contact": "Contact"
+  },
+  "Header": {
+    "home": "Home",
     "ranking": "Ranking",
-    "more": "More"
+    "more": "More",
+    "settings": "Settings",
+    "me": "Me"
   },
-  "home": {
-    "subtitle": "Will you remember 2 digits ago?",
-    "play": "Play",
-    "description": {
-      "title": "The game",
-      "subtitle": "Will you remember 2 digits ago?",
-      "p1": "Every turn the game will show you one digit.",
-      "p2": "First two turns just remember the digits.",
-      "p3": "Then, the game will ask you if a digit was displayed two turns ago!",
-      "example": {
-        "title": "Example",
-        "list": {
-          "l1": "Turn 1 : you remember 2.",
-          "l2": "Turn 2 : you remember 7.",
-          "l3": "Turn 3 : you remember 8. The game asks you if 5 was displayed two turns ago: no.",
-          "l4": "Turn 4 : you remember 1. The game asks you if 7 was displayed two turns ago: yes."
-        }
-      },
-      "score": "Go as far as you can, make the biggest score!"
-    }
-  },
-  "ranking": {
-    "title": "Ranking"
-  },
-  "more": {
-    "title": "More",
-    "p": {
-      "1": "This project is inspired by the psychotechnical tests to be performed to become a pilot at Air France.",
-      "2": "The fabulous site <1>Pilotest</1> has developed excellent tests of this nature, must see!",
-      "3": "This game uses these technologies: React.js, TypeScript, Reach Router, Shards React, react-i18next."
+  "Legal": {
+    "legal": "Legal notice",
+    "hosting": "Hosting",
+    "vps": "VPS rented to OVH.",
+    "ovhDetails": {
+      "1": "SAS au capital de 10 069 020 €",
+      "2": "RCS Lille Métropole 424 761 419 00045",
+      "3": "Code APE 2620Z",
+      "4": "N° TVA : FR 22 424 761 419",
+      "5": "Siège social : 2 rue Kellermann - 59100 Roubaix - France"
     },
-    "sourceCode": "Source code available on GitHub"
-  },
-  "gameDisplay": {
-    "intro": {
-      "remember": "Remember this digit!",
-      "next": "Next"
-    },
-    "inGame": {
-      "question": "Was this digit displayed two turns ago?",
-      "yes": "Yes",
-      "no": "No",
-      "turn": "Tun",
-      "score": "Score"
-    },
-    "gameOver": {
-      "gameOver": "Game over!",
-      "score": "Your score",
-      "playAgain": "Play again"
+    "contactOvh": "Contact OVH",
+    "source": "Source code",
+    "seeSource": "See source code on GitHub",
+    "cookies": "Cookies",
+    "seeCookies": "You can watch the cookies this website stored on your machine at",
+    "fromSettings": "the settings page",
+    "allCookies": "All the cookies this website can store on your machine, after your consent, are these:",
+    "cookiesList": {
+      "theme": "theme: website style theme details if modified.",
+      "session": "session: if you logged in, the website can then remember it."
     }
   }
 }

@@ -1,6 +1,6 @@
 import React, { FunctionComponent, ReactElement } from 'react';
 import style from 'styled-components';
-// import { Trans } from 'react-i18next';
+import { Trans } from 'react-i18next';
 
 const HeaderWrapper = style.header`
   padding: 10px 5vw 20px 5vw;
@@ -36,7 +36,6 @@ const HeaderWrapper = style.header`
     padding: 10px 5vw;
   }
 `;
-
 const Logo = style.div`
   flex-basis: 7%;
   margin: 10px auto;
@@ -48,7 +47,6 @@ const Logo = style.div`
     margin: 0;
   }
 `;
-
 const Nav = style.nav`
   flex-basis: 50%;
 
@@ -62,7 +60,6 @@ const Nav = style.nav`
     flex-basis: 60%;
   }
 `;
-
 const List = style.ul`
   list-style: none;
   padding: 0;
@@ -76,7 +73,6 @@ const List = style.ul`
     flex-direction: row;
   }
 `;
-
 const ListElt = style.li`
   margin-bottom: 10px;
   a {
@@ -109,22 +105,31 @@ const Header: FunctionComponent<HeaderProps> = ({
       <Nav>
         <List>
           <ListElt>
-            <a href="/">Accueil</a>
+            <a href="/">
+              <Trans i18nKey="Header.home">Home</Trans>
+            </a>
           </ListElt>
           <ListElt>
-            <a href="/ranking">Classement</a>
+            <a href="/ranking">
+              <Trans i18nKey="Header.ranking">Ranking</Trans>
+            </a>
           </ListElt>
           <ListElt>
-            <a href="/more">À propos</a>
+            <a href="/more">
+              <Trans i18nKey="Header.more">More</Trans>
+            </a>
           </ListElt>
           <ListElt>
             <a href="/settings">
-              Paramètres <span role="img" aria-label="settings-and-language" />
+              <Trans i18nKey="Header.settings">Settings</Trans>{' '}
+              <span role="img" aria-label="settings-and-language" />
               🌐
             </a>
           </ListElt>
           <ListElt>
-            <a href={userIsConnected ? '/me' : '/login'}>Mon compte</a>
+            <a href={userIsConnected ? '/me' : '/login'}>
+              <Trans i18nKey="Header.me">Me</Trans>
+            </a>
           </ListElt>
         </List>
       </Nav>

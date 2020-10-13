@@ -1,9 +1,10 @@
 import React, { FunctionComponent, ReactElement } from 'react';
 import style from 'styled-components';
+import { Trans } from 'react-i18next';
 
+import Digit from './Digit';
 import { GameDisplayProps } from '../../interfaces/game';
 import GameOver from './GameOver';
-import Digit from './Digit';
 
 const GameWrapper = style.section`
   text-align: center;
@@ -13,11 +14,9 @@ const GameWrapper = style.section`
     font-size: 1.3em;
   }
 `;
-
 const Score = style.section`
   font-size: 1em;
 `;
-
 const Answers = style.div`
   width: 150px;
   display: flex;
@@ -43,7 +42,7 @@ const GameDisplay: FunctionComponent<GameDisplayProps> = ({
       {allDigits.length <= 1 ? (
         <>
           <p>
-            Remember this digit!{' '}
+            <Trans i18nKey="GameDisplay.remember">Remember this digit!</Trans>{' '}
             <span role="img" aria-label="think">
               🧐
             </span>
@@ -53,7 +52,7 @@ const GameDisplay: FunctionComponent<GameDisplayProps> = ({
             className="btn btn-success"
             onClick={() => newTurn()}
           >
-            Next{' '}
+            <Trans i18nKey="GameDisplay.next">Next</Trans>{' '}
             <span role="img" aria-label="fist">
               🤜
             </span>
@@ -62,7 +61,9 @@ const GameDisplay: FunctionComponent<GameDisplayProps> = ({
       ) : (
         <>
           <p>
-            Whas this digit displayed two turns ago?{' '}
+            <Trans i18nKey="GameDisplay.question">
+              Whas this digit displayed two turns ago?
+            </Trans>{' '}
             <span role="img" aria-label="think">
               🤔
             </span>
@@ -73,14 +74,14 @@ const GameDisplay: FunctionComponent<GameDisplayProps> = ({
               className="btn btn-success"
               onClick={() => checkAnswer(true)}
             >
-              Yes
+              <Trans i18nKey="GameDisplay.yes">Yes</Trans>
             </button>
             <button
               type="button"
               className="btn btn-danger"
               onClick={() => checkAnswer(false)}
             >
-              No
+              <Trans i18nKey="GameDisplay.no">No</Trans>
             </button>
           </Answers>
         </>

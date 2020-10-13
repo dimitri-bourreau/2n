@@ -1,5 +1,6 @@
 import React, { FunctionComponent, ReactElement } from 'react';
 import style from 'styled-components';
+import { Trans } from 'react-i18next';
 
 import { RouteComponentProps } from '@reach/router';
 
@@ -7,7 +8,6 @@ const RulesWrapper = style.div`
   img {
   }
 `;
-
 const RulesBuble = style.section`
   clip-path: polygon(0% 0%, 100% 0%, 100% 88%, 75% 88%, 75% 100%, 50% 88%, 0 88%);
   background-color: #920292;
@@ -51,7 +51,6 @@ const RulesBuble = style.section`
     width: 26%;
   }
 `;
-
 const Kirk = style.div`
   background-image: url('/img/kirk.jpg');
     margin: 0 0 0 40%;
@@ -77,11 +76,19 @@ const Rules: FunctionComponent<RouteComponentProps> = (): ReactElement => {
   return (
     <RulesWrapper>
       <RulesBuble>
-        <p>Ce jeu est vraiment simple !</p>
-        <p>À chaque tour vous devez mémoriser le chiffre présenté.</p>
         <p>
-          Quand on vous demande si le chiffre affiché est apparu il y a deux
-          tours, vous devez donner la bonne réponse !
+          <Trans i18nKey="Rules.easy">This game is easy!</Trans>
+        </p>
+        <p>
+          <Trans i18nKey="Rules.remember">
+            At every turn remember the displayed digit.
+          </Trans>
+        </p>
+        <p>
+          <Trans i18nKey="Rules.answer">
+            When we ask you if the displayed digit was shown two turns ago, you
+            must answer correctly!
+          </Trans>
         </p>
       </RulesBuble>
       <Kirk />

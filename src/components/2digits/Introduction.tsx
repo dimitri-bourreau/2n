@@ -1,10 +1,9 @@
 import React, { FunctionComponent, ReactElement } from 'react';
 import { RouteComponentProps } from '@reach/router';
 import style from 'styled-components';
+import { Trans } from 'react-i18next';
 
 import IntroductionCanvas from './IntroductionCanvas';
-
-// import { Trans } from 'react-i18next';
 
 const IntroductionWrapper = style.div`
   width: 100%;
@@ -33,7 +32,6 @@ const IntroductionWrapper = style.div`
       100%{background-position:0% 88%}
   }
 `;
-
 const IntroductionCard = style.section`
   width: 80%;
   margin: auto;
@@ -71,14 +69,16 @@ const Introduction: FunctionComponent<RouteComponentProps> = (): ReactElement =>
       <IntroductionCard>
         <h1>2n</h1>
         <h2>
-          Souvenez-vous il y a deux chiffres.{' '}
+          <Trans i18nKey="Introduction.remember">
+            Will you remember two digits ago?
+          </Trans>{' '}
           <span role="img" aria-label="think">
             🤔
           </span>
         </h2>
         <a href="/game">
           <button className="btn btn-success" type="button">
-            Jouer
+            <Trans i18nKey="Introduction.play">Play</Trans>
           </button>
         </a>
       </IntroductionCard>

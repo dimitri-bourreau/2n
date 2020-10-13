@@ -1,6 +1,7 @@
 import React, { FunctionComponent, ReactElement } from 'react';
 import { RouteComponentProps } from '@reach/router';
 import style from 'styled-components';
+import { Trans } from 'react-i18next';
 
 const LegalWrapper = style.section`
   margin: 30px auto;
@@ -57,7 +58,6 @@ const LegalWrapper = style.section`
     width: 30%;
   }
 `;
-
 const DetailsBlock = style.section`
   margin: 40px auto;
 
@@ -77,106 +77,186 @@ const DetailsBlock = style.section`
 const Legal: FunctionComponent<RouteComponentProps> = (): ReactElement => {
   return (
     <LegalWrapper>
-      <h1>Mentions légales</h1>
+      <h1>
+        <Trans i18nKey="Legal.legal">Mentions légales</Trans>
+      </h1>
       <DetailsBlock>
-        <h2>Hébergement</h2>
+        <h2>
+          <Trans i18nKey="Legal.hosting">Hébergement</Trans>
+        </h2>
 
-        <p>VPS loué chez OVH.</p>
+        <p>
+          <Trans i18nKey="Legal.vps">VPS loué chez OVH.</Trans>
+        </p>
 
         <ul>
-          <li>SAS au capital de 10 069 020 €</li>
-          <li>RCS Lille Métropole 424 761 419 00045</li>
-          <li>Code APE 2620Z</li>
-          <li>N° TVA : FR 22 424 761 419</li>
-          <li>Siège social : 2 rue Kellermann - 59100 Roubaix - France</li>
+          <li>
+            <Trans i18nKey="Legal.ovhDetails.1">
+              SAS au capital de 10 069 020 €
+            </Trans>
+          </li>
+          <li>
+            <Trans i18nKey="Legal.ovhDetails.2">
+              RCS Lille Métropole 424 761 419 00045
+            </Trans>
+          </li>
+          <li>
+            <Trans i18nKey="Legal.ovhDetails.3">Code APE 2620Z</Trans>
+          </li>
+          <li>
+            <Trans i18nKey="Legal.ovhDetails.4">
+              N° TVA : FR 22 424 761 419
+            </Trans>
+          </li>
+          <li>
+            <Trans i18nKey="Legal.ovhDetails.5">
+              Siège social : 2 rue Kellermann - 59100 Roubaix - France
+            </Trans>
+          </li>
         </ul>
 
-        <a href="https://www.ovhcloud.com/fr/contact/">Contacter OVH</a>
+        <a href="https://www.ovhcloud.com/fr/contact/">
+          <Trans i18nKey="Legal.contactOvh">Contacter OVH</Trans>
+        </a>
       </DetailsBlock>
 
       <DetailsBlock>
-        <h2 className="source-code">Code source</h2>
+        <h2 className="source-code">
+          <Trans i18nKey="Legal.source">Code source</Trans>
+        </h2>
 
         <a href="https://github.com/tobudim/2n">
           <button type="button" className="btn">
-            Voir le code source de ce site sur GitHub
+            <Trans i18nKey="Legal.seeSource">
+              Voir le code source de ce site sur GitHub
+            </Trans>
           </button>
         </a>
       </DetailsBlock>
 
       <DetailsBlock>
-        <h2>Cookies</h2>
+        <h2>
+          <Trans i18nKey="Legal.cookies">Cookies</Trans>
+        </h2>
 
         <p>
-          Vous pouvez voir les cookies stockés sur votre machine pour ce site
-          depuis <a href="/settings">les paramètres</a>.
+          <Trans i18nKey="Legal.seeCookies">
+            Vous pouvez voir les cookies stockés sur votre machine pour ce site
+            depuis
+          </Trans>{' '}
+          <a href="/settings">
+            {' '}
+            <Trans i18nKey="Legal.fromSettings">les paramètres</Trans>
+          </a>
+          .
         </p>
 
         <p>
-          Les cookies qui, après votre consentement, peuvent être déposés sur
-          votre navigateur Internet sont ceux-ci :
+          <Trans i18nKey="Legal.allCookies">
+            Les cookies qui, après votre consentement, peuvent être déposés sur
+            votre navigateur Internet sont ceux-ci :
+          </Trans>
         </p>
 
         <ul>
-          <li>&quot;theme&quot; : Gestion du thème global du site.</li>
           <li>
-            &quot;session&quot; : Si vous vous connectez, cela permet au site de
-            vous renconnaître au gré de votre navigation.
+            <Trans i18nKey="Legal.cookiesList.theme">
+              &quot;theme&quot; : Gestion du thème global du site.
+            </Trans>
+          </li>
+          <li>
+            <Trans i18nKey="Legal.cookiesList.session">
+              &quot;session&quot; : Si vous vous connectez, cela permet au site
+              de vous renconnaître au gré de votre navigation.
+            </Trans>
           </li>
         </ul>
       </DetailsBlock>
 
       <DetailsBlock>
-        <h2>Utilisation des données personnelles</h2>
+        <h2>
+          <Trans i18nKey="Legal.home">
+            Utilisation des données personnelles
+          </Trans>
+        </h2>
 
         <p>
-          Avant toute chose : pour ce sujet vous pouvez me contacter{' '}
-          <a href="/contact">ici</a>.
+          <Trans i18nKey="Legal.home">
+            Avant toute chose : pour ce sujet vous pouvez me contacter
+          </Trans>{' '}
+          <a href="/contact">
+            <Trans i18nKey="Legal.home">ici</Trans>
+          </a>
+          .
         </p>
 
         <p>
-          Lorsque vous créez un compte, je vous demande deux données
-          personnelles :
+          <Trans i18nKey="Legal.home">
+            Lorsque vous créez un compte, je vous demande deux données
+            personnelles :
+          </Trans>
         </p>
 
         <ul>
-          <li>Votre adresse email</li>
-          <li>Un mot de passe</li>
+          <li>
+            <Trans i18nKey="Legal.home">Votre adresse email</Trans>
+          </li>
+          <li>
+            <Trans i18nKey="Legal.home">Un mot de passe</Trans>
+          </li>
         </ul>
 
         <p>
-          L&apos;adresse email est alors enregistrée et conservée par Google au
-          sein de son service Firebase.
+          <Trans i18nKey="Legal.home">
+            L&apos;adresse email est alors enregistrée et conservée par Google
+            au sein de son service Firebase.
+          </Trans>
         </p>
 
         <p>
-          Le mot de passe ne quitte pas votre machine. Je confie aux serveurs de
-          Google, au sein de son service Firebase, un <i>hash</i> de votre mot
-          de passe : ce hash est une sorte de clé qui permet plus tard de
-          vérifier votre mot de passe, mais il ne permet pas de le deviner.
+          <Trans i18nKey="Legal.home">
+            Le mot de passe ne quitte pas votre machine. Je confie aux serveurs
+            de Google, au sein de son service Firebase, un <i>hash</i> de votre
+            mot de passe : ce hash est une sorte de clé qui permet plus tard de
+            vérifier votre mot de passe, mais il ne permet pas de le deviner.
+          </Trans>
         </p>
 
         <p>
-          Vous pouvez modifier votre mot de passe, votre email, et supprimer
-          votre compte depuis <a href="/me">Mon compte</a>. Vous pouvez me
-          demander les données vous concernant en ma possession depuis{' '}
-          <a href="/contact">cette page</a>.
+          <Trans i18nKey="Legal.home">
+            Vous pouvez modifier votre mot de passe, votre email, et supprimer
+            votre compte depuis <a href="/me">Mon compte</a>. Vous pouvez me
+            demander les données vous concernant en ma possession depuis
+          </Trans>{' '}
+          <a href="/contact">
+            <Trans i18nKey="Legal.home">cette page</Trans>
+          </a>
+          .
         </p>
 
         <p>
-          En supprimant votre compte, je supprime toutes les données vous
-          concernant sur les serveurs de Google.
+          <Trans i18nKey="Legal.home">
+            En supprimant votre compte, je supprime toutes les données vous
+            concernant sur les serveurs de Google.
+          </Trans>
         </p>
 
         <p>
           <a href="https://firebase.google.com/support/privacy/">
-            Confidentialité et sécurité dans Firebase
+            <Trans i18nKey="Legal.home">
+              Confidentialité et sécurité dans Firebase
+            </Trans>
           </a>
         </p>
 
         <p>
-          Vous pouvez réaliser une réclamation depuis{' '}
-          <a href="https://www.cnil.fr/">le site de la CNIL</a>.
+          <Trans i18nKey="Legal.home">
+            Vous pouvez réaliser une réclamation depuis
+          </Trans>{' '}
+          <a href="https://www.cnil.fr/">
+            <Trans i18nKey="Legal.home">le site de la CNIL</Trans>
+          </a>
+          .
         </p>
       </DetailsBlock>
     </LegalWrapper>
