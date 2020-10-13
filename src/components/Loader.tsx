@@ -1,7 +1,9 @@
 import React, { FunctionComponent, ReactElement } from 'react';
 
+// For now nothing displayed to avoid clipping, TODO
+
 const Loader: FunctionComponent = (): ReactElement => {
-  return <h1>Loading...</h1>;
+  return <></>;
 };
 
 export default Loader;
