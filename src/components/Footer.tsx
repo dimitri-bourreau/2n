@@ -43,7 +43,7 @@ const Footer: FunctionComponent = (): ReactElement => {
   return (
     <FooterWrapper>
       <p>
-        Mais pourquoi ce site ?{' '}
+        Pourquoi ce site ?{' '}
         <span>
           J&apos;ai réalisé ce petit site pour m&apos;amuser et montrer mes
           compétences : je suis un développeur disponible sur Bordeaux et Paris,
