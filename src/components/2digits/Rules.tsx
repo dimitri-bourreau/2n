@@ -3,7 +3,6 @@ import style from 'styled-components';
 import { Trans } from 'react-i18next';
 
 const RulesWrapper = style.div`
-  background-color: white;
   display: inline-block;
   width: 100%;
 `;
@@ -51,7 +50,7 @@ const RulesBuble = style.section`
   }
 `;
 const Kirk = style.div`
-  background-image: url('/img/kirk.jpg');
+  background-image: url('/img/kirk.png');
     margin: 0 0 0 40%;
     display: block;
     width: 220px;

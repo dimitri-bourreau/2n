@@ -11,7 +11,7 @@ import { useCookies } from 'react-cookie';
 
 import PreFooterCanvas from './PreFooterCanvas';
 
-const SettingsWrapper = style.section`
+const SettingsWrapper = style.div`
   margin: 30px auto;
   width: 80%;
   min-height: 50vh;
@@ -44,13 +44,12 @@ const SettingsWrapper = style.section`
 const PositionRelative = style.div`
   position: relative;
 `;
-const Setting = style.section`
+const Setting = style.div`
   padding: 25px;
   box-sizing: border-box;
   margin-bottom: 30px;
   width: 100%;
   border-radius: 10px;
-  background-color: #f5f5f5;
 
   h2 {
     font-size: 1.6em;
@@ -63,10 +62,10 @@ const Setting = style.section`
 
   .deleteCookie {
     width: 35px;
-    height: 35px;
+    height: 40px;
     position: absolute;
     top: 0;
-    right: 0;
+    right: -1px;
     line-height: 35px;
     background-color: red;
     color: white;
@@ -113,17 +112,19 @@ const Settings: FunctionComponent<RouteComponentProps> = (): ReactElement => {
 
   const handleThemeUpdate = (newTheme: string): void => {
     setCookie('theme', newTheme, { path: '/' });
+    window.location.reload();
   };
 
   const handleDeleteCookie = (cookie: string): void => {
     removeCookie(cookie);
+    window.location.reload();
   };
 
   return (
     <>
       <SettingsWrapper>
         <h1>
-          <Trans i18nKey="Settings.settings">Paramètres</Trans>
+          <Trans i18nKey="Settings.settings">Settings</Trans>
         </h1>
 
         <Setting>
@@ -159,22 +160,29 @@ const Settings: FunctionComponent<RouteComponentProps> = (): ReactElement => {
 
         <Setting>
           <h2>
-            <Trans i18nKey="Settings.theme">Thème</Trans>
+            <Trans i18nKey="Settings.theme">Theme</Trans>
           </h2>
           <SelectButtons>
             <button
               type="button"
-              className="btn btn-light"
+              className="btn btn-theme btn-light"
               onClick={() => handleThemeUpdate('light')}
             >
-              <Trans i18nKey="Settings.light">Clair</Trans>
+              <Trans i18nKey="Settings.light">Light</Trans>
             </button>
             <button
               type="button"
-              className="btn btn-dark"
+              className="btn btn-theme btn-soft"
+              onClick={() => handleThemeUpdate('soft')}
+            >
+              <Trans i18nKey="Settings.soft">Soft</Trans>
+            </button>
+            <button
+              type="button"
+              className="btn btn-theme btn-dark"
               onClick={() => handleThemeUpdate('dark')}
             >
-              <Trans i18nKey="Settings.dark">Sombre</Trans>
+              <Trans i18nKey="Settings.dark">Dark</Trans>
             </button>
           </SelectButtons>
         </Setting>
@@ -182,20 +190,20 @@ const Settings: FunctionComponent<RouteComponentProps> = (): ReactElement => {
         <Setting>
           <h2>
             <Trans i18nKey="Settings.cookiesManagement">
-              Gestion des cookies
+              Cookies Management
             </Trans>
           </h2>
 
           <p>
             <Trans i18nKey="Settings.storedCookies">
-              Voici la liste des cookies stockés sur votre machine depuis ce
-              site
+              Here is the list of all the cookies this website stored on your
+              machine:
             </Trans>
           </p>
 
           {!cookies ? (
             <p className="cookie">
-              <Trans i18nKey="Settings.noCookies">Aucun cookie</Trans>
+              <Trans i18nKey="Settings.noCookies">None</Trans>
             </p>
           ) : (
             Object.keys(cookies).map(key => (

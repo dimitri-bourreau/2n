@@ -104,9 +104,13 @@ ul {
 .btn-danger {
   background-color: #c51d1d;
 }
-
 .btn-danger:hover {
   background-color: #e21f1f;
+}
+
+.btn-theme {
+  border-radius: 0px;
+  border: 2px solid #f5f5f5;
 }
 
 .btn-light {
@@ -115,6 +119,13 @@ ul {
 }
 .btn-light:hover {
   background-color: #fffdfd;
+}
+
+.btn-soft {
+  background-color: #955656;
+}
+.btn-soft:hover {
+  background-color: #744646;
 }
 
 .btn-dark {
@@ -136,6 +147,7 @@ ul {
   padding: 10px;
   border-radius: 10px;
   font-size: 0.8em;
+  border: 2px solid #d4caca;
 }
 .cookie span {
   color: grey;

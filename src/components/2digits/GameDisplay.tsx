@@ -7,7 +7,7 @@ import { GameDisplayProps } from '../../interfaces/game';
 import GameOver from './GameOver';
 import Rules from './Rules';
 
-const GameWrapper = style.section`
+const GameWrapper = style.div`
   text-align: center;
   margin: 50px auto;
 
@@ -15,7 +15,7 @@ const GameWrapper = style.section`
     font-size: 1.3em;
   }
 `;
-const Score = style.section`
+const Score = style.div`
   font-size: 1em;
 `;
 const Answers = style.div`

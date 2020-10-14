@@ -5,7 +5,7 @@ import { Trans } from 'react-i18next';
 
 import PreFooterCanvas from './PreFooterCanvas';
 
-const MoreWrapper = style.section`
+const MoreWrapper = style.div`
   margin: 30px auto;
   width: 80%;
   text-align: center;

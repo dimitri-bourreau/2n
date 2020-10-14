@@ -5,7 +5,7 @@ import { Trans } from 'react-i18next';
 
 import PreFooterCanvas from './PreFooterCanvas';
 
-const RankingWrapper = style.section`
+const RankingWrapper = style.div`
   margin: 30px auto 60px auto;
   width: 80%;
   min-height: 50vh;
