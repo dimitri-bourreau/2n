@@ -78,15 +78,14 @@ const App: FunctionComponent = (): ReactElement => {
 
   useEffect(() => {
     const getRanking = async () => {
-      const snapshot = await firestore.collection('posts').get();
+      const snapshot = await firestore.collection('ranking').get();
       snapshot.forEach(doc => {
         const { id } = doc;
         const data = doc.data();
         console.log(id, data);
       });
     };
-    const ranking = await getRanking();
-    console.log();
+    getRanking();
   });
 
   if (typeof cookies.theme !== 'undefined') {
