@@ -40,6 +40,7 @@
     "eslint-loader": "3.0.3",
     "eslint-plugin-flowtype": "4.6.0",
     "file-loader": "4.3.0",
+    "firebase": "^7.23.0",
     "fs-extra": "^8.1.0",
     "html-webpack-plugin": "4.0.0-beta.11",
     "i18next": "^19.7.0",

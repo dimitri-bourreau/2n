@@ -1,12 +1,18 @@
-import React, { FunctionComponent, ReactElement, Suspense } from 'react';
+import React, {
+  FunctionComponent,
+  ReactElement,
+  Suspense,
+  useEffect,
+} from 'react';
 import { useCookies } from 'react-cookie';
 import style from 'styled-components';
 
+import { firestore } from './firebase.js';
 import Layout from './components/Layout';
 import Loader from './components/Loader';
 
 const SoftTheme = style.div`
-  background-color:  #955656;
+  background-color: #955656;
   color: white;
 
   h1, h2 {
@@ -45,6 +51,10 @@ const SoftTheme = style.div`
   footer ul {
     background-color: transparent;
   }
+
+  .cookie {
+    color: black;
+  }
 `;
 const DarkTheme = style(SoftTheme)`
   background-color: #292727;
@@ -65,6 +75,19 @@ const DisplayApp: FunctionComponent = (): ReactElement => (
 
 const App: FunctionComponent = (): ReactElement => {
   const [cookies] = useCookies();
+
+  useEffect(() => {
+    const getRanking = async () => {
+      const snapshot = await firestore.collection('posts').get();
+      snapshot.forEach(doc => {
+        const { id } = doc;
+        const data = doc.data();
+        console.log(id, data);
+      });
+    };
+    const ranking = await getRanking();
+    console.log();
+  });
 
   if (typeof cookies.theme !== 'undefined') {
     if (cookies.theme === 'soft') {
