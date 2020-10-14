@@ -50,7 +50,7 @@ const Setting = style.section`
   margin-bottom: 30px;
   width: 100%;
   border-radius: 10px;
-  background-color: beige;
+  background-color: #f5f5f5;
 
   h2 {
     font-size: 1.6em;
