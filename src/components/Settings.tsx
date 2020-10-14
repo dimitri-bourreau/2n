@@ -35,6 +35,7 @@ const SettingsWrapper = style.section`
   }
   @media all and (min-width: 992px) {
     width: 40%;
+    max-width: 400px;
   }
   @media all and (min-width: 1200px) {
     width: 30%;
@@ -44,12 +45,12 @@ const PositionRelative = style.div`
   position: relative;
 `;
 const Setting = style.section`
-  background-color: #e7e8fb;
   padding: 25px;
   box-sizing: border-box;
   margin-bottom: 30px;
   width: 100%;
   border-radius: 10px;
+  background-color: beige;
 
   h2 {
     font-size: 1.6em;
@@ -84,7 +85,7 @@ const SelectButtons = style.div`
   justify-content: space-evenly;
   align-items: center;
   width: 80%;
-  margin: 0 auto;
+  margin: 40px auto 20px auto;
 
   button {
     display: inline-block;
@@ -127,14 +128,8 @@ const Settings: FunctionComponent<RouteComponentProps> = (): ReactElement => {
 
         <Setting>
           <h2>
-            <span role="img" aria-label="uk-flag">
-              🇬🇧
-            </span>{' '}
             <span role="img" aria-label="change-language">
               🌐
-            </span>{' '}
-            <span role="img" aria-label="france-flag">
-              🇫🇷
             </span>
           </h2>
 
@@ -166,24 +161,6 @@ const Settings: FunctionComponent<RouteComponentProps> = (): ReactElement => {
           <h2>
             <Trans i18nKey="Settings.theme">Thème</Trans>
           </h2>
-
-          <p>
-            <Trans i18nKey="Settings.themeCookie">
-              Si vous sélectionnez un thème, ce cookie sera déposé sur votre
-              machine :
-            </Trans>
-          </p>
-
-          <p className="cookie">
-            theme:{' '}
-            <span>
-              {'<'}
-              <Trans i18nKey="Settings.nameOfThemeCookie">
-                nom du thème sélectionné
-              </Trans>
-              {'>'}
-            </span>{' '}
-          </p>
           <SelectButtons>
             <button
               type="button"
