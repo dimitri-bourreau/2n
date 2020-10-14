@@ -7,6 +7,7 @@ import React, {
 import { RouteComponentProps } from '@reach/router';
 import style from 'styled-components';
 import { Trans, useTranslation } from 'react-i18next';
+import { useCookies } from 'react-cookie';
 
 import PreFooterCanvas from './PreFooterCanvas';
 
@@ -72,27 +73,27 @@ const SelectButtons = style.div`
 `;
 
 const Settings: FunctionComponent<RouteComponentProps> = (): ReactElement => {
-  const [storedCookies, setStoredCookies] = useState<string[]>();
-  const [currentLanguage, setCurrentLanguage] = useState('');
+  const [i18NCookie, setI18NCookie] = useState('');
+  const [cookies, setCookie, removeCookie] = useCookies();
 
   const { i18n } = useTranslation();
 
   useEffect(() => {
     const { localStorage } = window;
-    const cookies = Object.keys(localStorage).map(key => key);
-    const browserLang =
-      localStorage.i18nextLng === 'fr-FR' || !localStorage.i18nextLng
-        ? 'fr'
-        : 'en';
-    setStoredCookies(cookies);
-    setCurrentLanguage(browserLang);
-  }, [i18n.language]);
+    if (typeof localStorage.i18nextLng !== 'undefined') {
+      setI18NCookie(localStorage.i18nextLng);
+    }
+  }, [setI18NCookie]);
 
-  const handleChangeLanguage = (newLanguage: string): null => {
+  const handleChangeLanguage = (newLanguage: string): void => {
     i18n.changeLanguage(newLanguage);
-    return null;
+    setI18NCookie(newLanguage);
   };
-  console.log(currentLanguage);
+
+  const handleThemeUpdate = (newTheme: string): void => {
+    setCookie('theme', newTheme, { path: '/' });
+  };
+
   return (
     <>
       <SettingsWrapper>
@@ -126,7 +127,7 @@ const Settings: FunctionComponent<RouteComponentProps> = (): ReactElement => {
             <button
               type="button"
               className={`btn btn-${
-                currentLanguage === 'en' ? 'selected' : 'light'
+                i18NCookie === 'en' ? 'selected' : 'light'
               }`}
               onClick={() => handleChangeLanguage('en')}
             >
@@ -135,7 +136,9 @@ const Settings: FunctionComponent<RouteComponentProps> = (): ReactElement => {
             <button
               type="button"
               className={`btn btn-${
-                currentLanguage === 'fr' ? 'selected' : 'light'
+                i18NCookie === 'fr' || i18NCookie === 'fr-FR'
+                  ? 'selected'
+                  : 'light'
               }`}
               onClick={() => handleChangeLanguage('fr')}
             >
@@ -167,10 +170,18 @@ const Settings: FunctionComponent<RouteComponentProps> = (): ReactElement => {
             </span>{' '}
           </p>
           <SelectButtons>
-            <button type="button" className="btn btn-light">
+            <button
+              type="button"
+              className="btn btn-light"
+              onClick={() => handleThemeUpdate('light')}
+            >
               <Trans i18nKey="Settings.light">Clair</Trans>
             </button>
-            <button type="button" className="btn btn-dark">
+            <button
+              type="button"
+              className="btn btn-dark"
+              onClick={() => handleThemeUpdate('dark')}
+            >
               <Trans i18nKey="Settings.dark">Sombre</Trans>
             </button>
           </SelectButtons>
@@ -190,17 +201,22 @@ const Settings: FunctionComponent<RouteComponentProps> = (): ReactElement => {
             </Trans>
           </p>
 
-          {!storedCookies ? (
+          {!cookies ? (
             <p className="cookie">
               <Trans i18nKey="Settings.noCookies">Aucun cookie</Trans>
             </p>
           ) : (
-            storedCookies.map(cookie => (
-              <p key={cookie} className="cookie">
-                {cookie} : <span>{window.localStorage[cookie]}</span>
+            Object.keys(cookies).map(key => (
+              <p key={key} className="cookie">
+                {key} : <span>{cookies[key]}</span>
               </p>
             ))
           )}
+          {i18NCookie ? (
+            <p className="cookie">
+              i18nextLng : <span>{i18NCookie}</span>
+            </p>
+          ) : null}
         </Setting>
       </SettingsWrapper>
       <PreFooterCanvas />
