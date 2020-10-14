@@ -57,6 +57,21 @@ const Setting = style.section`
     margin-bottom: 30px;
   }
 
+  .deleteCookie {
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    background-color: red;
+    color: white;
+    font-size: 1.6em;
+    display: inline-block;
+    float: right;
+    margin: -10px -10px auto auto;
+    border-radius: 0 10px 10px 0;
+  }
+  .deleteCookie:hover {
+    cursor: pointer;
+  }
 `;
 const SelectButtons = style.div`
   display: flex;
@@ -208,7 +223,8 @@ const Settings: FunctionComponent<RouteComponentProps> = (): ReactElement => {
           ) : (
             Object.keys(cookies).map(key => (
               <p key={key} className="cookie">
-                {key} : <span>{cookies[key]}</span>
+                {key} : <span>{cookies[key]}</span>{' '}
+                <span className="deleteCookie">x</span>
               </p>
             ))
           )}
