@@ -40,6 +40,9 @@ const SettingsWrapper = style.section`
     width: 30%;
   }
 `;
+const PositionRelative = style.div`
+  position: relative;
+`;
 const Setting = style.section`
   background-color: #e7e8fb;
   padding: 25px;
@@ -60,14 +63,16 @@ const Setting = style.section`
   .deleteCookie {
     width: 35px;
     height: 35px;
+    position: absolute;
+    top: 0;
+    right: 0;
     line-height: 35px;
     background-color: red;
     color: white;
     font-size: 1.6em;
-    display: inline-block;
-    float: right;
-    margin: -10px -10px auto auto;
     border-radius: 0 10px 10px 0;
+    border: none;
+    outline: none;
   }
   .deleteCookie:hover {
     cursor: pointer;
@@ -107,6 +112,10 @@ const Settings: FunctionComponent<RouteComponentProps> = (): ReactElement => {
 
   const handleThemeUpdate = (newTheme: string): void => {
     setCookie('theme', newTheme, { path: '/' });
+  };
+
+  const handleDeleteCookie = (cookie: string): void => {
+    removeCookie(cookie);
   };
 
   return (
@@ -222,10 +231,18 @@ const Settings: FunctionComponent<RouteComponentProps> = (): ReactElement => {
             </p>
           ) : (
             Object.keys(cookies).map(key => (
-              <p key={key} className="cookie">
-                {key} : <span>{cookies[key]}</span>{' '}
-                <span className="deleteCookie">x</span>
-              </p>
+              <PositionRelative key={key}>
+                <p className="cookie">
+                  {key} : <span>{cookies[key]}</span>{' '}
+                </p>
+                <button
+                  type="button"
+                  className="deleteCookie"
+                  onClick={() => handleDeleteCookie(key)}
+                >
+                  x
+                </button>
+              </PositionRelative>
             ))
           )}
           {i18NCookie ? (
