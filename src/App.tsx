@@ -1,13 +1,7 @@
-import React, {
-  FunctionComponent,
-  ReactElement,
-  Suspense,
-  useEffect,
-} from 'react';
+import React, { FunctionComponent, ReactElement, Suspense } from 'react';
 import { useCookies } from 'react-cookie';
 import style from 'styled-components';
 
-import { firestore } from './firebase.js';
 import Layout from './components/Layout';
 import Loader from './components/Loader';
 
@@ -75,18 +69,6 @@ const DisplayApp: FunctionComponent = (): ReactElement => (
 
 const App: FunctionComponent = (): ReactElement => {
   const [cookies] = useCookies();
-
-  useEffect(() => {
-    const getRanking = async () => {
-      const snapshot = await firestore.collection('ranking').get();
-      snapshot.forEach(doc => {
-        const { id } = doc;
-        const data = doc.data();
-        console.log(id, data);
-      });
-    };
-    getRanking();
-  });
 
   if (typeof cookies.theme !== 'undefined') {
     if (cookies.theme === 'soft') {

@@ -1,7 +1,13 @@
-import React, { FunctionComponent, ReactElement } from 'react';
+import React, {
+  FunctionComponent,
+  ReactElement,
+  useState,
+  useEffect,
+} from 'react';
 import { RouteComponentProps } from '@reach/router';
 import style from 'styled-components';
 import { Trans } from 'react-i18next';
+import { firestore } from '../firebase.js';
 
 import PreFooterCanvas from './PreFooterCanvas';
 
@@ -46,7 +52,19 @@ const RankingWrapper = style.div`
 `;
 
 const Ranking: FunctionComponent<RouteComponentProps> = (): ReactElement => {
-  const ranking = [{ name: 'Dimitri', score: 1 }];
+  const [ranking, setRanking] = useState([{ name: 'Dimitri', score: 1 }]);
+
+  useEffect(() => {
+    const getRanking = async () => {
+      const snapshot = await firestore.collection('ranking').get();
+      snapshot.forEach(doc => {
+        const { id } = doc;
+        const data = doc.data();
+        console.log(id, data);
+      });
+    };
+    getRanking();
+  });
 
   return (
     <>
