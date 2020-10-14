@@ -51,22 +51,22 @@ const RulesBuble = style.section`
 `;
 const Kirk = style.div`
   background-image: url('/img/kirk.png');
-    margin: 0 0 0 40%;
+    margin: 0 0 0 55%;
     display: block;
     width: 220px;
     height: 200px;
 
     @media all and (min-width: 576px) {
-      margin: 0 0 0 45%;
+      margin: 0 0 0 52%;
     }
     @media all and (min-width: 768px) {
-      margin: 0 0 0 45%;
+      margin: 0 0 0 53%;
     }
     @media all and (min-width: 992px) {
-      margin: 0 0 0 45%;
+      margin: 0 0 0 52%;
     }
     @media all and (min-width: 1200px) {
-      margin: 0 0 0 50%;
+      margin: 0 0 0 53%;
     }
 `;
 
