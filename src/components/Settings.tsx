@@ -127,25 +127,16 @@ const Settings: FunctionComponent<RouteComponentProps> = (): ReactElement => {
 
         <Setting>
           <h2>
-            <Trans i18nKey="Settings.language">Language</Trans>{' '}
+            <span role="img" aria-label="uk-flag">
+              🇬🇧
+            </span>{' '}
             <span role="img" aria-label="change-language">
               🌐
+            </span>{' '}
+            <span role="img" aria-label="france-flag">
+              🇫🇷
             </span>
           </h2>
-
-          <p>
-            <Trans i18nKey="Settings.langCookie">
-              If you select english, this specific cookie will be stored on your
-              machine:
-            </Trans>
-          </p>
-
-          <p className="cookie">
-            i18nextLng:{' '}
-            <span>
-              <Trans i18nKey="Settings.langCookieEnFr">en</Trans>
-            </span>
-          </p>
 
           <SelectButtons>
             <button
