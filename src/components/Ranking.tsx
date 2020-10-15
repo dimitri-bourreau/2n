@@ -51,17 +51,24 @@ const RankingWrapper = style.div`
   }
 `;
 
+interface DocumentData {
+  score: number;
+  user: {
+    name: string;
+    uid: number;
+  };
+}
+
 const Ranking: FunctionComponent<RouteComponentProps> = (): ReactElement => {
-  const [ranking, setRanking] = useState([{ name: 'Dimitri', score: 1 }]);
+  const [ranking, setRanking] = useState([] as DocumentData[]);
 
   useEffect(() => {
     const getRanking = async () => {
       const snapshot = await firestore.collection('ranking').get();
-      snapshot.forEach(doc => {
-        const { id } = doc;
-        const data = doc.data();
-        console.log(id, data);
-      });
+      const snappedRanking = snapshot.docs.map(
+        doc => doc.data() as DocumentData,
+      );
+      setRanking(snappedRanking);
     };
     getRanking();
   });
@@ -86,8 +93,8 @@ const Ranking: FunctionComponent<RouteComponentProps> = (): ReactElement => {
           </thead>
           <tbody>
             {ranking.map(rank => (
-              <tr key={`${rank.name}${rank.score}`}>
-                <td>{rank.name}</td>
+              <tr key={`${rank.user.name}${rank.score}`}>
+                <td>{rank.user.name}</td>
                 <td>{rank.score}</td>
               </tr>
             ))}
