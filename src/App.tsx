@@ -4,6 +4,8 @@ import style from 'styled-components';
 
 import Layout from './components/Layout';
 import Loader from './components/Loader';
+import UserProvider from './providers/UserProvider';
+import { config } from './firebase.js';
 
 const SoftTheme = style.div`
   background-color: #955656;
@@ -62,9 +64,11 @@ const DarkTheme = style(SoftTheme)`
   }
 `;
 const DisplayApp: FunctionComponent = (): ReactElement => (
-  <Suspense fallback={<Loader />}>
-    <Layout />
-  </Suspense>
+  <UserProvider>
+    <Suspense fallback={<Loader />}>
+      <Layout />
+    </Suspense>
+  </UserProvider>
 );
 
 const App: FunctionComponent = (): ReactElement => {

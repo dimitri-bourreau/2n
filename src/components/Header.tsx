@@ -86,13 +86,7 @@ const ListElt = style.li`
   }
 `;
 
-interface HeaderProps {
-  userIsConnected?: boolean;
-}
-
-const Header: FunctionComponent<HeaderProps> = ({
-  userIsConnected,
-}: HeaderProps): ReactElement => {
+const Header: FunctionComponent = (): ReactElement => {
   // const activePath = window.location.pathname.split('').splice(1).join('');
 
   return (
@@ -126,19 +120,20 @@ const Header: FunctionComponent<HeaderProps> = ({
               🌐
             </a>
           </ListElt>
-          <ListElt>
-            <a href={userIsConnected ? '/me' : '/login'}>
-              <Trans i18nKey="Header.me">Me</Trans>
+          {/* <ListElt>
+            <a href="/me">
+              <IfFirebaseAuthed>
+                {() => <Trans i18nKey="Header.me">My account</Trans>}
+              </IfFirebaseAuthed>
+              <IfFirebaseUnAuthed>
+                {() => <Trans i18nKey="Header.logIn">Log in</Trans>}
+              </IfFirebaseUnAuthed>
             </a>
-          </ListElt>
+          </ListElt> */}
         </List>
       </Nav>
     </HeaderWrapper>
   );
-};
-
-Header.defaultProps = {
-  userIsConnected: false,
 };
 
 export default Header;

@@ -30,6 +30,7 @@
     "prettier"
   ],
   "rules": {
+    "react/jsx-props-no-spreading": 1,
     "react/jsx-one-expression-per-line": "off",
     "no-unused-expressions": 0,
     "chai-friendly/no-unused-expressions": 2,

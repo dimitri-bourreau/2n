@@ -1,7 +1,8 @@
-import firebase from 'firebase/app';
-import 'firebase/firestore';
+import firebase from 'firebase';
+// import 'firebase/auth';
+// import 'firebase/firestore';
 
-const config = {
+export const config = {
   apiKey: 'AIzaSyAZciIBN9EI3Gsiv543AkXUELgQDx-2PEM',
   authDomain: 'n-game-7d0a4.firebaseapp.com',
   databaseURL: 'https://n-game-7d0a4.firebaseio.com',
@@ -12,7 +13,10 @@ const config = {
 };
 
 firebase.initializeApp(config);
-
+export const auth = firebase.auth();
 export const firestore = firebase.firestore();
 
-export default firebase;
+const provider = new firebase.auth.GoogleAuthProvider();
+export const signInWithGoogle = () => {
+  auth.signInWithPopup(provider);
+};

@@ -2,11 +2,15 @@ import React, { FunctionComponent, ReactElement } from 'react';
 import { RouteComponentProps } from '@reach/router';
 import style from 'styled-components';
 
-const MeWrapper = style.section`
+// import { Trans } from 'react-i18next';
+
+import PreFooterCanvas from './PreFooterCanvas';
+
+const LoginWrapper = style.div`
   margin: 30px auto;
   width: 80%;
   text-align: center;
-  min-height: 80vh;
+  min-height: 50vh;
   padding: 30px;
   box-sizing: border-box;
 
@@ -14,8 +18,18 @@ const MeWrapper = style.section`
     margin-bottom: 50px;
   }
 
+  h2 {
+    margin-bottom: 20px;
+  }
+
   p {
     margin-bottom: 30px;
+  }
+
+  ul {
+    background-color: #f7ecec;
+    padding: 20px 0;
+    border-radius: 10px;
   }
 
   @media all and (min-width: 576px) {
@@ -32,14 +46,45 @@ const MeWrapper = style.section`
   }
 `;
 
-const Me: FunctionComponent<RouteComponentProps> = (): ReactElement => {
-  return (
-    <MeWrapper>
-      <h1>Profil connecté</h1>
+const Logger = style.form`
+  width: 100%;
 
-      <p>À venir</p>
-    </MeWrapper>
+  label, label input {
+    display: block;
+    margin: 10px auto;
+  }
+
+  label input {
+    padding: 10px 20px;
+    border: 1px solid lightgrey;
+  }
+
+  button {
+    background-color: #920292;
+  }
+
+  button:hover {
+    background-color: #a53ea5;
+  }
+`;
+
+const Details = style.div`
+  width: 100%;
+  margin-top: 40px;
+
+  p {
+    color: grey;
+    font-style: italic;
+  }
+`;
+
+const Login: FunctionComponent<RouteComponentProps> = (): ReactElement => {
+  return (
+    <>
+      <h1>Mon compte</h1>
+      <PreFooterCanvas />
+    </>
   );
 };
 
-export default Me;
+export default Login;

@@ -6,11 +6,11 @@ import { useTranslation } from 'react-i18next';
 import Footer from './Footer';
 import Header from './Header';
 
+import Account from './Account';
 import Contact from './Contact';
 import Game from './Game';
 import Home from './Home';
 import Legal from './Legal';
-import Login from './Login';
 import More from './More';
 import Ranking from './Ranking';
 import Settings from './Settings';
@@ -27,7 +27,8 @@ const Layout: FunctionComponent = (): ReactElement => {
       <Router>
         <Home path="/" />
         <Game path="/game" />
-        <Login path="/login" />
+        <Account path="/login" />
+        <Account path="/me" />
         <More path="/more" />
         <Ranking path="/ranking" />
         <Settings path="/settings" />

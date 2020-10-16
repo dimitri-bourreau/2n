@@ -7,7 +7,7 @@ import React, {
 import { RouteComponentProps } from '@reach/router';
 import style from 'styled-components';
 import { Trans } from 'react-i18next';
-import { firestore } from '../firebase.js';
+// import { firestore } from '../firebase.js';
 
 import PreFooterCanvas from './PreFooterCanvas';
 
@@ -51,27 +51,27 @@ const RankingWrapper = style.div`
   }
 `;
 
-interface DocumentData {
-  score: number;
-  user: {
-    name: string;
-    uid: number;
-  };
-}
+// interface DocumentData {
+//   score: number;
+//   user: {
+//     name: string;
+//     uid: number;
+//   };
+// }
 
 const Ranking: FunctionComponent<RouteComponentProps> = (): ReactElement => {
-  const [ranking, setRanking] = useState([] as DocumentData[]);
+  // const [ranking, setRanking] = useState([] as DocumentData[]);
 
-  useEffect(() => {
-    const getRanking = async () => {
-      const snapshot = await firestore.collection('ranking').get();
-      const snappedRanking = snapshot.docs.map(
-        doc => doc.data() as DocumentData,
-      );
-      setRanking(snappedRanking);
-    };
-    getRanking();
-  });
+  // useEffect(() => {
+  //   const getRanking = async () => {
+  //     const snapshot = await firestore.collection('ranking').get();
+  //     const snappedRanking = snapshot.docs.map(
+  //       doc => doc.data() as DocumentData,
+  //     );
+  //     setRanking(snappedRanking);
+  //   };
+  //   getRanking();
+  // });
 
   return (
     <>
@@ -92,12 +92,12 @@ const Ranking: FunctionComponent<RouteComponentProps> = (): ReactElement => {
             </tr>
           </thead>
           <tbody>
-            {ranking.map(rank => (
+            {/* {ranking.map(rank => (
               <tr key={`${rank.user.name}${rank.score}`}>
                 <td>{rank.user.name}</td>
                 <td>{rank.score}</td>
               </tr>
-            ))}
+            ))} */}
           </tbody>
         </table>
       </RankingWrapper>
