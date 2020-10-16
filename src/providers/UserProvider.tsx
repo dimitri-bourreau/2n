@@ -1,8 +1,15 @@
-import React, { Component, createContext, ReactElement } from 'react';
-import PropTypes from 'prop-types';
+import React, {
+  FunctionComponent,
+  createContext,
+  ReactElement,
+  useEffect,
+  useState,
+  ReactNode,
+} from 'react';
 import { auth } from '../firebase.js';
 
 interface UserInterface {
+  children: ReactNode;
   user: {
     exists: boolean;
     photoURL?: string;
@@ -11,40 +18,23 @@ interface UserInterface {
   };
 }
 
-export const UserContext = createContext({
+export const UserContext = createContext<UserInterface>({
   user: { exists: false },
 } as UserInterface);
 
-class UserProvider extends Component<unknown, UserInterface> {
-  constructor(props: unknown) {
-    super(props);
-    this.state = {
-      user: {
-        exists: false,
-      },
-    };
-  }
+export const UserProvider: FunctionComponent = (
+  props: UserInterface,
+): ReactElement => {
+  const { children } = props;
+  const [user, setUser] = useState();
 
-  componentDidMount = (): void => {
+  useEffect(() => {
     auth.onAuthStateChanged(userAuth => {
-      this.setState({
-        user: {
-          exists: true,
-          ...userAuth,
-        },
+      setUser({
+        ...userAuth,
       });
     });
-  };
+  });
 
-  render(): ReactElement {
-    const { user } = this.state;
-    const { children } = this.props;
-    return <UserContext.Provider value={user}>{children}</UserContext.Provider>;
-  }
-}
-
-// UserProvider.propTypes = {
-//   children: PropTypes.node.isRequired,
-// };
-
-export default UserProvider;
+  return <UserContext.Provider value={user}>{children}</UserContext.Provider>;
+};

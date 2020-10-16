@@ -1,7 +1,7 @@
 import React, { FunctionComponent, ReactElement } from 'react';
 import { RouteComponentProps } from '@reach/router';
 import style from 'styled-components';
-import { State } from 'react-powerplug';
+// import { State } from 'react-powerplug';
 import 'firebase/auth';
 // import { Trans } from 'react-i18next';
 
