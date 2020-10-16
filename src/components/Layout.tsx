@@ -19,16 +19,27 @@ const LayoutWrapper = style.div`
   min-height: 100vh;
 `;
 
-const Layout: FunctionComponent = (): ReactElement => {
+interface LayoutProps {
+  user: unknown;
+  sign: {
+    signOut: unknown;
+    signInWithGoogle: unknown;
+  };
+}
+
+const Layout: FunctionComponent<LayoutProps> = ({
+  user,
+  sign,
+}: LayoutProps): ReactElement => {
   useTranslation();
   return (
     <LayoutWrapper>
-      <Header />
+      <Header user={user} />
       <Router>
         <Home path="/" />
         <Game path="/game" />
-        <Account path="/login" />
-        <Account path="/me" />
+        <Account path="/login" user={user} sign={sign} />
+        <Account path="/me" user={user} sign={sign} />
         <More path="/more" />
         <Ranking path="/ranking" />
         <Settings path="/settings" />

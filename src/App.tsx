@@ -1,11 +1,15 @@
 import React, { FunctionComponent, ReactElement, Suspense } from 'react';
+import withFirebaseAuth from 'react-with-firebase-auth';
+import * as firebase from 'firebase/app';
 import { useCookies } from 'react-cookie';
 import style from 'styled-components';
+import { config } from './firebase.js';
+import 'firebase/auth';
 
 import Layout from './components/Layout';
 import Loader from './components/Loader';
-import UserProvider from './providers/UserProvider';
-import { config } from './firebase.js';
+
+const firebaseApp = firebase.initializeApp(config);
 
 const SoftTheme = style.div`
   background-color: #955656;
@@ -63,16 +67,25 @@ const DarkTheme = style(SoftTheme)`
     background-color: #955656;
   }
 `;
-const DisplayApp: FunctionComponent = (): ReactElement => (
-  <UserProvider>
-    <Suspense fallback={<Loader />}>
-      <Layout />
-    </Suspense>
-  </UserProvider>
-);
 
-const App: FunctionComponent = (): ReactElement => {
+interface AppProps {
+  user: unknown;
+  signOut: unknown;
+  signInWithGoogle: unknown;
+}
+
+const App: FunctionComponent<AppProps | any> = ({
+  user,
+  signOut,
+  signInWithGoogle,
+}: AppProps): ReactElement => {
   const [cookies] = useCookies();
+
+  const DisplayApp: FunctionComponent = (): ReactElement => (
+    <Suspense fallback={<Loader />}>
+      <Layout user={user} sign={{ signOut, signInWithGoogle }} />
+    </Suspense>
+  );
 
   if (typeof cookies.theme !== 'undefined') {
     if (cookies.theme === 'soft') {
@@ -93,5 +106,13 @@ const App: FunctionComponent = (): ReactElement => {
 
   return <DisplayApp />;
 };
+const firebaseAppAuth = firebaseApp.auth();
 
-export default App;
+const providers = {
+  googleProvider: new firebase.auth.GoogleAuthProvider(),
+};
+
+export default withFirebaseAuth({
+  providers,
+  firebaseAppAuth,
+})(App);

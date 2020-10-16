@@ -86,7 +86,13 @@ const ListElt = style.li`
   }
 `;
 
-const Header: FunctionComponent = (): ReactElement => {
+interface HeaderProps {
+  user: unknown;
+}
+
+const Header: FunctionComponent<HeaderProps> = ({
+  user,
+}: HeaderProps): ReactElement => {
   // const activePath = window.location.pathname.split('').splice(1).join('');
 
   return (
@@ -120,16 +126,15 @@ const Header: FunctionComponent = (): ReactElement => {
               🌐
             </a>
           </ListElt>
-          {/* <ListElt>
-            <a href="/me">
-              <IfFirebaseAuthed>
-                {() => <Trans i18nKey="Header.me">My account</Trans>}
-              </IfFirebaseAuthed>
-              <IfFirebaseUnAuthed>
-                {() => <Trans i18nKey="Header.logIn">Log in</Trans>}
-              </IfFirebaseUnAuthed>
+          <ListElt>
+            <a href={user ? '/me' : '/login'}>
+              {user ? (
+                <Trans i18nKey="Header.me">My account</Trans>
+              ) : (
+                <Trans i18nKey="Header.logIn">Log in</Trans>
+              )}
             </a>
-          </ListElt> */}
+          </ListElt>
         </List>
       </Nav>
     </HeaderWrapper>
