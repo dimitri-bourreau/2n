@@ -2,6 +2,8 @@ import React, { FunctionComponent, ReactElement } from 'react';
 import style from 'styled-components';
 import { Trans } from 'react-i18next';
 
+import User from '../interfaces/user';
+
 const HeaderWrapper = style.header`
   padding: 10px 5vw 20px 5vw;
   display: flex;
@@ -87,7 +89,7 @@ const ListElt = style.li`
 `;
 
 interface HeaderProps {
-  user: unknown;
+  user: User;
 }
 
 const Header: FunctionComponent<HeaderProps> = ({

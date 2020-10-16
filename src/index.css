@@ -88,9 +88,14 @@ ul {
   transition: all 0.2s ease-in;
   outline: none;
 }
-
 .btn:hover {
   cursor: pointer;
+}
+
+.btn-sm {
+  font-size: 1em;
+  padding: 5px 10px;
+  margin: 0;
 }
 
 .btn-success {

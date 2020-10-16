@@ -15,12 +15,14 @@ import More from './More';
 import Ranking from './Ranking';
 import Settings from './Settings';
 
+import User from '../interfaces/user';
+
 const LayoutWrapper = style.div`
   min-height: 100vh;
 `;
 
 interface LayoutProps {
-  user: unknown;
+  user: User;
   sign: {
     signOut: unknown;
     signInWithGoogle: unknown;

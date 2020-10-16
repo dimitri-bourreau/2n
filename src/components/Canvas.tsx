@@ -8,10 +8,14 @@ const Canvas: FunctionComponent<IntroductionCanvasProps> = ({
   height,
 }: IntroductionCanvasProps): ReactElement => {
   useEffect(() => {
-    const script = document.createElement('script');
-    script.src = '/2-digits-canvas/main.mjs';
-    script.type = 'module';
-    document.body.appendChild(script);
+    const alreadyDone = document.getElementById('canvas-script');
+    if (!alreadyDone) {
+      const script = document.createElement('script');
+      script.id = 'canvas-script';
+      script.src = '/2-digits-canvas/main.mjs';
+      script.type = 'module';
+      document.body.appendChild(script);
+    }
   }, []);
 
   return (

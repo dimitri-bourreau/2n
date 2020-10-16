@@ -9,6 +9,8 @@ import 'firebase/auth';
 import Layout from './components/Layout';
 import Loader from './components/Loader';
 
+import User from './interfaces/user';
+
 const firebaseApp = firebase.initializeApp(config);
 
 const SoftTheme = style.div`
@@ -69,7 +71,7 @@ const DarkTheme = style(SoftTheme)`
 `;
 
 interface AppProps {
-  user: unknown;
+  user: User;
   signOut: unknown;
   signInWithGoogle: unknown;
 }

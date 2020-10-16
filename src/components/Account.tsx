@@ -5,8 +5,10 @@ import 'firebase/auth';
 import ProfilePage from './Profile';
 import LogIn from './LogIn';
 
+import User from '../interfaces/user';
+
 interface AccountProps extends RouteComponentProps {
-  user: unknown;
+  user: User;
   sign: {
     signOut: unknown;
     signInWithGoogle: unknown;
