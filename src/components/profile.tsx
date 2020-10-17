@@ -1,4 +1,4 @@
-import React, { FunctionComponent, ReactElement } from 'react';
+import React, { FunctionComponent, ReactElement, useState } from 'react';
 import style from 'styled-components';
 
 import User from '../interfaces/user';
@@ -52,6 +52,11 @@ const ProfileScores = style.div`
   }
 `;
 
+const PseudoUpdated = style.div`
+  color: green;
+  font-size: 0.8em;
+`;
+
 const ProfileDangerZone = style.div`
   border-left: 1px solid red;
   padding: 10px 0;
@@ -76,14 +81,21 @@ const ProfilePage: FunctionComponent<ProfilePageProps> = ({
   user,
   signOut,
 }: ProfilePageProps): ReactElement => {
+  const [pseudoUpdate, setPseudoUpdate] = useState('');
+  const [myPseudo, setMyPseudo] = useState('Dimitri');
   const myScores = [12, 123, 44, 26, 43].sort((a, b) => b - a);
+
+  const updatePseudo = (value: string): void => {
+    setPseudoUpdate('Mis à jour');
+    setMyPseudo(value);
+  };
 
   return (
     <ProfileWrapper>
       <h1>Mon compte</h1>
 
       <ProfileData>
-        <h3>Mes informations</h3>
+        <h3>Mes informations privées</h3>
         <ProfilePicture>
           <img src={user.photoURL} alt="Profile" />
         </ProfilePicture>
@@ -99,8 +111,23 @@ const ProfilePage: FunctionComponent<ProfilePageProps> = ({
         </button>
       </ProfileData>
 
+      <ProfileData>
+        <h3>Mes informations publiques</h3>
+
+        <label htmlFor="pseudo">
+          Pseudo affiché dans le classement des scores
+          <input
+            id="pseudo"
+            type="text"
+            value={myPseudo}
+            onChange={e => updatePseudo(e.target.value)}
+          />
+        </label>
+        <PseudoUpdated>{pseudoUpdate}</PseudoUpdated>
+      </ProfileData>
+
       <ProfileScores>
-        <h3>Mes scores</h3>
+        <h3>Mes meilleurs scores</h3>
 
         {myScores.map(score => (
           <p key={`${score}${Math.random()}`}>{score}</p>
@@ -113,7 +140,7 @@ const ProfilePage: FunctionComponent<ProfilePageProps> = ({
           Supprimer mes scores
         </button>
         <button type="button" className="btn btn-danger">
-          Supprimer mon compte
+          Supprimer mon compte et mes scores
         </button>
       </ProfileDangerZone>
     </ProfileWrapper>
