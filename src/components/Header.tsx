@@ -130,11 +130,7 @@ const Header: FunctionComponent<HeaderProps> = ({
           </ListElt>
           <ListElt>
             <a href={user ? '/me' : '/login'}>
-              {user ? (
-                <Trans i18nKey="Header.me">My account</Trans>
-              ) : (
-                <Trans i18nKey="Header.logIn">Log in</Trans>
-              )}
+              <Trans i18nKey="Header.me">My account</Trans>
             </a>
           </ListElt>
         </List>

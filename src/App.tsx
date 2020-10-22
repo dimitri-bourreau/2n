@@ -1,17 +1,17 @@
 import React, { FunctionComponent, ReactElement, Suspense } from 'react';
-// import withFirebaseAuth from 'react-with-firebase-auth';
+import withFirebaseAuth from 'react-with-firebase-auth';
 import * as firebase from 'firebase/app';
 import { useCookies } from 'react-cookie';
 import style from 'styled-components';
 import { config } from './firebase.js';
-// import 'firebase/auth';
+import 'firebase/auth';
 
 import Layout from './components/Layout';
 import Loader from './components/Loader';
 
 import User from './interfaces/user';
 
-// const firebaseApp = firebase.initializeApp(config);
+const firebaseApp = firebase.initializeApp(config);
 
 const SoftTheme = style.div`
   background-color: #955656;
@@ -108,15 +108,13 @@ const App: FunctionComponent<AppProps | any> = ({
 
   return <DisplayApp />;
 };
-// const firebaseAppAuth = firebaseApp.auth();
+const firebaseAppAuth = firebaseApp.auth();
 
-// const providers = {
-//   googleProvider: new firebase.auth.GoogleAuthProvider(),
-// };
+const providers = {
+  googleProvider: new firebase.auth.GoogleAuthProvider(),
+};
 
-// export default withFirebaseAuth({
-//   providers,
-//   firebaseAppAuth,
-// })(App);
-
-export default App;
+export default withFirebaseAuth({
+  providers,
+  firebaseAppAuth,
+})(App);
