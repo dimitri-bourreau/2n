@@ -2,7 +2,7 @@ import React, { FunctionComponent, ReactElement } from 'react';
 import style from 'styled-components';
 
 import { DigitProps } from '../../interfaces/game';
-import getNiceColorPalette from '../../nice-color-palettes';
+import getNiceColorPalette from '../utils/nice-color-palettes';
 
 const colors = getNiceColorPalette();
 const randomNumber = Math.random();

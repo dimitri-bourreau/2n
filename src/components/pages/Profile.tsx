@@ -1,7 +1,7 @@
 import React, { FunctionComponent, ReactElement, useState } from 'react';
 import style from 'styled-components';
 
-import User from '../interfaces/user';
+import User from '../../interfaces/user';
 
 const ProfileWrapper = style.div`
   margin: 30px auto 60px auto;
@@ -77,7 +77,7 @@ interface ProfilePageProps {
   signOut: any;
 }
 
-const ProfilePage: FunctionComponent<ProfilePageProps> = ({
+const Profile: FunctionComponent<ProfilePageProps> = ({
   user,
   signOut,
 }: ProfilePageProps): ReactElement => {
@@ -147,4 +147,4 @@ const ProfilePage: FunctionComponent<ProfilePageProps> = ({
   );
 };
 
-export default ProfilePage;
+export default Profile;

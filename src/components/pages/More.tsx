@@ -3,7 +3,7 @@ import { RouteComponentProps } from '@reach/router';
 import style from 'styled-components';
 import { Trans } from 'react-i18next';
 
-import PreFooterCanvas from './partials/PreFooterCanvas';
+import PreFooterCanvas from '../partials/PreFooterCanvas';
 
 const MoreWrapper = style.div`
   margin: 30px auto;

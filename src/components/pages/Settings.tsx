@@ -9,7 +9,7 @@ import style from 'styled-components';
 import { Trans, useTranslation } from 'react-i18next';
 import { useCookies } from 'react-cookie';
 
-import PreFooterCanvas from './partials/PreFooterCanvas';
+import PreFooterCanvas from '../partials/PreFooterCanvas';
 
 const SettingsWrapper = style.div`
   margin: 30px auto;

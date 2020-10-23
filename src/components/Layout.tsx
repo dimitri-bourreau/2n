@@ -6,14 +6,14 @@ import { useTranslation } from 'react-i18next';
 import Footer from './partials/Footer';
 import Header from './partials/Header';
 
-import Account from './Account';
-import Contact from './Contact';
-import Game from './Game';
-import Home from './Home';
-import Legal from './Legal';
-import More from './More';
-import Ranking from './Ranking';
-import Settings from './Settings';
+import Account from './pages/Account';
+import Contact from './pages/Contact';
+import Game from './pages/Game';
+import Home from './pages/Home';
+import Legal from './pages/Legal';
+import More from './pages/More';
+import Ranking from './pages/Ranking';
+import Settings from './pages/Settings';
 
 import User from '../interfaces/user';
 
