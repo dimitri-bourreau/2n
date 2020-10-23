@@ -1,8 +1,8 @@
 import React, {
   FunctionComponent,
   ReactElement,
-  useState,
-  useEffect,
+  // useState,
+  // useEffect,
 } from 'react';
 import { RouteComponentProps } from '@reach/router';
 import style from 'styled-components';
