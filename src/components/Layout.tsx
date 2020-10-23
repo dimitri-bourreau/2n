@@ -3,8 +3,8 @@ import style from 'styled-components';
 import { Router } from '@reach/router';
 import { useTranslation } from 'react-i18next';
 
-import Footer from './Footer';
-import Header from './Header';
+import Footer from './partials/Footer';
+import Header from './partials/Header';
 
 import Account from './Account';
 import Contact from './Contact';

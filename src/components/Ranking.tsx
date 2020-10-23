@@ -9,7 +9,7 @@ import style from 'styled-components';
 import { Trans } from 'react-i18next';
 // import { firestore } from '../firebase.js';
 
-import PreFooterCanvas from './PreFooterCanvas';
+import PreFooterCanvas from './partials/PreFooterCanvas';
 
 const RankingWrapper = style.div`
   margin: 30px auto 60px auto;

@@ -4,7 +4,7 @@ import style from 'styled-components';
 import { Trans } from 'react-i18next';
 import { useCookies } from 'react-cookie';
 
-import Canvas from '../Canvas';
+import Canvas from '../partials/Canvas';
 
 const IntroductionWrapper = style.div`
   width: 100%;

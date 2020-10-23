@@ -2,7 +2,7 @@ import React, { FunctionComponent, ReactElement, useState } from 'react';
 import { RouteComponentProps } from '@reach/router';
 
 import GameDisplay from './GameDisplay';
-import PreFooterCanvas from '../PreFooterCanvas';
+import PreFooterCanvas from '../partials/PreFooterCanvas';
 
 const GameLogic: FunctionComponent<RouteComponentProps> = (): ReactElement => {
   const getRandomDigit = (): number => Math.floor(Math.random() * 7);
