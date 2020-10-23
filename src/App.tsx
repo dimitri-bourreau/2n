@@ -8,56 +8,12 @@ import 'firebase/auth';
 
 import Layout from './components/Layout';
 import Loader from './components/Loader';
+import SoftTheme from './components/themes/SoftTheme';
 
 import User from './interfaces/user';
 
 const firebaseApp = firebase.initializeApp(config);
 
-const SoftTheme = style.div`
-  background-color: #955656;
-  color: white;
-
-  h1, h2 {
-    color: white;
-  }
-
-  a {
-    color: white;
-    text-decoration: underline;
-    border: none;
-    transition: font-weight 0s ease-in;
-  }
-  a:hover {
-    border: none;
-    font-weight: bold:
-  }
-  
-  section, ul {
-    background-color: #523434;
-  }
-
-  header {
-    background: #955656;
-  }
-  header a {
-    text-decoration: none;
-    border-bottom: 2px solid transparent;
-  }
-  header a:hover {
-    border-bottom: 2px solid white;
-  }
-  header ul {
-    background-color: transparent;
-  }
-
-  footer ul {
-    background-color: transparent;
-  }
-
-  .cookie {
-    color: black;
-  }
-`;
 const DarkTheme = style(SoftTheme)`
   background-color: #292727;
 
