@@ -95,8 +95,6 @@ interface HeaderProps {
 const Header: FunctionComponent<HeaderProps> = ({
   user,
 }: HeaderProps): ReactElement => {
-  // const activePath = window.location.pathname.split('').splice(1).join('');
-
   return (
     <HeaderWrapper>
       <Logo>
