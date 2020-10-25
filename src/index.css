@@ -71,10 +71,6 @@ ul {
 .img-link img {
   transition: all 0.2s ease-in;
 }
-.img-link img:hover {
-  width: 60px;
-  transform: rotate(-10deg);
-}
 
 /* ---- PRESETS ---- */
 .btn {
