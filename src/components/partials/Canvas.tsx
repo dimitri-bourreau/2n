@@ -13,7 +13,7 @@ const Canvas: FunctionComponent<IntroductionCanvasProps> = ({
       const script = document.createElement('script');
       script.id = 'canvas-script';
       script.src = '/2-digits-canvas/main.mjs';
-      script.type = 'module';
+      script.type = 'application/javascript';
       document.body.appendChild(script);
     }
   }, []);
