@@ -57,18 +57,6 @@ const Footer: FunctionComponent = (): ReactElement => {
           !
         </span>
       </p>
-      <ul>
-        <li>
-          <a href="/legal">
-            <Trans i18nKey="Footer.legal">Legal notice</Trans>
-          </a>
-        </li>
-        <li>
-          <a href="/contact">
-            <Trans i18nKey="Footer.contact">Contact</Trans>
-          </a>
-        </li>
-      </ul>
     </FooterWrapper>
   );
 };

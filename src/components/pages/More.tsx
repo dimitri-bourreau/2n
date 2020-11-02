@@ -84,7 +84,6 @@ const More: FunctionComponent<RouteComponentProps> = (): ReactElement => {
           <li>react-i18next</li>
           <li>Canvas</li>
           <li>Jest</li>
-          <li>Firebase</li>
         </ul>
 
         <a href="https://github.com/tobudim/2n">

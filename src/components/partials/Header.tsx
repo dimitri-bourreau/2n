@@ -2,8 +2,6 @@ import React, { FunctionComponent, ReactElement } from 'react';
 import style from 'styled-components';
 import { Trans } from 'react-i18next';
 
-import User from '../../interfaces/user';
-
 const HeaderWrapper = style.header`
   padding: 10px 5vw 20px 5vw;
   display: flex;
@@ -53,13 +51,13 @@ const Nav = style.nav`
   flex-basis: 50%;
 
   @media all and (min-width: 576px) {
-    flex-basis: 80%;
+    flex-basis: 50%;
   }
   @media all and (min-width: 992px) {
-    flex-basis: 70%;
+    flex-basis: 40%;
   }
   @media all and (min-width: 1200px) {
-    flex-basis: 60%;
+    flex-basis: 30%;
   }
 `;
 const List = style.ul`
@@ -88,13 +86,7 @@ const ListElt = style.li`
   }
 `;
 
-interface HeaderProps {
-  user: User;
-}
-
-const Header: FunctionComponent<HeaderProps> = ({
-  user,
-}: HeaderProps): ReactElement => {
+const Header: FunctionComponent = (): ReactElement => {
   return (
     <HeaderWrapper>
       <Logo>
@@ -110,11 +102,6 @@ const Header: FunctionComponent<HeaderProps> = ({
             </a>
           </ListElt>
           <ListElt>
-            <a href="/ranking">
-              <Trans i18nKey="Header.ranking">Ranking</Trans>
-            </a>
-          </ListElt>
-          <ListElt>
             <a href="/more">
               <Trans i18nKey="Header.more">More</Trans>
             </a>
@@ -124,11 +111,6 @@ const Header: FunctionComponent<HeaderProps> = ({
               <Trans i18nKey="Header.settings">Settings</Trans>{' '}
               <span role="img" aria-label="settings-and-language" />
               🌐
-            </a>
-          </ListElt>
-          <ListElt>
-            <a href={user ? '/me' : '/login'}>
-              <Trans i18nKey="Header.me">My account</Trans>
             </a>
           </ListElt>
         </List>
